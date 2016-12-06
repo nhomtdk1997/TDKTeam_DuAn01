@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Ve" table="ve" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idve" type="java.lang.Integer">
+            <column name="idve" />
+            <generator class="identity" />
+        </id>
+        <property name="ho" type="string">
+            <column name="Ho" length="10" not-null="true" />
+        </property>
+        <property name="tenDem" type="string">
+            <column name="TenDem" length="45" not-null="true" />
+        </property>
+        <property name="ten" type="string">
+            <column name="Ten" length="10" not-null="true" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" />
+        </property>
+        <property name="diaChi" type="string">
+            <column name="DiaChi" />
+        </property>
+        <property name="sdt" type="string">
+            <column name="SDT" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="soCmnd" type="string">
+            <column name="SoCMND" length="12" not-null="true" unique="true" />
+        </property>
+        <property name="quocTich" type="string">
+            <column name="QuocTich" length="45" not-null="true" />
+        </property>
+        <property name="idchuyenbay" type="int">
+            <column name="idchuyenbay" not-null="true" />
+        </property>
+        <property name="idloaive" type="int">
+            <column name="idloaive" not-null="true" />
+        </property>
+        <property name="idtaikhoan" type="java.lang.Integer">
+            <column name="idtaikhoan" />
+        </property>
+    </class>
+</hibernate-mapping>

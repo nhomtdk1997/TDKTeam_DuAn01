@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Quoctich" table="quoctich" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idquoctich" type="java.lang.Integer">
+            <column name="idquoctich" />
+            <generator class="identity" />
+        </id>
+        <property name="quocTich" type="string">
+            <column name="QuocTich" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="moTa" type="string">
+            <column name="MoTa" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

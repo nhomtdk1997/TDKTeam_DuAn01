@@ -1,0 +1,354 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 16, 2016, 3:52:05 PM
+    Author     : DuongNguyen
+*/
+
+/*
+    Footer style
+*/
+.bg-4 { 
+    background-color: #090909;
+    color: #6d6d6d;
+    height: 60px;
+    border-top: solid 1px #373737;
+    border-bottom: solid 1px #373737;
+}
+.bg-5 {
+    background-color: #171717;
+    color: #ffffff;
+    height: 300px;
+}
+.a1{
+    padding-right: 20px;
+    color: #adadad;
+}
+.a2{
+    margin-bottom: 5px;
+}
+.a2 a{
+    color: #d0e9c6;
+}
+.a2 a:hover {
+    color: greenyellow;
+    padding-left: 6px;
+    transition: 0.7s;
+    text-decoration: none;
+}
+
+
+
+/*** Table Styles **/
+
+#table{
+    border-collapse: collapse;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+.table-fill {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+th {
+    color:#D5DDE5;;
+    background:#1b1e24;
+    font-size:16px;
+    font-weight: 100;
+    padding:24px;
+    text-align:left;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align:middle;
+}
+
+tr {
+    color:#393939;
+}
+
+tr:hover td {
+    background:#393939;
+    color:#FFFFFF;
+}
+
+tr:first-child {
+    border-top:none;
+}
+
+tr:last-child {
+    border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+    background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+    background:#262626;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+
+td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+    border-right: 0px;
+}
+
+th.text-left {
+    text-align: left;
+}
+
+th.text-center {
+    text-align: center;
+}
+
+th.text-right {
+    text-align: right;
+}
+
+td.text-left {
+    text-align: left;
+}
+
+td.text-center {
+    text-align: center;
+}
+
+td.text-right {
+    text-align: right;
+}
+
+
+/*
+    index
+*/
+.bg-6 { 
+    background-color: #090909;
+    color: #FFFFFF;
+    height: 240px;
+    border-top: solid 1px #373737;
+    border-bottom: solid 1px #373737;
+}
+.bg-7{
+    background-color: #EDEDED;
+}
+.bg-8{
+    background-color: #1C191C;
+    color: #FFFFFF;
+    height: 400px;
+    border-top: solid 1px #373737;
+    border-bottom: solid 1px #373737;
+}
+.menu{
+    opacity: 0.8;
+}
+.menu:hover{
+    opacity: 1;
+}
+.aa{
+    color: white;
+}
+.spnb{
+    margin-top: 40px;
+}
+.bg-9{
+    margin-left: 130px;
+    float: left;
+    margin-top: -120px;
+    padding-right: 50px;
+}
+.a1{
+    color: wheat;
+}
+.a2{
+    color: whitesmoke;
+}
+.spnbh2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 50%;
+    height: 50px;
+    background: #313131;
+    color: white;
+    border-radius: 20px 0px;
+    text-align: center;
+    padding-top: 8px;
+    transition-duration: 0.5s;
+}
+.spnbh2:hover{
+    width: 100%;
+    color: #EBEBEB;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+
+
+
+
+.container {
+    padding: 80px 120px;
+}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.6;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+
+/*
+    index
+*/
+.productinfo h2{
+    color: #113;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.productinfo .btn:hover{
+    background: white;
+    color: black;
+    margin-bottom: 25px;
+}
+.productinfo .btn{
+    background: #171717;
+    color: white;
+    margin-bottom: 25px;
+    border-radius: 0;
+}
+.product-overlay h2{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+.productinfo p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #696763;
+}
+.productinfo img{
+    width: 100%;
+}
+
+.productinfo{
+    position:relative;
+}
+.product-overlay {
+    background:#171717;
+    top: 0;
+    display: none;
+    height: 0;
+    position: absolute;
+    transition: height 500ms ease 0s;
+    width: 100%;
+    display: block;
+    opacity:0.9;
+}
+.single-products:hover .product-overlay {
+    display:block;
+    height:100%;
+}
+.product-overlay .overlay-content {
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+.product-overlay .add-to-cart {
+    background:white;
+    border: 0 none;
+    border-radius: 0;
+    color: #113;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.product-overlay .add-to-cart:hover {
+    background: white;
+    color: black;
+}
+.product-overlay p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+.product-image-wrapper{
+    border:1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom:30px;
+}
+.single-products {
+    position: relative;
+}
+.product-image-wrapper{
+    border:1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom:30px;
+}
+.single-products {
+    position: relative;
+}
+.add-to-cart {
+    background:#F5F5ED;
+    border: 0 none;
+    border-radius: 0;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.add-to-cart:hover {
+    background: #FE980F;
+    color: #FFFFFF;
+}
+.add-to-cart i{
+    margin-right:5px;
+}

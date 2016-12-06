@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Phanhoi" table="phanhoi" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idphanhoi" type="java.lang.Integer">
+            <column name="idphanhoi" />
+            <generator class="identity" />
+        </id>
+        <property name="idtaikhoan" type="java.lang.Integer">
+            <column name="idtaikhoan" />
+        </property>
+        <property name="fullName" type="string">
+            <column name="FullName" length="100" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="45" not-null="true" />
+        </property>
+        <property name="phanHoi" type="string">
+            <column name="PhanHoi" length="65535" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

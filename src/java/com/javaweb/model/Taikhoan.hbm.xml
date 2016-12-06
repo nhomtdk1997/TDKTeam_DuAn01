@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Taikhoan" table="taikhoan" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idTaiKhoan" type="java.lang.Integer">
+            <column name="idTaiKhoan" />
+            <generator class="identity" />
+        </id>
+        <property name="idnguoidung" type="int">
+            <column name="idnguoidung" not-null="true" />
+        </property>
+        <property name="tenDangNhap" type="string">
+            <column name="TenDangNhap" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="matKhau" type="string">
+            <column name="MatKhau" length="45" not-null="true" />
+        </property>
+        <property name="idLoaiTk" type="int">
+            <column name="idLoaiTK" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

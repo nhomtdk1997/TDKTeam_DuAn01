@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Nguoidung" table="nguoidung" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idnguoidung" type="java.lang.Integer">
+            <column name="idnguoidung" />
+            <generator class="identity" />
+        </id>
+        <property name="ho" type="string">
+            <column name="Ho" length="10" not-null="true" />
+        </property>
+        <property name="demVaTen" type="string">
+            <column name="DemVaTen" length="45" not-null="true" />
+        </property>
+        <property name="gioiTinh" type="java.lang.Boolean">
+            <column name="GioiTinh" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" />
+        </property>
+        <property name="diaChi" type="string">
+            <column name="DiaChi" />
+        </property>
+        <property name="sdt" type="string">
+            <column name="SDT" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="soCmnd" type="string">
+            <column name="SoCMND" length="12" not-null="true" unique="true" />
+        </property>
+        <property name="quocTich" type="int">
+            <column name="QuocTich" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

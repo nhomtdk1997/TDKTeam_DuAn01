@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Baocao" table="baocao" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idbaocao" type="java.lang.Integer">
+            <column name="idbaocao" />
+            <generator class="identity" />
+        </id>
+        <property name="idtaikhoan" type="int">
+            <column name="idtaikhoan" not-null="true" />
+        </property>
+        <property name="noiDung" type="string">
+            <column name="NoiDung" length="65535" not-null="true" />
+        </property>
+        <property name="ghiChu" type="string">
+            <column name="GhiChu" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Tintuc" table="tintuc" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idtintuc" type="java.lang.Integer">
+            <column name="idtintuc" />
+            <generator class="identity" />
+        </id>
+        <property name="idTaiKhoan" type="int">
+            <column name="idTaiKhoan" not-null="true" />
+        </property>
+        <property name="imgLink" type="string">
+            <column name="img_link" length="45" not-null="true" />
+        </property>
+        <property name="imgList" type="string">
+            <column name="img_list" length="65535" />
+        </property>
+        <property name="tieuDe" type="string">
+            <column name="TieuDe" not-null="true" />
+        </property>
+        <property name="noiDung" type="string">
+            <column name="NoiDung" length="65535" not-null="true" />
+        </property>
+        <property name="ngayDang" type="date">
+            <column name="NgayDang" length="10" />
+        </property>
+        <property name="ghiChu" type="string">
+            <column name="GhiChu" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
