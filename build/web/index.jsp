@@ -18,6 +18,7 @@
     <!-- Site Title -->
     <title>TDK_Team_Website Vé Máy Bay</title>
     <%@include file="includes/headtag.jsp" %>
+    <%@include file="includes/popuplogin.jsp" %>
 </head>
 
 <body>
@@ -32,20 +33,156 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Đặt vé</h2>    
+                        <h2>Đặt vé</h2>
+                        <p>Tìm chuyến bay</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row timvemotchang">
+                <form action="TimChuyenBayServlet" method="post">
+                    <div class="form-group col-md-12 modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Tìm vé một chặng</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row tu-den col-md-4">
+                                <span id="idghichu">Từ<span class="required">*</span></span>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <select name="Tu-vemotchang" class="selectpicker form-control">
+                                                <optgroup label="Miền Bắc">
+                                                    <option>Hà Nội</option>
+                                                    <option>Hải Phòng</option>
+                                                    <option>Điện Biên</option>
+                                                    <option>Đồng Hới</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Trung">
+                                                    <option>Buôn Mê Thuột</option>
+                                                    <option>Chu Lai</option>
+                                                    <option>Huế</option>
+                                                    <option>Pleiku</option>
+                                                    <option>Quy Nhơn</option>
+                                                    <option>Thanh Hóa</option>
+                                                    <option>TP. Vinh</option>
+                                                    <option>Tuy Hòa</option>
+                                                    <option>Đà Nẵng</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Nam">
+                                                    <option>Đà Lạt</option>
+                                                    <option>Cà Mau</option>
+                                                    <option>Côn Đảo</option>
+                                                    <option>Cần Thơ</option>
+                                                    <option>Nha Trang</option>
+                                                    <option>Phú Quốc</option>
+                                                    <option>Rạch Giá</option>
+                                                    <option>TP. Hồ Chí Minh</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <span id="idghichu">Đến<span class="required">*</span></span>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <select name="Den-vemotchang" class="selectpicker form-control">
+                                                <optgroup label="Miền Bắc">
+                                                    <option>Hà Nội</option>
+                                                    <option>Hải Phòng</option>
+                                                    <option>Điện Biên</option>
+                                                    <option>Đồng Hới</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Trung">
+                                                    <option>Buôn Mê Thuột</option>
+                                                    <option>Chu Lai</option>
+                                                    <option>Huế</option>
+                                                    <option>Pleiku</option>
+                                                    <option>Quy Nhơn</option>
+                                                    <option>Thanh Hóa</option>
+                                                    <option>TP. Vinh</option>
+                                                    <option>Tuy Hòa</option>
+                                                    <option>Đà Nẵng</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Nam">
+                                                    <option>Đà Lạt</option>
+                                                    <option>Cà Mau</option>
+                                                    <option>Côn Đảo</option>
+                                                    <option>Cần Thơ</option>
+                                                    <option>Nha Trang</option>
+                                                    <option>Phú Quốc</option>
+                                                    <option>Rạch Giá</option>
+                                                    <option>TP. Hồ Chí Minh</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            </div> <!-- end .row -->
-        </div> <!-- end .container -->
+                            <div class="row ngay-di-ve col-md-4">
+                                <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-md-4 soluonghk">
+                                <span>Người lớn (>12 tuổi)<span class="required">*</span></span>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <select class="selectpicker form-control">
+                                                <option>1 người</option>
+                                                <option>2 người</option>
+                                                <option>3 người</option>
+                                                <option>4 người</option>
+                                                <option>5 người</option>
+                                                <option>6 người</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span>Trẻ em (2<12 tuổi)<span class="required">*</span></span>
+                                            <select class="selectpicker form-control">
+                                                <option>0 người</option>
+                                                <option>1 người</option>
+                                                <option>2 người</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span>Trẻ em (<2 tuổi)<span class="required">*</span></span>
+                                            <select class="selectpicker form-control">
+                                                <option>0 người</option>
+                                                <option>1 người</option>
+                                                <option>2 người</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-blue col-md-12" style="margin-top: 20px;">Tìm vé</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
     <!--
     End #datve
     ========================== -->
-    
+
     <!--
     #quotes
     ========================== -->

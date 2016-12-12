@@ -8,6 +8,14 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.javaweb.controller.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ThemTinTucServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.ThemTinTucServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TimChuyenBayServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.TimChuyenBayServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThemTinTucServlet</servlet-name>
+        <url-pattern>/ThemTinTucServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimChuyenBayServlet</servlet-name>
+        <url-pattern>/TimChuyenBayServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

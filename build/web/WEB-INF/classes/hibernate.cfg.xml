@@ -46,16 +46,15 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_dailybanve</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">duongnguyen97</property>
-    <mapping resource="com/javaweb/model/Loaichuyenbay.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Baocao.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Nguoidung.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Loaive.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Ve.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Phanhoi.hbm.xml"/>
     <mapping resource="com/javaweb/model/Chuyenbay.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Loaitaikhoan.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Tintuc.hbm.xml"/>
-    <mapping resource="com/javaweb/model/Taikhoan.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Phanhoi.hbm.xml"/>
     <mapping resource="com/javaweb/model/Quoctich.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Loaive.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Taikhoan.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Ve.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Loaitaikhoan.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Nguoidung.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Baocao.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Tintuc.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Dec 12, 2016 2:00:48 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.javaweb.model.Ve" table="ve" catalog="db_dailybanve" optimistic-lock="version">
         <id name="idve" type="java.lang.Integer">
@@ -11,11 +11,8 @@
         <property name="ho" type="string">
             <column name="Ho" length="10" not-null="true" />
         </property>
-        <property name="tenDem" type="string">
-            <column name="TenDem" length="45" not-null="true" />
-        </property>
-        <property name="ten" type="string">
-            <column name="Ten" length="10" not-null="true" />
+        <property name="demVaTen" type="string">
+            <column name="DemVaTen" length="45" not-null="true" />
         </property>
         <property name="ngaySinh" type="date">
             <column name="NgaySinh" length="10" />
@@ -29,8 +26,8 @@
         <property name="soCmnd" type="string">
             <column name="SoCMND" length="12" not-null="true" unique="true" />
         </property>
-        <property name="quocTich" type="string">
-            <column name="QuocTich" length="45" not-null="true" />
+        <property name="idquoctich" type="string">
+            <column name="idquoctich" length="45" not-null="true" />
         </property>
         <property name="idchuyenbay" type="int">
             <column name="idchuyenbay" not-null="true" />
@@ -40,6 +37,18 @@
         </property>
         <property name="idtaikhoan" type="java.lang.Integer">
             <column name="idtaikhoan" />
+        </property>
+        <property name="soNguoiLon" type="int">
+            <column name="SoNguoiLon" not-null="true" />
+        </property>
+        <property name="soTreEm" type="java.lang.Integer">
+            <column name="SoTreEm" />
+        </property>
+        <property name="soEmBe" type="java.lang.Integer">
+            <column name="SoEmBe" />
+        </property>
+        <property name="giaVe" type="big_decimal">
+            <column name="GiaVe" precision="8" scale="3" />
         </property>
     </class>
 </hibernate-mapping>

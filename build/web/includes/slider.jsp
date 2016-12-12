@@ -19,7 +19,7 @@
 
         <div class="carousel-inner">
 
-            <div class="item active"  style="background-image: url('img/slider/sl1.jpg')" >
+            <div class="item active"  style="background-image: url('img/slider/slider1.jpg')" >
                 <div class="carousel-caption">
                     <div class="animated bounceInRight">
                         <h2>Tìm & Đặt Vé – Khuyến Mại</h2>
@@ -29,7 +29,7 @@
                 </div>
             </div>              
 
-            <div class="item" style="background-image: url('img/slider/sl4.jpg')">                
+            <div class="item" style="background-image: url('img/slider/slider7.jpg')">                
                 <div class="carousel-caption">
                     <div class="animated bounceInDown">
                         <h2>Giá Vé Đặc Biệt</h2>
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="item" style="background-image: url('img/slider/sl3.jpg')">                 
+            <div class="item" style="background-image: url('img/slider/slider5.jpg')">                 
                 <div class="carousel-caption">
                     <div class="animated bounceInUp">
                         <h2>Chăm Sóc Khách Hàng</h2>

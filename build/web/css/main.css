@@ -254,11 +254,17 @@ width: 11px;
 }
 
 .carousel-caption > div {
+  /*
   background-color: rgba(15,116,143,0.8);
   padding: 60px 50px 80px 20%;
   position: absolute;
   top: 25%;
   width: 76%;
+  */
+  padding: 60px 50px 80px 10%;
+  position: absolute;
+  top: 25%;
+  width: 60%;
 }
 
 #home-carousel .carousel-inner h2 {
@@ -273,7 +279,7 @@ width: 11px;
 #home-carousel .carousel-inner p {
   color: #FFFFFF;
   line-height: 28px;
-  font-size: 13px;
+  font-size: 17px;
   margin-top: 0;
   text-shadow:none;
 }
