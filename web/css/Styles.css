@@ -209,12 +209,6 @@ td.text-right {
 }
 
 
-
-
-
-.container {
-    padding: 80px 120px;
-}
 .person {
     border: 10px solid transparent;
     margin-bottom: 25px;
@@ -350,4 +344,28 @@ td.text-right {
 }
 .add-to-cart i{
     margin-right:5px;
+}
+
+/*
+    Popup login
+*/
+.modal .modal-dialog .modal-content .dangky{
+    padding-left: 5px;
+}
+
+.modal .modal-dialog .modal-content .dangky a{
+    font-weight: normal;
+}
+
+.modal .modal-dialog .modal-content .form-popup{
+    border-radius: 0px;
+    height: 45px;
+}
+
+
+/*
+    modal-header-fix
+*/
+.modal-content .modal-header-fix{
+    margin-top: 50px;
 }
