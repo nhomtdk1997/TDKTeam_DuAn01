@@ -1,7 +1,8 @@
 package com.javaweb.model;
-// Generated Dec 3, 2016 1:09:20 PM by Hibernate Tools 4.3.1
+// Generated Dec 12, 2016 2:00:47 PM by Hibernate Tools 4.3.1
 
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -11,17 +12,25 @@ public class Chuyenbay  implements java.io.Serializable {
 
 
      private Integer idchuyenbay;
-     private String chuyenBay;
-     private Date thoiGian;
-     private int idloaichuyenbay;
+     private String tu;
+     private String den;
+     private Date ngayKhoiHanh;
+     private Date gioCatCanh;
+     private Date gioHaCanh;
+     private String loaiMayBay;
+     private BigDecimal giaChuyenBay;
 
     public Chuyenbay() {
     }
 
-    public Chuyenbay(String chuyenBay, Date thoiGian, int idloaichuyenbay) {
-       this.chuyenBay = chuyenBay;
-       this.thoiGian = thoiGian;
-       this.idloaichuyenbay = idloaichuyenbay;
+    public Chuyenbay(String tu, String den, Date ngayKhoiHanh, Date gioCatCanh, Date gioHaCanh, String loaiMayBay, BigDecimal giaChuyenBay) {
+       this.tu = tu;
+       this.den = den;
+       this.ngayKhoiHanh = ngayKhoiHanh;
+       this.gioCatCanh = gioCatCanh;
+       this.gioHaCanh = gioHaCanh;
+       this.loaiMayBay = loaiMayBay;
+       this.giaChuyenBay = giaChuyenBay;
     }
    
     public Integer getIdchuyenbay() {
@@ -31,26 +40,54 @@ public class Chuyenbay  implements java.io.Serializable {
     public void setIdchuyenbay(Integer idchuyenbay) {
         this.idchuyenbay = idchuyenbay;
     }
-    public String getChuyenBay() {
-        return this.chuyenBay;
+    public String getTu() {
+        return this.tu;
     }
     
-    public void setChuyenBay(String chuyenBay) {
-        this.chuyenBay = chuyenBay;
+    public void setTu(String tu) {
+        this.tu = tu;
     }
-    public Date getThoiGian() {
-        return this.thoiGian;
-    }
-    
-    public void setThoiGian(Date thoiGian) {
-        this.thoiGian = thoiGian;
-    }
-    public int getIdloaichuyenbay() {
-        return this.idloaichuyenbay;
+    public String getDen() {
+        return this.den;
     }
     
-    public void setIdloaichuyenbay(int idloaichuyenbay) {
-        this.idloaichuyenbay = idloaichuyenbay;
+    public void setDen(String den) {
+        this.den = den;
+    }
+    public Date getNgayKhoiHanh() {
+        return this.ngayKhoiHanh;
+    }
+    
+    public void setNgayKhoiHanh(Date ngayKhoiHanh) {
+        this.ngayKhoiHanh = ngayKhoiHanh;
+    }
+    public Date getGioCatCanh() {
+        return this.gioCatCanh;
+    }
+    
+    public void setGioCatCanh(Date gioCatCanh) {
+        this.gioCatCanh = gioCatCanh;
+    }
+    public Date getGioHaCanh() {
+        return this.gioHaCanh;
+    }
+    
+    public void setGioHaCanh(Date gioHaCanh) {
+        this.gioHaCanh = gioHaCanh;
+    }
+    public String getLoaiMayBay() {
+        return this.loaiMayBay;
+    }
+    
+    public void setLoaiMayBay(String loaiMayBay) {
+        this.loaiMayBay = loaiMayBay;
+    }
+    public BigDecimal getGiaChuyenBay() {
+        return this.giaChuyenBay;
+    }
+    
+    public void setGiaChuyenBay(BigDecimal giaChuyenBay) {
+        this.giaChuyenBay = giaChuyenBay;
     }
 
 

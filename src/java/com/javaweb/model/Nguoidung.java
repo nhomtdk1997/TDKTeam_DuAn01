@@ -1,5 +1,5 @@
 package com.javaweb.model;
-// Generated Dec 3, 2016 1:09:20 PM by Hibernate Tools 4.3.1
+// Generated Dec 12, 2016 2:00:47 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -24,11 +24,9 @@ public class Nguoidung  implements java.io.Serializable {
     }
 
 	
-    public Nguoidung(String ho, String demVaTen, String sdt, String soCmnd, int quocTich) {
+    public Nguoidung(String ho, String demVaTen, int quocTich) {
         this.ho = ho;
         this.demVaTen = demVaTen;
-        this.sdt = sdt;
-        this.soCmnd = soCmnd;
         this.quocTich = quocTich;
     }
     public Nguoidung(String ho, String demVaTen, Boolean gioiTinh, Date ngaySinh, String diaChi, String sdt, String soCmnd, int quocTich) {

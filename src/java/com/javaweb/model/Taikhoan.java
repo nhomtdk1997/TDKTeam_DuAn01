@@ -1,5 +1,5 @@
 package com.javaweb.model;
-// Generated Dec 3, 2016 1:09:20 PM by Hibernate Tools 4.3.1
+// Generated Dec 12, 2016 2:00:47 PM by Hibernate Tools 4.3.1
 
 
 
@@ -19,6 +19,13 @@ public class Taikhoan  implements java.io.Serializable {
     public Taikhoan() {
     }
 
+	
+    public Taikhoan(int idnguoidung, String tenDangNhap, String matKhau, int idLoaiTk) {
+        this.idnguoidung = idnguoidung;
+        this.tenDangNhap = tenDangNhap;
+        this.matKhau = matKhau;
+        this.idLoaiTk = idLoaiTk;
+    }
     public Taikhoan(int idnguoidung, String tenDangNhap, String email, String matKhau, int idLoaiTk) {
        this.idnguoidung = idnguoidung;
        this.tenDangNhap = tenDangNhap;

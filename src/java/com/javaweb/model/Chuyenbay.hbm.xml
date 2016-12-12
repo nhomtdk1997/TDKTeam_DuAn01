@@ -1,21 +1,33 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Dec 3, 2016 1:09:21 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Dec 12, 2016 2:00:48 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.javaweb.model.Chuyenbay" table="chuyenbay" catalog="db_dailybanve" optimistic-lock="version">
         <id name="idchuyenbay" type="java.lang.Integer">
             <column name="idchuyenbay" />
             <generator class="identity" />
         </id>
-        <property name="chuyenBay" type="string">
-            <column name="ChuyenBay" length="100" not-null="true" />
+        <property name="tu" type="string">
+            <column name="Tu" length="45" not-null="true" />
         </property>
-        <property name="thoiGian" type="timestamp">
-            <column name="ThoiGian" length="19" not-null="true" />
+        <property name="den" type="string">
+            <column name="Den" length="45" not-null="true" />
         </property>
-        <property name="idloaichuyenbay" type="int">
-            <column name="idloaichuyenbay" not-null="true" />
+        <property name="ngayKhoiHanh" type="date">
+            <column name="NgayKhoiHanh" length="10" not-null="true" />
+        </property>
+        <property name="gioCatCanh" type="time">
+            <column name="GioCatCanh" length="8" not-null="true" />
+        </property>
+        <property name="gioHaCanh" type="time">
+            <column name="GioHaCanh" length="8" not-null="true" />
+        </property>
+        <property name="loaiMayBay" type="string">
+            <column name="LoaiMayBay" length="45" not-null="true" />
+        </property>
+        <property name="giaChuyenBay" type="big_decimal">
+            <column name="GiaChuyenBay" precision="8" scale="3" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

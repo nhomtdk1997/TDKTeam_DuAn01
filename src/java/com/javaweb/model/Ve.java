@@ -1,7 +1,8 @@
 package com.javaweb.model;
-// Generated Dec 3, 2016 1:09:20 PM by Hibernate Tools 4.3.1
+// Generated Dec 12, 2016 2:00:47 PM by Hibernate Tools 4.3.1
 
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -12,43 +13,49 @@ public class Ve  implements java.io.Serializable {
 
      private Integer idve;
      private String ho;
-     private String tenDem;
-     private String ten;
+     private String demVaTen;
      private Date ngaySinh;
      private String diaChi;
      private String sdt;
      private String soCmnd;
-     private String quocTich;
+     private String idquoctich;
      private int idchuyenbay;
      private int idloaive;
      private Integer idtaikhoan;
+     private int soNguoiLon;
+     private Integer soTreEm;
+     private Integer soEmBe;
+     private BigDecimal giaVe;
 
     public Ve() {
     }
 
 	
-    public Ve(String ho, String tenDem, String ten, String sdt, String soCmnd, String quocTich, int idchuyenbay, int idloaive) {
+    public Ve(String ho, String demVaTen, String sdt, String soCmnd, String idquoctich, int idchuyenbay, int idloaive, int soNguoiLon) {
         this.ho = ho;
-        this.tenDem = tenDem;
-        this.ten = ten;
+        this.demVaTen = demVaTen;
         this.sdt = sdt;
         this.soCmnd = soCmnd;
-        this.quocTich = quocTich;
+        this.idquoctich = idquoctich;
         this.idchuyenbay = idchuyenbay;
         this.idloaive = idloaive;
+        this.soNguoiLon = soNguoiLon;
     }
-    public Ve(String ho, String tenDem, String ten, Date ngaySinh, String diaChi, String sdt, String soCmnd, String quocTich, int idchuyenbay, int idloaive, Integer idtaikhoan) {
+    public Ve(String ho, String demVaTen, Date ngaySinh, String diaChi, String sdt, String soCmnd, String idquoctich, int idchuyenbay, int idloaive, Integer idtaikhoan, int soNguoiLon, Integer soTreEm, Integer soEmBe, BigDecimal giaVe) {
        this.ho = ho;
-       this.tenDem = tenDem;
-       this.ten = ten;
+       this.demVaTen = demVaTen;
        this.ngaySinh = ngaySinh;
        this.diaChi = diaChi;
        this.sdt = sdt;
        this.soCmnd = soCmnd;
-       this.quocTich = quocTich;
+       this.idquoctich = idquoctich;
        this.idchuyenbay = idchuyenbay;
        this.idloaive = idloaive;
        this.idtaikhoan = idtaikhoan;
+       this.soNguoiLon = soNguoiLon;
+       this.soTreEm = soTreEm;
+       this.soEmBe = soEmBe;
+       this.giaVe = giaVe;
     }
    
     public Integer getIdve() {
@@ -65,19 +72,12 @@ public class Ve  implements java.io.Serializable {
     public void setHo(String ho) {
         this.ho = ho;
     }
-    public String getTenDem() {
-        return this.tenDem;
+    public String getDemVaTen() {
+        return this.demVaTen;
     }
     
-    public void setTenDem(String tenDem) {
-        this.tenDem = tenDem;
-    }
-    public String getTen() {
-        return this.ten;
-    }
-    
-    public void setTen(String ten) {
-        this.ten = ten;
+    public void setDemVaTen(String demVaTen) {
+        this.demVaTen = demVaTen;
     }
     public Date getNgaySinh() {
         return this.ngaySinh;
@@ -107,12 +107,12 @@ public class Ve  implements java.io.Serializable {
     public void setSoCmnd(String soCmnd) {
         this.soCmnd = soCmnd;
     }
-    public String getQuocTich() {
-        return this.quocTich;
+    public String getIdquoctich() {
+        return this.idquoctich;
     }
     
-    public void setQuocTich(String quocTich) {
-        this.quocTich = quocTich;
+    public void setIdquoctich(String idquoctich) {
+        this.idquoctich = idquoctich;
     }
     public int getIdchuyenbay() {
         return this.idchuyenbay;
@@ -134,6 +134,34 @@ public class Ve  implements java.io.Serializable {
     
     public void setIdtaikhoan(Integer idtaikhoan) {
         this.idtaikhoan = idtaikhoan;
+    }
+    public int getSoNguoiLon() {
+        return this.soNguoiLon;
+    }
+    
+    public void setSoNguoiLon(int soNguoiLon) {
+        this.soNguoiLon = soNguoiLon;
+    }
+    public Integer getSoTreEm() {
+        return this.soTreEm;
+    }
+    
+    public void setSoTreEm(Integer soTreEm) {
+        this.soTreEm = soTreEm;
+    }
+    public Integer getSoEmBe() {
+        return this.soEmBe;
+    }
+    
+    public void setSoEmBe(Integer soEmBe) {
+        this.soEmBe = soEmBe;
+    }
+    public BigDecimal getGiaVe() {
+        return this.giaVe;
+    }
+    
+    public void setGiaVe(BigDecimal giaVe) {
+        this.giaVe = giaVe;
     }
 
 
