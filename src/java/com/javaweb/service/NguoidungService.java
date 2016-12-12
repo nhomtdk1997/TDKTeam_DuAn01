@@ -17,7 +17,7 @@ import org.hibernate.Transaction;
  */
 public class NguoidungService {
     
-    //Cap nhat Nguoidung
+    //Cập nhật người dùng
     public boolean InsertNguoidung(Nguoidung nd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = null;
