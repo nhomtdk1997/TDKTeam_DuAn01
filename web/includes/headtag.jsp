@@ -5,40 +5,44 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!--Google Fonts
-        ============================================= -->
+<!--Sweetalert ===============================================-->
+<!--Sweetalert.min-->
+<script src="js/sweetalert.min.js" type="text/javascript"></script>
+<!--Sweetalert-->
+<link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
+
+<!--Google Fonts ============================================= -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 
-<!--
-CSS
-============================================= -->
+<!--CSS ============================================= -->
+<link href="css/Styles.css" rel="stylesheet" type="text/css"/>
 <!-- Fontawesome -->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <!-- Fancybox -->
-<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
 <!-- owl carousel -->
-<link rel="stylesheet" href="css/owl.carousel.css">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
 <!-- Animate -->
-<link rel="stylesheet" href="css/animate.css">
+<link href="css/animate.css" rel="stylesheet" type="text/css"/>
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="css/main.css">
+<link href="css/main.css" rel="stylesheet" type="text/css"/>
 <!-- Main Responsive -->
-<link rel="stylesheet" href="css/responsive.css">
-
+<link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
 <!-- Modernizer Script for old Browsers -->
 <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
-<!--
-JavaScripts
-========================== -->
 
-<!-- main jQuery -->
+<!--JavaScripts ========================== -->
+<!-- main jquery -->
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
+<!-- jquery.min-->
+<script src="js/jquery.min.js" type="text/javascript"></script>
 <!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
 <!-- jquery.nav -->
 <script src="js/jquery.nav.js"></script>
 <!-- Portfolio Filtering -->

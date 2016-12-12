@@ -50,16 +50,16 @@ Fixed Navigation
                         <li><a href="Logout.jsp">Đăng xuất</a></li>
                     </ul>
                 </li>
-                    <%
-                    } else {
-                    %>
+                <%
+                } else {
+                %>
                 <li class="current"><a href="#home">Home</a></li>
                 <li><a href="#datve">Đặt vé</a></li>
                 <li><a href="#khuyenmai">Khuyến mãi</a></li>
                 <li><a href="#tintuc">Tin tức</a></li>
                 <li><a href="#service">Điều khoản</a></li>
                 <li><a href="#contact">Phản hồi</a></li>
-                <li><a href="Login.jsp">Đăng Nhập</a></li>
+                <li><a href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a></li>
                     <%
                         }
                     %>
