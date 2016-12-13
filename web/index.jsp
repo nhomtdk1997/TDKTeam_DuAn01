@@ -33,24 +33,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Đặt vé</h2>
+                        <h2>Tìm vé</h2>
                         <p>Tìm chuyến bay</p>
                     </div>
                 </div>
             </div>
             <div class="row timvemotchang">
                 <form action="TimChuyenBayServlet" method="post">
-                    <div class="form-group col-md-12 modal-content">
+                    <div class="form-group col-md-12 modal-content formdatve">
                         <div class="modal-header">
                             <h4 class="modal-title" id="myModalLabel">Tìm vé một chặng</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row tu-den col-md-4">
-                                <span id="idghichu">Từ<span class="required">*</span></span>
+                                <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="form-group">
-                                            <select name="Tu-vemotchang" class="selectpicker form-control">
+                                            <select name="Tu-vemotchang" class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn điểm khởi hành -- </option>
                                                 <optgroup label="Miền Bắc">
                                                     <option>Hà Nội</option>
                                                     <option>Hải Phòng</option>
@@ -83,11 +84,12 @@
                                     </div>
                                 </div>
 
-                                <span id="idghichu">Đến<span class="required">*</span></span>
+                                <span id="idghichu">Điểm đến<span class="required">*</span></span>
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="form-group">
-                                            <select name="Den-vemotchang" class="selectpicker form-control">
+                                            <select name="Den-vemotchang" class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn điểm đến -- </option>
                                                 <optgroup label="Miền Bắc">
                                                     <option>Hà Nội</option>
                                                     <option>Hải Phòng</option>
@@ -126,7 +128,7 @@
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="form-group">
-                                            <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control">
+                                            <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +139,8 @@
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="form-group">
-                                            <select class="selectpicker form-control">
+                                            <select class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn số người -- </option>
                                                 <option>1 người</option>
                                                 <option>2 người</option>
                                                 <option>3 người</option>
@@ -173,7 +176,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-blue col-md-12" style="margin-top: 20px;">Tìm vé</button>
+                        <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
                     </div>
                 </form>
             </div>
@@ -467,9 +470,9 @@
                             <img src="img/icons/vanchuyen.png" alt="VanChuyen">
                         </a>
                         <div class="media-body">
-                            <h3>Điều kiện vận chuyển</h3>
+                            <h3>Điều kiện vận chuyển</h3><br>
                             <p>Như mọi hãng hàng không khác, TDK Team áp dụng một số điều kiện vận 
-                                chuyển để bảo đảm an toàn và tiện ích cho hành khách trên các chuyến bay.</p>
+                                chuyển để bảo đảm an toàn và tiện ích cho hành khách trên các chuyến bay.</p><br>
                         </div>
                     </div>
 

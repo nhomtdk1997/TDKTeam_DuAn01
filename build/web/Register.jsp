@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Page</title>
         <%@include file="includes/headtag.jsp" %>
+        <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
         <%@include file="includes/header.jsp" %>
@@ -198,7 +199,7 @@
                                     <div class="move-top">
                                         <div class="col-xs-12 col-md-8 padding10">
                                             <div class="move-top">
-                                                <select name="quoctich">
+                                                <select name="quoctich" class="form-control">
                                                     <option hidden="" value="0"></option>
                                                     <option value="1">AFGHANISTAN</option><option value="2">ALBANIA</option><option value="3">ALGERIA</option><option value="4">AMERICAN SAMOA</option>
                                                     <option value="5">ANDORRA</option><option value="6">ANGOLA</option><option value="7">ANGUILLA</option><option value="8">ANTARTICA</option>

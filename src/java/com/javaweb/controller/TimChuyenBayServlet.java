@@ -5,7 +5,6 @@
  */
 package com.javaweb.controller;
 
-import com.javaweb.model.Chuyenbay;
 import com.javaweb.service.ChuyenbayService;
 import java.io.IOException;
 import java.text.ParseException;
@@ -35,16 +34,6 @@ public class TimChuyenBayServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        String Tu, Den, Ngaykhoihanh;
-
-        Tu = request.getParameter("Tu-vemotchang");
-        Den = request.getParameter("Den-vemotchang");
-        Ngaykhoihanh = request.getParameter("Ngaykhoihanh-motchang");
-
-        ChuyenbayService chuyenbayservice = new ChuyenbayService();
-        chuyenbayservice.SearchChuyenbay(Tu, Den, Ngaykhoihanh);
-        
-        
         String url = "/TimVe.jsp";
         getServletContext().getRequestDispatcher(url).forward(request, response);
 

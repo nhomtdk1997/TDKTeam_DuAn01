@@ -65,7 +65,7 @@
                             <td><%= chuyenbay.getLoaiMayBay()%></td>
                             <td><%= chuyenbay.getGiaChuyenBay()%></td>
                             <td style="width: 47px;">
-                                <a href="DatVe.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" name="DatVe" value="Đặt" /> </a>
+                                <a href="DatVe.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" name="DatVe" value="Đặt" /></a>
                             </td>
                         </tr>
                         <%

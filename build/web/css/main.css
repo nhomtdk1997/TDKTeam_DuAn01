@@ -6,8 +6,6 @@
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1;
-	font-size: 13px;
     color: #a8a8a8;
 }
 
@@ -108,7 +106,6 @@ width: 11px;
 .section-title p {
     line-height: 25px;
     font-weight: 300;
-    font-size: 13px;
 }
 
 .btn {
@@ -341,7 +338,6 @@ width: 11px;
 
 #service .media .media-body p{
     color: #A8A8A8;
-    font-size: 13px;
     line-height: 24px;
 }
 

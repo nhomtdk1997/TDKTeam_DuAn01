@@ -369,3 +369,14 @@ td.text-right {
 .modal-content .modal-header-fix{
     margin-top: 50px;
 }
+
+/*
+    From đặt vé trang index
+*/
+.btndatve
+{
+    margin-top: 20px;
+}
+.container .timvemotchang .formdatve{
+    border-radius: inherit;
+}
