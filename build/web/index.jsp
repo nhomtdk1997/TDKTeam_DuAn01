@@ -45,10 +45,10 @@
                             <h4 class="modal-title" id="myModalLabel">Tìm vé một chặng</h4>
                         </div>
                         <div class="modal-body">
-                            <div class="row tu-den col-md-4">
-                                <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
+                            <div class="row tu-den col-md-6">
                                 <div class="row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
                                         <div class="form-group">
                                             <select name="Tu-vemotchang" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm khởi hành -- </option>
@@ -84,9 +84,9 @@
                                     </div>
                                 </div>
 
-                                <span id="idghichu">Điểm đến<span class="required">*</span></span>
                                 <div class="row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <span id="idghichu">Điểm đến<span class="required">*</span></span>
                                         <div class="form-group">
                                             <select name="Den-vemotchang" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm đến -- </option>
@@ -123,10 +123,10 @@
                                 </div>
                             </div>
 
-                            <div class="row ngay-di-ve col-md-4">
-                                <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
+                            <div class="row ngay-di-ve col-md-6">
                                 <div class="row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-md-offset-2">
+                                        <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
                                         <div class="form-group">
                                             <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control" required="">
                                         </div>
@@ -134,47 +134,6 @@
                                 </div>
                             </div>
 
-                            <div class="row col-md-4 soluonghk">
-                                <span>Người lớn (>12 tuổi)<span class="required">*</span></span>
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <div class="form-group">
-                                            <select class="selectpicker form-control" required="">
-                                                <option disabled selected value> -- Chọn số người -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
-                                                <option>4 người</option>
-                                                <option>5 người</option>
-                                                <option>6 người</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span>Trẻ em (2<12 tuổi)<span class="required">*</span></span>
-                                            <select class="selectpicker form-control">
-                                                <option>0 người</option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span>Trẻ em (<2 tuổi)<span class="required">*</span></span>
-                                            <select class="selectpicker form-control">
-                                                <option>0 người</option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
                     </div>

@@ -20,7 +20,8 @@
         <%@include file="includes/header.jsp" %>
         <%@include file="includes/slider.jsp" %>
 
-        <%            ChuyenbayService cb = new ChuyenbayService();
+        <%            
+            ChuyenbayService cb = new ChuyenbayService();
             ArrayList<Chuyenbay> listChuyenbay = null;
 
             String Tu, Den, Ngaykhoihanh;
@@ -48,7 +49,7 @@
                         <tr>
                             <th>STT</th>                        
                             <th>Điểm khởi hành</th>                        
-                            <th>Điểm dừng</th>                                               
+                            <th>Điểm đến</th>                                               
                             <th>Ngày khởi hành</th>                                               
                             <th>Giờ cất cánh</th>                       
                             <th>Giời hạ cánh</th>

@@ -4,6 +4,8 @@
     Author     : DuongNguyen
 --%>
 
+<%@page import="com.javaweb.model.Chuyenbay"%>
+<%@page import="com.javaweb.service.ChuyenbayService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +17,12 @@
     <body>
         <%@include file="includes/header.jsp" %>
         <%@include file="includes/slider.jsp" %>
+
+        <%            ChuyenbayService cbservice = new ChuyenbayService();
+            Chuyenbay chuyenbay = null;
+            String idChuyenbay = request.getParameter("idChuyenbay");
+            chuyenbay = cbservice.GetChuyenbayById(idChuyenbay);
+        %>
 
         <section id="datve">
             <div class="container">
@@ -30,125 +38,77 @@
                     <form action="#" method="post">
                         <div class="form-group col-md-12 modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel">Chuyến bay</h4>
+                                <h4 class="modal-title" id="myModalLabel">Thông tin chuyến bay</h4>
                             </div>
                             <div class="modal-body">
-                                <div class="row col-md-4">
-                                    <span id="idghichu">Từ<span class="required">*</span></span>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="form-group">
-                                                <select name="Tu-vemotchang" class="selectpicker form-control" disabled>
-                                                    <optgroup label="Miền Bắc">
-                                                        <option>Hà Nội</option>
-                                                        <option>Hải Phòng</option>
-                                                        <option>Điện Biên</option>
-                                                        <option>Đồng Hới</option>
-                                                    </optgroup>
-                                                    <optgroup label="Miền Trung">
-                                                        <option>Buôn Mê Thuột</option>
-                                                        <option>Chu Lai</option>
-                                                        <option>Huế</option>
-                                                        <option>Pleiku</option>
-                                                        <option>Quy Nhơn</option>
-                                                        <option>Thanh Hóa</option>
-                                                        <option>TP. Vinh</option>
-                                                        <option>Tuy Hòa</option>
-                                                        <option>Đà Nẵng</option>
-                                                    </optgroup>
-                                                    <optgroup label="Miền Nam">
-                                                        <option>Đà Lạt</option>
-                                                        <option>Cà Mau</option>
-                                                        <option>Côn Đảo</option>
-                                                        <option>Cần Thơ</option>
-                                                        <option>Nha Trang</option>
-                                                        <option>Phú Quốc</option>
-                                                        <option>Rạch Giá</option>
-                                                        <option>TP. Hồ Chí Minh</option>
-                                                    </optgroup>
-                                                </select>
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
+                                        <span id="idghichu">Điểm khởi hành</span>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="diemkhoihanh" value="<%= chuyenbay.getTu()%>" required="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span id="idghichu">Điểm đến</span>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="diemden" value="<%= chuyenbay.getDen()%>" required="" disabled="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <span id="idghichu">Đến<span class="required">*</span></span>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="form-group">
-                                                <select name="Den-vemotchang" class="selectpicker form-control" disabled>
-                                                    <optgroup label="Miền Bắc">
-                                                        <option>Hà Nội</option>
-                                                        <option>Hải Phòng</option>
-                                                        <option>Điện Biên</option>
-                                                        <option>Đồng Hới</option>
-                                                    </optgroup>
-                                                    <optgroup label="Miền Trung">
-                                                        <option>Buôn Mê Thuột</option>
-                                                        <option>Chu Lai</option>
-                                                        <option>Huế</option>
-                                                        <option>Pleiku</option>
-                                                        <option>Quy Nhơn</option>
-                                                        <option>Thanh Hóa</option>
-                                                        <option>TP. Vinh</option>
-                                                        <option>Tuy Hòa</option>
-                                                        <option>Đà Nẵng</option>
-                                                    </optgroup>
-                                                    <optgroup label="Miền Nam">
-                                                        <option>Đà Lạt</option>
-                                                        <option>Cà Mau</option>
-                                                        <option>Côn Đảo</option>
-                                                        <option>Cần Thơ</option>
-                                                        <option>Nha Trang</option>
-                                                        <option>Phú Quốc</option>
-                                                        <option>Rạch Giá</option>
-                                                        <option>TP. Hồ Chí Minh</option>
-                                                    </optgroup>
-                                                </select>
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
+                                        <span id="idghichu">Ngày khởi hành</span>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input name="ngaykhoihanh" type="date" class="ngaydi form-control" value="<%= chuyenbay.getNgayKhoiHanh()%>" disabled>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row ngay-di-ve col-md-4">
-                                    <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="form-group">
-                                                <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control" disabled>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="modal-header modal-header-fix">
-                                <h4 class="modal-title" id="myModalLabel">Số người</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
-                                        <span>Người lớn (>12 tuổi)<span class="required">*</span></span>
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
+                                        <span>Người lớn (>12 tuổi)<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <select class="selectpicker form-control">
+                                            <select name="songuoilon" class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn số người lớn -- </option>
                                                 <option>1 người</option>
                                                 <option>2 người</option>
                                                 <option>3 người</option>
                                                 <option>4 người</option>
                                                 <option>5 người</option>
-                                                <option>6 người</option>
                                             </select>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>Trẻ em (2<12 tuổi)<span class="required">*</span></span>
-                                            <select class="selectpicker form-control">
-                                                <option>0 người</option>
+                                            <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
+                                            <select name="songuoilon" class="selectpicker form-control">
+                                                <option disabled selected value> -- Số trẻ em -- </option>
+                                                <option>1 người</option>
+                                                <option>2 người</option>
+                                                <option>3 người</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
+                                            <select name="songuoilon" class="selectpicker form-control">
+                                                <option disabled selected value> -- Số em bé -- </option>
                                                 <option>1 người</option>
                                                 <option>2 người</option>
                                             </select>
@@ -156,28 +116,16 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
-                                        <div class="form-group">
-                                            <span>Trẻ em (<2 tuổi)<span class="required">*</span></span>
-                                            <select class="selectpicker form-control">
-                                                <option>0 người</option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="modal-header modal-header-fix">
                                 <h4 class="modal-title" id="myModalLabel">Thông tin khách hàng</h4>
                             </div>
                             <div class="modal-body">
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Họ<span class="required">*</span></span>
+                                            <span>Họ<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="ho" placeholder="Điền Họ" required="">
                                             </div>
@@ -185,10 +133,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Đệm và Tên<span class="required">*</span></span>
+                                            <span>Đệm và Tên<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="demvaten" placeholder="Điền Đệm và Tên" required="">
                                             </div>
@@ -196,10 +144,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Ngày sinh<span class="required">*</span></span>
+                                            <span>Ngày sinh<span class="required"> *</span></span>
                                             <div class="form-group">
                                                 <input name="ngaysinh" type="date" class="form-control">
                                             </div>
@@ -207,10 +155,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Địa chỉ<span class="required">*</span></span>
+                                            <span>Địa chỉ<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="diachi" placeholder="Điền địa chỉ" required="">
                                             </div>
@@ -218,10 +166,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Số điện thoại<span class="required">*</span></span>
+                                            <span>Số điện thoại<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="sdt" placeholder="Điền số điện thoại" required="">
                                             </div>
@@ -229,10 +177,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Số chứng minh thư<span class="required">*</span></span>
+                                            <span>Số chứng minh thư<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="cmnd" placeholder="Điền số chứng minh thư" required="">
                                             </div>
@@ -240,10 +188,10 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <span>Quốc tịch<span class="required">*</span></span>
+                                            <span>Quốc tịch<span class="required"> *</span></span>
                                             <select class="form-control" name="quoctich">
                                                 <option hidden="" value="0"></option>
                                                 <option value="1">AFGHANISTAN</option><option value="2">ALBANIA</option><option value="3">ALGERIA</option><option value="4">AMERICAN SAMOA</option>
@@ -318,33 +266,27 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-8">
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                <div class="col-md-8">
+                                    <div class="col-md-4">
                                         <div class="form-group">
-                                            <span>ID Chuyến bay<span class="required">*</span></span>
+                                            <span>ID Chuyến bay<span class="required"> *</span></span>
                                             <div class="input-field">
-                                                <input type="text" class="form-control" name="idchuyenbay" disabled="" required="">
+                                                <input type="text" class="form-control" name="idchuyenbay" disabled="" required="" value="<%= chuyenbay.getIdchuyenbay()%>">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                    <div class="col-md-4">
                                         <div class="form-group">
-                                            <span>ID Loại vé<span class="required">*</span></span>
+                                            <span>ID Loại vé<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="idloaive" disabled="" required="">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row col-md-4">
-                                    <div class="row col-md-11">
+                                    <div class="col-md-4">
                                         <div class="form-group">
-                                            <span>ID Tài khoản<span class="required">*</span></span>
+                                            <span>ID Tài khoản<span class="required"> *</span></span>
                                             <div class="input-field">
                                                 <input type="text" class="form-control" name="idtaikhoan" disabled="" required="">
                                             </div>
@@ -353,7 +295,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-blue col-md-12" style="margin-top: 20px;">Đặt vé</button>
+                            <button type="submit" class="btndatve btn btn-blue col-md-12" >Đặt vé</button>
                         </div>
                     </form>
                 </div>
