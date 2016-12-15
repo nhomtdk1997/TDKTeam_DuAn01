@@ -34,7 +34,7 @@ Fixed Navigation
         <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <%
-                    if (session.getAttribute("youruser") != null) {
+                    if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
                 %>
                 <li><a href="index.jsp">Home</a></li>
                 <li><a href="#timve">Tìm vé</a></li>
@@ -46,6 +46,7 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="#">Thông tin tài khoản</a></li>
                         <li><a href="Logout.jsp">Đăng xuất</a></li>
                     </ul>

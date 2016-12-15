@@ -91,7 +91,7 @@
                                 <td><%= chuyenbaydi.getLoaiMayBay()%></td>
                                 <td><%= chuyenbaydi.getGiaChuyenBay()%></td>
                                 <td style="width: 47px;">
-                                    <input name="Vedi" type="checkbox" value="<%= chuyenbaydi.getIdchuyenbay()%>">
+                                    <input name="Vedi" type="radio" required="" value="<%= chuyenbaydi.getIdchuyenbay()%>">
                                 </td>
                             </tr>
                             <%
@@ -148,7 +148,7 @@
                                 <td><%= chuyenbayve.getLoaiMayBay()%></td>
                                 <td><%= chuyenbayve.getGiaChuyenBay()%></td>
                                 <td style="width: 47px;">
-                                    <input name="Veve" type="checkbox" value="<%= chuyenbayve.getIdchuyenbay()%>">
+                                    <input name="Veve" type="radio" required="" value="<%= chuyenbayve.getIdchuyenbay()%>">
                                 </td>
                             </tr>
                             <%
