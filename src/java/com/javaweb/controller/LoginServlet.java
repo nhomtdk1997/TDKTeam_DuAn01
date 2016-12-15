@@ -55,6 +55,13 @@ public class LoginServlet extends HttpServlet {
             Taikhoan taikhoan = tk.GetUserByEmailOrUserName(username);
             Nguoidung nguoidung = ndsv.GetUserByIdTaikhoan(taikhoan.getIdTaiKhoan());
             session.setAttribute("youruser", nguoidung.getHo() + " " + nguoidung.getDemVaTen());
+            session.setAttribute("iduser", taikhoan.getIdTaiKhoan());
+            session.setAttribute("HoNguoidung", nguoidung.getHo());
+            session.setAttribute("DemvatenNguoidung", nguoidung.getDemVaTen());
+            session.setAttribute("DiachiNguoidung", nguoidung.getDiaChi());
+            session.setAttribute("NgaysinhNguoidung", nguoidung.getNgaySinh());
+            session.setAttribute("SDTNguoidung", nguoidung.getSdt());
+            session.setAttribute("CMNDNguoidung", nguoidung.getSoCmnd());
             try {
                 Thread.sleep(1000);
                 String url = "/index.jsp";
