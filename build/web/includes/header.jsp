@@ -37,7 +37,7 @@ Fixed Navigation
                     if (session.getAttribute("youruser") != null) {
                 %>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="#datve">Đặt vé</a></li>
+                <li><a href="#timve">Tìm vé</a></li>
                 <li><a href="#khuyenmai">Khuyến mãi</a></li>
                 <li><a href="#tintuc">Tin tức</a></li>
                 <li><a href="#service">Điều khoản</a></li>
@@ -54,7 +54,7 @@ Fixed Navigation
                 } else {
                 %>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="#datve">Đặt vé</a></li>
+                <li><a href="#timve">Tìm vé</a></li>
                 <li><a href="#khuyenmai">Khuyến mãi</a></li>
                 <li><a href="#tintuc">Tin tức</a></li>
                 <li><a href="#service">Điều khoản</a></li>

@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Vé</title>
+        <title>Tìm vé một chặng</title>
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/popuplogin.jsp" %>
     </head>
@@ -63,7 +63,7 @@
                             if (listChuyenbay.size() <= 0) {
                         %>
                         <tr>
-                            <td colspan="9">Ngày bạn chọn đã hết chỗ hoặc không có chuyến bay - Vui lòng chọn ngày khác!</td>
+                            <td colspan="9">Chuyến bay ngày bạn chọn đã hết hoặc không có - <a href="index.jsp">Vui lòng chọn ngày khác!</a></td>
                         </tr>
                         <%
                         } else {
@@ -80,7 +80,7 @@
                         <td><%= chuyenbay.getLoaiMayBay()%></td>
                         <td><%= chuyenbay.getGiaChuyenBay()%></td>
                         <td style="width: 47px;">
-                            <a href="DatVe.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" name="DatVe" value="Đặt" /></a>
+                            <a href="DatVeMotChieu.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" name="DatVe" value="Đặt" /></a>
                         </td>
                     </tr>
                     <%

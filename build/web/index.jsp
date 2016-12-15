@@ -26,9 +26,9 @@
     <%@include file="includes/slider.jsp" %>
 
     <!--
-    #datve
+    #timve
     ========================== -->
-    <section id="datve">
+    <section id="timve">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -38,12 +38,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row timvemotchang">
-                <form action="TimChuyenBayServlet" method="post">
-                    <div class="form-group col-md-12 modal-content formdatve">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Tìm vé một chặng</h4>
-                        </div>
+            <div class="row timve-index">
+
+                <div class="form-group col-md-12 modal-content formdatve">
+                    <div class="loaiveindex modal-header">
+                        <ul class="nav nav-loaiveindex">
+                            <li id="li-vemotchang" class="active loaive-index"><a href="#timve" id="vemotchieu" onclick="vemotchang()">Một chiều</a></li>
+                            <li id="li-vekhuahoi" class="loaive-index"><a href="#timve" id="vekhuahoi" onclick="vekhuahoi()">Khứa hồi</a></li>
+                        </ul>
+                    </div>
+                    <form id="form-vemotchangindex" action="TimChuyenBayMotChangServlet" method="post">
                         <div class="modal-body">
                             <div class="row tu-den col-md-6">
                                 <div class="row">
@@ -133,16 +137,122 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
-                    </div>
-                </form>
+                    </form>
+                    
+                    <form id="form-vekhuahoiindex" action="TimChuyenBayKhuaHoiServlet" method="post" style="display: none;">
+                        <div class="modal-body">
+                            <div class="row tu-den col-md-6">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
+                                        <div class="form-group">
+                                            <select name="Tu-vekhuahoi" class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn điểm khởi hành -- </option>
+                                                <optgroup label="Miền Bắc">
+                                                    <option>Hà Nội</option>
+                                                    <option>Hải Phòng</option>
+                                                    <option>Điện Biên</option>
+                                                    <option>Đồng Hới</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Trung">
+                                                    <option>Buôn Mê Thuột</option>
+                                                    <option>Chu Lai</option>
+                                                    <option>Huế</option>
+                                                    <option>Pleiku</option>
+                                                    <option>Quy Nhơn</option>
+                                                    <option>Thanh Hóa</option>
+                                                    <option>TP. Vinh</option>
+                                                    <option>Tuy Hòa</option>
+                                                    <option>Đà Nẵng</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Nam">
+                                                    <option>Đà Lạt</option>
+                                                    <option>Cà Mau</option>
+                                                    <option>Côn Đảo</option>
+                                                    <option>Cần Thơ</option>
+                                                    <option>Nha Trang</option>
+                                                    <option>Phú Quốc</option>
+                                                    <option>Rạch Giá</option>
+                                                    <option>TP. Hồ Chí Minh</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <span id="idghichu">Điểm đến<span class="required">*</span></span>
+                                        <div class="form-group">
+                                            <select name="Den-vekhuahoi" class="selectpicker form-control" required="">
+                                                <option disabled selected value> -- Chọn điểm đến -- </option>
+                                                <optgroup label="Miền Bắc">
+                                                    <option>Hà Nội</option>
+                                                    <option>Hải Phòng</option>
+                                                    <option>Điện Biên</option>
+                                                    <option>Đồng Hới</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Trung">
+                                                    <option>Buôn Mê Thuột</option>
+                                                    <option>Chu Lai</option>
+                                                    <option>Huế</option>
+                                                    <option>Pleiku</option>
+                                                    <option>Quy Nhơn</option>
+                                                    <option>Thanh Hóa</option>
+                                                    <option>TP. Vinh</option>
+                                                    <option>Tuy Hòa</option>
+                                                    <option>Đà Nẵng</option>
+                                                </optgroup>
+                                                <optgroup label="Miền Nam">
+                                                    <option>Đà Lạt</option>
+                                                    <option>Cà Mau</option>
+                                                    <option>Côn Đảo</option>
+                                                    <option>Cần Thơ</option>
+                                                    <option>Nha Trang</option>
+                                                    <option>Phú Quốc</option>
+                                                    <option>Rạch Giá</option>
+                                                    <option>TP. Hồ Chí Minh</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ngay-di-ve col-md-6">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-2">
+                                        <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
+                                        <div class="form-group">
+                                            <input name="Ngaykhoihanh-khuahoi" type="date" class="ngaydi form-control" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-2">
+                                        <span id="idghichu">Ngày quay về<span class="required">*</span></span>
+                                        <div class="form-group">
+                                            <input name="Ngayquayve-khuahoi" type="date" class="ngaydi form-control" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
+                    </form>
+                    
+                    
+                </div>
+
             </div>
+            
         </div>
     </section>
     <!--
-    End #datve
+    End #timve
     ========================== -->
 
     <!--
