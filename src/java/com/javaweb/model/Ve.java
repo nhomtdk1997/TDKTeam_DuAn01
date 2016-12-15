@@ -1,5 +1,5 @@
 package com.javaweb.model;
-// Generated Dec 12, 2016 2:00:47 PM by Hibernate Tools 4.3.1
+// Generated Dec 15, 2016 5:22:22 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -20,7 +20,6 @@ public class Ve  implements java.io.Serializable {
      private String soCmnd;
      private String idquoctich;
      private int idchuyenbay;
-     private int idloaive;
      private Integer idtaikhoan;
      private int soNguoiLon;
      private Integer soTreEm;
@@ -31,17 +30,16 @@ public class Ve  implements java.io.Serializable {
     }
 
 	
-    public Ve(String ho, String demVaTen, String sdt, String soCmnd, String idquoctich, int idchuyenbay, int idloaive, int soNguoiLon) {
+    public Ve(String ho, String demVaTen, String sdt, String soCmnd, String idquoctich, int idchuyenbay, int soNguoiLon) {
         this.ho = ho;
         this.demVaTen = demVaTen;
         this.sdt = sdt;
         this.soCmnd = soCmnd;
         this.idquoctich = idquoctich;
         this.idchuyenbay = idchuyenbay;
-        this.idloaive = idloaive;
         this.soNguoiLon = soNguoiLon;
     }
-    public Ve(String ho, String demVaTen, Date ngaySinh, String diaChi, String sdt, String soCmnd, String idquoctich, int idchuyenbay, int idloaive, Integer idtaikhoan, int soNguoiLon, Integer soTreEm, Integer soEmBe, BigDecimal giaVe) {
+    public Ve(String ho, String demVaTen, Date ngaySinh, String diaChi, String sdt, String soCmnd, String idquoctich, int idchuyenbay, Integer idtaikhoan, int soNguoiLon, Integer soTreEm, Integer soEmBe, BigDecimal giaVe) {
        this.ho = ho;
        this.demVaTen = demVaTen;
        this.ngaySinh = ngaySinh;
@@ -50,7 +48,6 @@ public class Ve  implements java.io.Serializable {
        this.soCmnd = soCmnd;
        this.idquoctich = idquoctich;
        this.idchuyenbay = idchuyenbay;
-       this.idloaive = idloaive;
        this.idtaikhoan = idtaikhoan;
        this.soNguoiLon = soNguoiLon;
        this.soTreEm = soTreEm;
@@ -120,13 +117,6 @@ public class Ve  implements java.io.Serializable {
     
     public void setIdchuyenbay(int idchuyenbay) {
         this.idchuyenbay = idchuyenbay;
-    }
-    public int getIdloaive() {
-        return this.idloaive;
-    }
-    
-    public void setIdloaive(int idloaive) {
-        this.idloaive = idloaive;
     }
     public Integer getIdtaikhoan() {
         return this.idtaikhoan;

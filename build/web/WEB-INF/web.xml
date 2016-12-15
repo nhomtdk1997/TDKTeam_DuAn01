@@ -13,8 +13,16 @@
         <servlet-class>com.javaweb.controller.ThemTinTucServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>TimChuyenBayServlet</servlet-name>
-        <servlet-class>com.javaweb.controller.TimChuyenBayServlet</servlet-class>
+        <servlet-name>TimChuyenBayMotChangServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.TimChuyenBayMotChangServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TimChuyenBayKhuaHoiServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.TimChuyenBayKhuaHoiServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChonChuyenBayServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.ChonChuyenBayServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -29,8 +37,16 @@
         <url-pattern>/ThemTinTucServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>TimChuyenBayServlet</servlet-name>
-        <url-pattern>/TimChuyenBayServlet</url-pattern>
+        <servlet-name>TimChuyenBayMotChangServlet</servlet-name>
+        <url-pattern>/TimChuyenBayMotChangServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimChuyenBayKhuaHoiServlet</servlet-name>
+        <url-pattern>/TimChuyenBayKhuaHoiServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChonChuyenBayServlet</servlet-name>
+        <url-pattern>/ChonChuyenBayServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

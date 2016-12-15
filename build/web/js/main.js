@@ -1,22 +1,22 @@
 /* ========================================================================= */
 /*  Preloader Script
-/* =========================================================================
+ /* =========================================================================
+ 
+ window.onload = function () {
+ document.getElementById('loading-mask').style.display = 'none';
+ } */
 
-window.onload = function () {
-    document.getElementById('loading-mask').style.display = 'none';
-} */
-
-$(function(){
+$(function () {
     /* ========================================================================= */
     /*  Menu item highlighting
-    /* ========================================================================= */
+     /* ========================================================================= */
 
     jQuery(window).scroll(function () {
         if (jQuery(window).scrollTop() > 400) {
-            jQuery("#navigation").css("background-color","#00C7FC");
+            jQuery("#navigation").css("background-color", "#00C7FC");
             jQuery("#navigation").addClass("animated-nav");
         } else {
-            jQuery("#navigation").css("background-color","transparent");
+            jQuery("#navigation").css("background-color", "transparent");
             jQuery("#navigation").removeClass("animated-nav");
         }
     });
@@ -29,10 +29,11 @@ $(function(){
 
     // Slider Height
     var slideHeight = $(window).height();
-    $('#home-carousel .carousel-inner .item, #home-carousel .video-container').css('height',slideHeight);
+    $('#home-carousel .carousel-inner .item, #home-carousel .video-container').css('height', slideHeight);
 
-    $(window).resize(function(){'use strict',
-        $('#home-carousel .carousel-inner .item, #home-carousel .video-container').css('height',slideHeight);
+    $(window).resize(function () {
+        'use strict',
+                $('#home-carousel .carousel-inner .item, #home-carousel .video-container').css('height', slideHeight);
     });
 
     // portfolio filtering
@@ -44,17 +45,17 @@ $(function(){
     $(".fancybox").fancybox({
         padding: 0,
 
-        openEffect : 'elastic',
-        openSpeed  : 650,
+        openEffect: 'elastic',
+        openSpeed: 650,
 
-        closeEffect : 'elastic',
-        closeSpeed  : 550,
+        closeEffect: 'elastic',
+        closeSpeed: 550,
     });
 
 
     /* ========================================================================= */
     /*  Facts count
-    /* ========================================================================= */
+     /* ========================================================================= */
 
     "use strict";
     $(".fact-item").appear(function () {
@@ -69,54 +70,73 @@ $(function(){
         })
     });
 
-/* ========================================================================= */
-/*  On scroll fade/bounce fffect
-/* ========================================================================= */
+    /* ========================================================================= */
+    /*  On scroll fade/bounce fffect
+     /* ========================================================================= */
 
     $("#testimonial").owlCarousel({
-        pagination : true, // Show bullet pagination
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
+        pagination: true, // Show bullet pagination
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true
     });
 
 });
 
 /* ========================================================================= */
 /*  On scroll fade/bounce fffect
-/* ========================================================================= */
+ /* ========================================================================= */
 
-    wow = new WOW({
-        animateClass: 'animated',
-        offset: 100,
-        mobile: false
-    });
-    wow.init();
+wow = new WOW({
+    animateClass: 'animated',
+    offset: 100,
+    mobile: false
+});
+wow.init();
 
 /* ---------------------------------------------------------------------- */
 /*      Progress Bars
-/* ---------------------------------------------------------------------- */
+ /* ---------------------------------------------------------------------- */
 
 initProgress('.progress');
 
-function initProgress(el){
-    jQuery(el).each(function(){
+function initProgress(el) {
+    jQuery(el).each(function () {
         var pData = jQuery(this).data('progress');
-        progress(pData,jQuery(this));
+        progress(pData, jQuery(this));
     });
 }
 
 
-            
+
 function progress(percent, $element) {
     var progressBarWidth = 0;
-    
-    (function myLoop (i,max) {
+
+    (function myLoop(i, max) {
         progressBarWidth = i * $element.width() / 100;
-        setTimeout(function () {   
-        $element.find('div').find('small').html(i+'%');
-        $element.find('div').width(progressBarWidth);
-        if (++i<=max) myLoop(i,max);     
+        setTimeout(function () {
+            $element.find('div').find('small').html(i + '%');
+            $element.find('div').width(progressBarWidth);
+            if (++i <= max)
+                myLoop(i, max);
         }, 10)
-    })(0,percent);  
-}   
+    })(0, percent);
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*      Đặt vé
+ /* ---------------------------------------------------------------------- */
+function vekhuahoi() {
+    document.getElementById('li-vekhuahoi').className = "active loaive-index";
+    document.getElementById('li-vemotchang').className = "loaive-index";
+    document.getElementById('form-vemotchangindex').style.display = 'none';
+    document.getElementById('form-vekhuahoiindex').style.display = '';
+}
+
+function vemotchang() {
+    document.getElementById('li-vekhuahoi').className = "loaive-index";
+    document.getElementById('li-vemotchang').className = "active loaive-index";
+    document.getElementById('form-vemotchangindex').style.display = '';
+    document.getElementById('form-vekhuahoiindex').style.display = 'none';
+}

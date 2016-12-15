@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Dec 12, 2016 2:00:48 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Dec 15, 2016 5:22:23 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.javaweb.model.Ve" table="ve" catalog="db_dailybanve" optimistic-lock="version">
         <id name="idve" type="java.lang.Integer">
@@ -31,9 +31,6 @@
         </property>
         <property name="idchuyenbay" type="int">
             <column name="idchuyenbay" not-null="true" />
-        </property>
-        <property name="idloaive" type="int">
-            <column name="idloaive" not-null="true" />
         </property>
         <property name="idtaikhoan" type="java.lang.Integer">
             <column name="idtaikhoan" />
