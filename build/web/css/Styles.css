@@ -371,12 +371,33 @@ td.text-right {
 }
 
 /*
-    From đặt vé trang index
+    From đặt vé trang index.jsp
 */
 .btndatve
 {
     margin-top: 20px;
 }
-.container .timvemotchang .formdatve{
+.container .timve-index .formdatve{
     border-radius: inherit;
+}
+.loaive-index{
+    float: left;
+}
+.timve-index .loaiveindex{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.loaiveindex ul li a:hover{
+    background-color: lightskyblue;
+    color: white;
+}
+.loaiveindex ul li.active a{
+    background-color: #00c7fc;
+    color: white;
+}
+
+#form-Timve .section-title .table-timvekhuahoi{
+    margin-top: 100px;
 }
