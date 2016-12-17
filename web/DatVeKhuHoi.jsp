@@ -1,5 +1,5 @@
 <%-- 
-    Document   : DatVeKhuaHoi
+    Document   : DatVeKhuHoi
     Created on : Dec 15, 2016, 2:21:35 PM
     Author     : DuongNguyen
 --%>
@@ -18,7 +18,8 @@
         <%@include file="includes/header.jsp" %>
         <%@include file="includes/slider.jsp" %>
 
-        <%            ChuyenbayService cbservice = new ChuyenbayService();
+        <%            
+            ChuyenbayService cbservice = new ChuyenbayService();
             Chuyenbay chuyenbaydi = null;
             Chuyenbay chuyenbayve = null;
 
@@ -40,7 +41,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <form action="#" method="post">
+                    <form action="DatVeKhuHoiServlet" method="post">
                         <div class="form-group col-md-12 modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="myModalLabel">Thông tin chuyến bay đi</h4>
@@ -52,7 +53,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="diemkhoihanh" value="<%= chuyenbaydi.getTu()%>" required="" disabled="">
+                                                    <input type="text" class="form-control" name="diemkhoihanh-vedi" value="<%= chuyenbaydi.getTu()%>" required="" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -61,7 +62,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="diemden" value="<%= chuyenbaydi.getDen()%>" required="" disabled="">
+                                                    <input type="text" class="form-control" name="diemden-vedi" value="<%= chuyenbaydi.getDen()%>" required="" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -74,7 +75,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input name="ngaykhoihanh" type="date" class="ngaydi form-control" value="<%= chuyenbaydi.getNgayKhoiHanh()%>" disabled>
+                                                    <input name="ngaykhoihanh-vedi" type="date" class="ngaydi form-control" value="<%= chuyenbaydi.getNgayKhoiHanh()%>" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -94,13 +95,12 @@
                                     <div class="col-md-12">
                                         <span>Người lớn (>12 tuổi)<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <select name="songuoilon" class="selectpicker form-control" required="">
-                                                <option disabled selected value> -- Chọn số người lớn -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
-                                                <option>4 người</option>
-                                                <option>5 người</option>
+                                            <select name="songuoilon-vedi" class="selectpicker form-control" required="">
+                                                <option value="1" selected="">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
+                                                <option value="4">4 người</option>
+                                                <option value="5">5 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -108,11 +108,11 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số trẻ em -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
+                                            <select name="sotreem-vedi" class="selectpicker form-control">
+                                                <option value="0" selected="">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -120,10 +120,10 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số em bé -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
+                                            <select name="soembe-vedi" class="selectpicker form-control">
+                                                <option value="0" selected="">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="diemkhoihanh" value="<%= chuyenbayve.getTu()%>" required="" disabled="">
+                                                    <input type="text" class="form-control" name="diemkhoihanh-veve" value="<%= chuyenbayve.getTu()%>" required="" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -151,7 +151,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="diemden" value="<%= chuyenbayve.getDen()%>" required="" disabled="">
+                                                    <input type="text" class="form-control" name="diemden-veve" value="<%= chuyenbayve.getDen()%>" required="" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -164,7 +164,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input name="ngaykhoihanh" type="date" class="ngaydi form-control" value="<%= chuyenbayve.getNgayKhoiHanh()%>" disabled>
+                                                    <input name="ngaykhoihanh-veve" type="date" class="ngaydi form-control" value="<%= chuyenbayve.getNgayKhoiHanh()%>" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -184,13 +184,12 @@
                                     <div class="col-md-12">
                                         <span>Người lớn (>12 tuổi)<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <select name="songuoilon" class="selectpicker form-control" required="">
-                                                <option disabled selected value> -- Chọn số người lớn -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
-                                                <option>4 người</option>
-                                                <option>5 người</option>
+                                            <select name="songuoilon-veve" class="selectpicker form-control" required="">
+                                                <option value="1" selected="">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
+                                                <option value="4">4 người</option>
+                                                <option value="5">5 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -198,11 +197,11 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số trẻ em -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
+                                            <select name="sotreem-veve" class="selectpicker form-control">
+                                                <option disabled selected value="0">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -210,10 +209,10 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số em bé -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
+                                            <select name="soembe-veve" class="selectpicker form-control">
+                                                <option disabled selected value="0">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
                                             </select>
                                         </div>
                                     </div>
