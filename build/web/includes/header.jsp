@@ -10,16 +10,7 @@ Fixed Navigation
 ==================================== -->
 <header id="navigation" class="navbar-fixed-top">
     <div class="container">
-
         <div class="navbar-header">
-            <!-- responsive nav button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- /responsive nav button -->
 
             <!-- logo -->
             <h1 class="navbar-brand">

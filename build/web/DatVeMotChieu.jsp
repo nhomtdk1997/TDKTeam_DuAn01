@@ -25,6 +25,7 @@
             chuyenbay = cbservice.GetChuyenbayById(idChuyenbay);
         %>
 
+
         <section id="datve">
             <div class="container">
                 <div class="row">
@@ -37,7 +38,7 @@
                 </div>
 
                 <div class="row">
-                    <form action="#" method="post">
+                    <form action="DatVeMotChieuServlet" method="post">
                         <div class="form-group col-md-12 modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="myModalLabel">Thông tin chuyến bay</h4>
@@ -82,7 +83,19 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input name="idchuyenbay" class="ngaydi form-control" value="<%= chuyenbay.getIdchuyenbay()%>" disabled>
+                                                    <input class="ngaydi form-control" value="<%= chuyenbay.getIdchuyenbay()%>" disabled>
+                                                    <input name="idchuyenbay" style="display: none;" value="<%= chuyenbay.getIdchuyenbay()%>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span id="idghichu">Giá chuyến bay</span>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input name="giachuyenbay" class="form-control" disabled="" value="<%= chuyenbay.getGiaChuyenBay()%> VNĐ">
+                                                    <input name="giachuyenbay" style="display: none;" value="<%= chuyenbay.getGiaChuyenBay()%>">
                                                 </div>
                                             </div>
                                         </div>
@@ -94,12 +107,11 @@
                                         <span>Người lớn (>12 tuổi)<span class="required"> *</span></span>
                                         <div class="form-group">
                                             <select name="songuoilon" class="selectpicker form-control" required="">
-                                                <option disabled selected value> -- Chọn số người lớn -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
-                                                <option>4 người</option>
-                                                <option>5 người</option>
+                                                <option value="1" selected="">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
+                                                <option value="4">4 người</option>
+                                                <option value="5">5 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -107,11 +119,11 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số trẻ em -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
-                                                <option>3 người</option>
+                                            <select name="sotreem" class="selectpicker form-control">
+                                                <option value="0" selected="">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
+                                                <option value="3">3 người</option>
                                             </select>
                                         </div>
                                     </div>
@@ -119,15 +131,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
-                                            <select name="songuoilon" class="selectpicker form-control">
-                                                <option disabled selected value> -- Số em bé -- </option>
-                                                <option>1 người</option>
-                                                <option>2 người</option>
+                                            <select name="soembe" class="selectpicker form-control">
+                                                <option value="0" selected="">0 người</option>
+                                                <option value="1">1 người</option>
+                                                <option value="2">2 người</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div class="modal-header modal-header-fix">
@@ -143,7 +154,8 @@
                                         <div class="form-group">
                                             <span>ID Tài khoản<span class="required"> *</span></span>
                                             <div class="input-field">
-                                                <input type="text" class="form-control" name="idtaikhoan" value="<%=session.getAttribute("iduser")%>" disabled="" required="">
+                                                <input type="text" class="form-control" value="<%=session.getAttribute("iduser")%>" disabled="">
+                                                <input name="idtaikhoan" style="display: none;" value="<%=session.getAttribute("iduser")%>">
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +199,7 @@
                                         <div class="form-group">
                                             <span>Ngày sinh<span class="required"> *</span></span>
                                             <div class="form-group">
-                                                <input name="ngaysinh" type="date" value="<%=session.getAttribute("NgaysinhNguoidung")%>" class="form-control">
+                                                <input name="ngaysinh" type="date" value="<%=session.getAttribute("NgaysinhNguoidung")%>" required="" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -257,7 +269,7 @@
                                             <div class="form-group">
                                                 <span>Ngày sinh<span class="required"> *</span></span>
                                                 <div class="form-group">
-                                                    <input name="ngaysinh" type="date" class="form-control">
+                                                    <input name="ngaysinh" type="date" required="" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -366,6 +378,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <button type="submit" class="btndatve btn btn-blue col-md-12" >Đặt vé</button>
                             </div>

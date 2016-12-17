@@ -127,16 +127,16 @@ function progress(percent, $element) {
 /* ---------------------------------------------------------------------- */
 /*      Đặt vé
  /* ---------------------------------------------------------------------- */
-function vekhuahoi() {
-    document.getElementById('li-vekhuahoi').className = "active loaive-index";
+function vekhuhoi() {
+    document.getElementById('li-vekhuhoi').className = "active loaive-index";
     document.getElementById('li-vemotchang').className = "loaive-index";
     document.getElementById('form-vemotchangindex').style.display = 'none';
-    document.getElementById('form-vekhuahoiindex').style.display = '';
+    document.getElementById('form-vekhuhoiindex').style.display = '';
 }
 
 function vemotchang() {
-    document.getElementById('li-vekhuahoi').className = "loaive-index";
+    document.getElementById('li-vekhuhoi').className = "loaive-index";
     document.getElementById('li-vemotchang').className = "active loaive-index";
     document.getElementById('form-vemotchangindex').style.display = '';
-    document.getElementById('form-vekhuahoiindex').style.display = 'none';
+    document.getElementById('form-vekhuhoiindex').style.display = 'none';
 }

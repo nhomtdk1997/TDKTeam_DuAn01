@@ -44,7 +44,7 @@
                     <div class="loaiveindex modal-header">
                         <ul class="nav nav-loaiveindex">
                             <li id="li-vemotchang" class="active loaive-index"><a href="#timve" id="vemotchieu" onclick="vemotchang()">Một chiều</a></li>
-                            <li id="li-vekhuahoi" class="loaive-index"><a href="#timve" id="vekhuahoi" onclick="vekhuahoi()">Khứa hồi</a></li>
+                            <li id="li-vekhuhoi" class="loaive-index"><a href="#timve" id="vekhuhoi" onclick="vekhuhoi()">Khứ hồi</a></li>
                         </ul>
                     </div>
                     <form id="form-vemotchangindex" action="TimChuyenBayMotChangServlet" method="post">
@@ -141,14 +141,14 @@
                         <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
                     </form>
                     
-                    <form id="form-vekhuahoiindex" action="TimChuyenBayKhuaHoiServlet" method="post" style="display: none;">
+                    <form id="form-vekhuhoiindex" action="TimChuyenBayKhuHoiServlet" method="post" style="display: none;">
                         <div class="modal-body">
                             <div class="row tu-den col-md-6">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
                                         <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
                                         <div class="form-group">
-                                            <select name="Tu-vekhuahoi" class="selectpicker form-control" required="">
+                                            <select name="Tu-vekhuhoi" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm khởi hành -- </option>
                                                 <optgroup label="Miền Bắc">
                                                     <option>Hà Nội</option>
@@ -186,7 +186,7 @@
                                     <div class="col-md-10 col-md-offset-1">
                                         <span id="idghichu">Điểm đến<span class="required">*</span></span>
                                         <div class="form-group">
-                                            <select name="Den-vekhuahoi" class="selectpicker form-control" required="">
+                                            <select name="Den-vekhuhoi" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm đến -- </option>
                                                 <optgroup label="Miền Bắc">
                                                     <option>Hà Nội</option>
@@ -226,7 +226,7 @@
                                     <div class="col-md-10 col-md-offset-2">
                                         <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
                                         <div class="form-group">
-                                            <input name="Ngaykhoihanh-khuahoi" type="date" class="ngaydi form-control" required="">
+                                            <input name="Ngaykhoihanh-khuhoi" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                     <div class="col-md-10 col-md-offset-2">
                                         <span id="idghichu">Ngày quay về<span class="required">*</span></span>
                                         <div class="form-group">
-                                            <input name="Ngayquayve-khuahoi" type="date" class="ngaydi form-control" required="">
+                                            <input name="Ngayquayve-khuhoi" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>

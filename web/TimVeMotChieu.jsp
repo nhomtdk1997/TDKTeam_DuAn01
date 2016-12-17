@@ -32,7 +32,7 @@
             listChuyenbay = cb.SearchChuyenbay(Tu, Den, Ngaykhoihanh);
         %>
 
-        <section class="container-fluid">
+        <section class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">

@@ -401,3 +401,14 @@ td.text-right {
 #form-Timve .section-title .table-timvekhuahoi{
     margin-top: 100px;
 }
+
+/*
+    Fix radio button TimVeKhuHoi.jsp
+*/
+.radiofix input[type=radio]{
+    display: -webkit-box;
+    width: 17px;
+    height: 17px;
+    margin-top: 2px;
+    margin-left: 7px;
+}

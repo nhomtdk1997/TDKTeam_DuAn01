@@ -6,7 +6,6 @@
 package com.javaweb.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +30,7 @@ public class ChonChuyenBayServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         
-        String url = "/DatVeKhuaHoi.jsp";
+        String url = "/DatVeKhuHoi.jsp";
         getServletContext().getRequestDispatcher(url).forward(request, response);
         
 //        try (PrintWriter out = response.getWriter()) {

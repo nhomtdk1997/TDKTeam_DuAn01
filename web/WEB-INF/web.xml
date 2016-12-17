@@ -17,12 +17,20 @@
         <servlet-class>com.javaweb.controller.TimChuyenBayMotChangServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>TimChuyenBayKhuaHoiServlet</servlet-name>
-        <servlet-class>com.javaweb.controller.TimChuyenBayKhuaHoiServlet</servlet-class>
+        <servlet-name>TimChuyenBayKhuHoiServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.TimChuyenBayKhuHoiServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ChonChuyenBayServlet</servlet-name>
         <servlet-class>com.javaweb.controller.ChonChuyenBayServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DatVeMotChieuServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.DatVeMotChieuServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DatVeKhuHoiServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.DatVeKhuHoiServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -41,12 +49,20 @@
         <url-pattern>/TimChuyenBayMotChangServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>TimChuyenBayKhuaHoiServlet</servlet-name>
-        <url-pattern>/TimChuyenBayKhuaHoiServlet</url-pattern>
+        <servlet-name>TimChuyenBayKhuHoiServlet</servlet-name>
+        <url-pattern>/TimChuyenBayKhuHoiServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ChonChuyenBayServlet</servlet-name>
         <url-pattern>/ChonChuyenBayServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DatVeMotChieuServlet</servlet-name>
+        <url-pattern>/DatVeMotChieuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DatVeKhuHoiServlet</servlet-name>
+        <url-pattern>/DatVeKhuHoiServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
