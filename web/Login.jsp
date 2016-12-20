@@ -22,7 +22,7 @@
                 <!-- logo -->
                 <h1 class="navbar-brand">
                     <a href="#body">
-                        <img src="img/logo.png" alt="Kasper Logo">
+                        <img src="img/logo.png" alt="TDKTeam Logo">
                     </a>
                 </h1>
                 <!-- /logo -->
