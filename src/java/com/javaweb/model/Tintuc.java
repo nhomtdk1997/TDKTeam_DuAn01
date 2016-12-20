@@ -1,5 +1,5 @@
 package com.javaweb.model;
-// Generated Dec 15, 2016 5:22:22 PM by Hibernate Tools 4.3.1
+// Generated Dec 20, 2016 11:01:57 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,7 +13,6 @@ public class Tintuc  implements java.io.Serializable {
      private Integer idtintuc;
      private int idTaiKhoan;
      private String imgLink;
-     private String imgList;
      private String tieuDe;
      private String noiDung;
      private Date ngayDang;
@@ -23,16 +22,16 @@ public class Tintuc  implements java.io.Serializable {
     }
 
 	
-    public Tintuc(int idTaiKhoan, String imgLink, String tieuDe, String noiDung) {
+    public Tintuc(int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang) {
         this.idTaiKhoan = idTaiKhoan;
         this.imgLink = imgLink;
         this.tieuDe = tieuDe;
         this.noiDung = noiDung;
+        this.ngayDang = ngayDang;
     }
-    public Tintuc(int idTaiKhoan, String imgLink, String imgList, String tieuDe, String noiDung, Date ngayDang, String ghiChu) {
+    public Tintuc(int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang, String ghiChu) {
        this.idTaiKhoan = idTaiKhoan;
        this.imgLink = imgLink;
-       this.imgList = imgList;
        this.tieuDe = tieuDe;
        this.noiDung = noiDung;
        this.ngayDang = ngayDang;
@@ -59,13 +58,6 @@ public class Tintuc  implements java.io.Serializable {
     
     public void setImgLink(String imgLink) {
         this.imgLink = imgLink;
-    }
-    public String getImgList() {
-        return this.imgList;
-    }
-    
-    public void setImgList(String imgList) {
-        this.imgList = imgList;
     }
     public String getTieuDe() {
         return this.tieuDe;
