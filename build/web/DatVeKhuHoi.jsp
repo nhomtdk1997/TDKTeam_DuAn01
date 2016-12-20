@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Vé</title>
+        <title>Đặt vé khứ hồi</title>
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
@@ -80,11 +80,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-7">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>ID Chuyến bay đi<span class="required"> *</span></span>
+                                            <span>ID Chuyến bay đi</span>
                                             <div class="input-field">
-                                                <input type="text" class="form-control" name="idchuyenbaydi" disabled="" value="<%= chuyenbaydi.getIdchuyenbay()%>">
+                                                <input type="text" class="form-control" disabled="" value="<%= chuyenbaydi.getIdchuyenbay()%>">
+                                                <input name="idchuyenbaydi" style="display: none;" value="<%= chuyenbaydi.getIdchuyenbay()%>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span>Giá chuyến bay đi</span>
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" disabled="" value="<%= chuyenbaydi.getGiaChuyenBay()%>">
+                                                <input name="giachuyenbaydi" style="display: none;" value="<%= chuyenbaydi.getGiaChuyenBay()%>">
                                             </div>
                                         </div>
                                     </div>
@@ -169,11 +179,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-7">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>ID Chuyến bay về<span class="required"> *</span></span>
+                                            <span>ID Chuyến bay về</span>
                                             <div class="input-field">
-                                                <input type="text" class="form-control" name="idchuyenbayve" disabled="" value="<%= chuyenbayve.getIdchuyenbay()%>">
+                                                <input type="text" class="form-control" disabled="" value="<%= chuyenbayve.getIdchuyenbay()%>">
+                                                <input name="idchuyenbayve" style="display: none;" value="<%= chuyenbayve.getIdchuyenbay()%>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span>Giá chuyến bay về</span>
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" disabled="" value="<%= chuyenbayve.getGiaChuyenBay()%>">
+                                                <input name="giachuyenbayve" style="display: none;" value="<%= chuyenbayve.getGiaChuyenBay()%>">
                                             </div>
                                         </div>
                                     </div>
@@ -198,7 +218,7 @@
                                         <div class="form-group">
                                             <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
                                             <select name="sotreem-veve" class="selectpicker form-control">
-                                                <option disabled selected value="0">0 người</option>
+                                                <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>
                                                 <option value="2">2 người</option>
                                                 <option value="3">3 người</option>
@@ -210,7 +230,7 @@
                                         <div class="form-group">
                                             <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
                                             <select name="soembe-veve" class="selectpicker form-control">
-                                                <option disabled selected value="0">0 người</option>
+                                                <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>
                                                 <option value="2">2 người</option>
                                             </select>
@@ -227,13 +247,14 @@
                                 if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
                             %>
                             <div class="modal-body">
-                                
+
                                 <div class="col-md-2">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <span>ID Tài khoản<span class="required"> *</span></span>
                                             <div class="input-field">
-                                                <input type="text" class="form-control" name="idtaikhoan" value="<%=session.getAttribute("iduser")%>" disabled="" required="">
+                                                <input type="text" class="form-control" value="<%=session.getAttribute("iduser")%>" disabled="">
+                                                <input name="idtaikhoan" style="display: none;" value="<%=session.getAttribute("iduser")%>">
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +326,7 @@
                                     </div>
                                 </div>
                                 <%
-                                    } else {
+                                } else {
                                 %>
                                 <div class="modal-body">
                                     <div class="col-md-4">
