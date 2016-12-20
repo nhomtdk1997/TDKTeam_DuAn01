@@ -8,6 +8,7 @@ package com.javaweb.controller;
 import com.javaweb.model.Ve;
 import com.javaweb.service.VeService;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -38,42 +39,49 @@ public class DatVeKhuHoiServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        String Ho, DemVaTen, DiaChi, SDT, SoCMND;
-        int idTK, idQuocTich, soNguoilonVedi, soTreemVedi, soEmbeVedi , soNguoilonVeve, soTreemVeve, soEmbeVeve;
+        String Ho, DemVaTen, DiaChi, SDT, SoCMND, giachuyenbaydi, giachuyenbayve, idQuocTich;
+        int idTK, soNguoilonDi, soTreemDi, soEmbeDi, idChuyenbayDi, soNguoilonVe, soTreemVe, soEmbeVe, idChuyenbayVe;
 
+        idChuyenbayDi = Integer.parseInt(request.getParameter("idchuyenbaydi"));
+        giachuyenbaydi = request.getParameter("giachuyenbaydi");
+        BigDecimal GiaChuyenbayDi = new BigDecimal(giachuyenbaydi);
+        soNguoilonDi = Integer.parseInt(request.getParameter("songuoilon-vedi"));
+        soTreemDi = Integer.parseInt(request.getParameter("sotreem-vedi"));
+        soEmbeDi = Integer.parseInt(request.getParameter("soembe-vedi"));
+        
+        idChuyenbayVe = Integer.parseInt(request.getParameter("idchuyenbayve"));
+        giachuyenbayve = request.getParameter("giachuyenbayve");
+        BigDecimal GiaChuyenbayVe = new BigDecimal(giachuyenbayve);
+        soNguoilonVe = Integer.parseInt(request.getParameter("songuoilon-veve"));
+        soTreemVe = Integer.parseInt(request.getParameter("sotreem-veve"));
+        soEmbeVe = Integer.parseInt(request.getParameter("soembe-veve"));
+
+        Ho = request.getParameter("ho");
+        DemVaTen = request.getParameter("demvaten");
+        
         //Xử lý ngày tháng năm sinh
         String ngaysinh = request.getParameter("ngaysinh");
         Date NgaySinh = new SimpleDateFormat("yyyy-MM-dd").parse(ngaysinh);
 
-        Ho = request.getParameter("ho");
-        DemVaTen = request.getParameter("demvaten");
         DiaChi = request.getParameter("diachi");
         SDT = request.getParameter("sdt");
         SoCMND = request.getParameter("cmnd");
+        idQuocTich = request.getParameter("quoctich");
         
-        soNguoilonVedi = Integer.parseInt(request.getParameter("songuoilon-vedi"));
-        soTreemVedi = Integer.parseInt(request.getParameter("sotreem-vedi"));
-        soEmbeVedi = Integer.parseInt(request.getParameter("soembe-vedi"));
-        
-        soNguoilonVeve = Integer.parseInt(request.getParameter("songuoilon-veve"));
-        soTreemVeve = Integer.parseInt(request.getParameter("sotreem-veve"));
-        soEmbeVeve = Integer.parseInt(request.getParameter("soembe-veve"));
-        idQuocTich = Integer.parseInt(request.getParameter("quoctich"));
-//        BigDecimal GiaVe = BigDecimal.valueOf(123123);
-
         HttpSession session = request.getSession();
         if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
             idTK = Integer.parseInt(request.getParameter("idtaikhoan"));
-            Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, DiaChi, idQuocTich, idTK, soNguoilonVedi, soTreemVedi, soEmbeVedi, null);
+            Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayVe, idTK, soNguoilonVe, soTreemVe, soEmbeVe, GiaChuyenbayVe);
+            Ve di = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayDi, idTK, soNguoilonDi, soTreemDi, soEmbeDi, GiaChuyenbayDi);
             VeService veservice = new VeService();
             veservice.InsertVe(ve);
+            veservice.InsertVe(di);
         } else {
-            Ve vedi = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, DiaChi, idQuocTich, null, soNguoilonVedi, soTreemVedi, soEmbeVedi, null);
+            Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayVe, null, soNguoilonVe, soTreemVe, soEmbeVe, GiaChuyenbayVe);
+            Ve di = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayDi, null, soNguoilonDi, soTreemDi, soEmbeDi, GiaChuyenbayDi);
             VeService veservice = new VeService();
-            veservice.InsertVe(vedi);
-            
-            Ve veve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, DiaChi, idQuocTich, null, soNguoilonVeve, soTreemVeve, soEmbeVeve, null);
-            veservice.InsertVe(veve);
+            veservice.InsertVe(ve);
+            veservice.InsertVe(di);
         }
 
         String url = "/index.jsp";
