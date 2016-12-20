@@ -746,7 +746,7 @@ figcaption.mask span {
 
 .pricing-table .price {
   border-top: 1px solid #00c7fc;
-  padding: 35px 0 45px;
+  padding: 35px 0 35px;
 }
 
 .pricing-table .plan {
@@ -767,7 +767,7 @@ figcaption.mask span {
 }
 
 .pricing-table .value > strong {
-  font-size: 59.48px;
+  font-size: -webkit-xxx-large;
   margin-right: 10px;
   line-height: 69.22px;
 }

@@ -412,3 +412,23 @@ td.text-right {
     margin-top: 2px;
     margin-left: 7px;
 }
+
+/*
+    Edit .requied + #idghichu + Form khuyến mãi index
+*/
+.required{
+    color: red;
+}
+#idghichu{
+    line-height: 2;
+}
+
+.small-gia{
+    color: orangered;
+}
+.strong-gia{
+    color: #00acda;
+}
+.panel .pagination{
+    display: block;
+}
