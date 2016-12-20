@@ -195,7 +195,7 @@
                                 <p class="form-title col-xs-12 col-md-4 padding10">
                                     <span id="idghichu">Quốc tịch<span class="required">*</span></span>
                                 </p>
-                                <div class="col-xs-12 col-md-8 padding10">
+                                <div>
                                     <div class="move-top">
                                         <div class="col-xs-12 col-md-8 padding10">
                                             <div class="move-top">
