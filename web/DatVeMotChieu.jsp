@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Vé</title>
+        <title>Đặt vé một chiều</title>
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>

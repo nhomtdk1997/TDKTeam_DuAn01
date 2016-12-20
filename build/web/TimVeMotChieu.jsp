@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tìm vé một chặng</title>
+        <title>Tìm vé một chiều</title>
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/popuplogin.jsp" %>
     </head>
@@ -29,10 +29,10 @@
             Tu = request.getParameter("Tu-vemotchang");
             Den = request.getParameter("Den-vemotchang");
             Ngaykhoihanh = request.getParameter("Ngaykhoihanh-motchang");
-            listChuyenbay = cb.SearchChuyenbay(Tu, Den, Ngaykhoihanh);
+            listChuyenbay = cb.TimKiemChuyenbay(Tu, Den, Ngaykhoihanh);
         %>
 
-        <section class="container">
+        <section id="TimVeMotChieu" class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
@@ -55,7 +55,7 @@
                             <th>Giời hạ cánh</th>
                             <th>Loại máy bay</th>
                             <th>Giá chuyến bay</th>
-                            <th>Đặt</th>                       
+                            <th>Đặt vé</th>                       
                         </tr>
                     </thead>
                     <tbody>
@@ -80,7 +80,7 @@
                         <td><%= chuyenbay.getLoaiMayBay()%></td>
                         <td><%= chuyenbay.getGiaChuyenBay()%></td>
                         <td style="width: 47px;">
-                            <a href="DatVeMotChieu.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" name="DatVe" value="Đặt" /></a>
+                            <a href="DatVeMotChieu.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" class="btn btn-primary" name="DatVe" value="Đặt" /></a>
                         </td>
                     </tr>
                     <%

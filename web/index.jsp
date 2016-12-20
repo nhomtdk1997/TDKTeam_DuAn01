@@ -52,7 +52,7 @@
                             <div class="row tu-den col-md-6">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
+                                        <span id="idghichu">Điểm khởi hành<span class="required"> *</span></span>
                                         <div class="form-group">
                                             <select name="Tu-vemotchang" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm khởi hành -- </option>
@@ -90,7 +90,7 @@
 
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <span id="idghichu">Điểm đến<span class="required">*</span></span>
+                                        <span id="idghichu">Điểm đến<span class="required"> *</span></span>
                                         <div class="form-group">
                                             <select name="Den-vemotchang" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm đến -- </option>
@@ -130,9 +130,9 @@
                             <div class="row ngay-di-ve col-md-6">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-2">
-                                        <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
+                                        <span id="idghichu">Ngày khởi hành<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <input name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control" required="">
+                                            <input id="Ngaykhoihanh-motchang-getdate" name="Ngaykhoihanh-motchang" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
                             <div class="row tu-den col-md-6">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <span id="idghichu">Điểm khởi hành<span class="required">*</span></span>
+                                        <span id="idghichu">Điểm khởi hành<span class="required"> *</span></span>
                                         <div class="form-group">
                                             <select name="Tu-vekhuhoi" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm khởi hành -- </option>
@@ -184,7 +184,7 @@
 
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <span id="idghichu">Điểm đến<span class="required">*</span></span>
+                                        <span id="idghichu">Điểm đến<span class="required"> *</span></span>
                                         <div class="form-group">
                                             <select name="Den-vekhuhoi" class="selectpicker form-control" required="">
                                                 <option disabled selected value> -- Chọn điểm đến -- </option>
@@ -224,18 +224,18 @@
                             <div class="row ngay-di-ve col-md-6">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-2">
-                                        <span id="idghichu">Ngày khởi hành<span class="required">*</span></span>
+                                        <span id="idghichu">Ngày khởi hành<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <input name="Ngaykhoihanh-khuhoi" type="date" class="ngaydi form-control" required="">
+                                            <input id="Ngaykhoihanh-khuhoi-getdate" name="Ngaykhoihanh-khuhoi" min="" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-2">
-                                        <span id="idghichu">Ngày quay về<span class="required">*</span></span>
+                                        <span id="idghichu">Ngày quay về<span class="required"> *</span></span>
                                         <div class="form-group">
-                                            <input name="Ngayquayve-khuhoi" type="date" class="ngaydi form-control" required="">
+                                            <input id="Ngayquayve-khuhoi-getdate" name="Ngayquayve-khuhoi" type="date" class="ngaydi form-control" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -283,66 +283,72 @@
 
                 <div class="section-title text-center wow fadeInUp">
                     <h2>Khuyến mãi</h2>    
-                    <p>Thông tin khuyến mãi đặt biệt từ website bán vé máy bay trực tuyến TDK Team</p>
+                    <p>Khuyến mãi đặt biệt cuối tháng 12 của TDK Team!
+                        <br>Các chuyến bay từ Hà Nội <-> TP.HCM sẽ được giảm 15%
+                        <br>Các chuyến bay đi từ Hải Phòng <-> TP.HCM sẽ được giảm 10%</p>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp">
                     <div class="pricing-table text-center">
                         <div class="price">
                             <span class="plan">Hà Nội > TP.HCM</span>
-                            <span class="value"><small>$</small><strong>25</strong>/MO</span>
+                            <span class="value"><small class="small-gia">-15%</small><strong class="strong-gia">935.000</strong></span>
+                            <span class="plan">VNĐ</span>
                         </div>
                         <ul class="text-center">
-                            <li>Giảm 15%</li>
-                            <li>Ghế hạng A</li>
-                            <li>2h > 10h</li>
+                            <li>31 - 12 - 2016</li>
+                            <li>Airbus A321-100/200</li>
+                            <li>8:00 - 10:00</li>
                         </ul>
-                        <a href="#" class="btn btn-price">Mua Ngay</a>
+                        <a href="DatVeMotChieu.jsp?idChuyenbay=496" class="btn btn-price">Đặt vé ngay!</a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="pricing-table text-center">
                         <div class="price">
-                            <span class="plan">TP.BMT > Hà Nội</span>
-                            <span class="value"><small>$</small><strong>18</strong>/MO</span>
+                            <span class="plan">TP. HCM > Hà Nội</span>
+                            <span class="value"><small class="small-gia">-15%</small><strong class="strong-gia">935.000</strong></span>
+                            <span class="plan">VNĐ</span>
                         </div>
                         <ul class="text-center">
-                            <li>Giảm 20%</li>
-                            <li>Ghế hạng A</li>
-                            <li>1h > 5h</li>
+                            <li>31 - 12 - 2016</li>
+                            <li>Boeing 777</li>
+                            <li>17:00 > 19:00</li>
                         </ul>
-                        <a href="#" class="btn btn-price">Mua Ngay</a>
+                        <a href="DatVeMotChieu.jsp?idChuyenbay=513" class="btn btn-price">Đặt vé ngay!</a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="pricing-table text-center">
                         <div class="price">
-                            <span class="plan">TP.BMT > TP.HCM</span>
-                            <span class="value"><small>$</small><strong>13</strong>/MO</span>
+                            <span class="plan">Hải Phòng > TP.HCM</span>
+                            <span class="value"><small class="small-gia">-10%</small><strong class="strong-gia">540.000</strong></span>
+                            <span class="plan">VNĐ</span>
                         </div>
                         <ul class="text-center">
-                            <li>Giảm 10%</li>
-                            <li>Ghế hạng A</li>
-                            <li>1h > 2h</li>
+                            <li>31 - 12 - 2016</li>
+                            <li>Airbus A320</li>
+                            <li>15:30 > 17:30</li>
                         </ul>
-                        <a href="#" class="btn btn-price">Mua Ngay</a>
+                        <a href="DatVeMotChieu.jsp?idChuyenbay=7" class="btn btn-price">Đặt vé ngay!</a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
                     <div class="pricing-table text-center">
                         <div class="price">
-                            <span class="plan">Khác</span>
-                            <span class="value"><small>$</small><strong>??</strong>/MO</span>
+                            <span class="plan">TP.HCM > Hải Phòng</span>
+                            <span class="value"><small class="small-gia">-10%</small><strong class="strong-gia">540.000</strong></span>
+                            <span class="plan">VNĐ</span>
                         </div>
                         <ul class="text-center">
-                            <li>Giảm ?%</li>
-                            <li>Ghế hạng A</li>
-                            <li>2h > 5h</li>
+                            <li>31 - 12 - 2016</li>
+                            <li>Airbus A320</li>
+                            <li>6:00 > 8:00</li>
                         </ul>
-                        <a href="#" class="btn btn-price">Mua Ngay</a>
+                        <a href="DatVeMotChieu.jsp?idChuyenbay=13" class="btn btn-price">Đặt vé ngay!</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +356,7 @@
                 <div class="col-md-12 wow fadeInUp">
                     <div class="special-plan text-center">
                         <p>Mọi thắc mắc gì xin liên hệ với chúng tôi!</p>
-                        <a href="#" class="btn btn-blue">Liên hệ chúng tôi</a>
+                        <a href="#contact" class="btn btn-blue">Liên hệ chúng tôi</a>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ Fixed Navigation
             <!-- logo -->
             <h1 class="navbar-brand">
                 <a href="#body">
-                    <img src="img/logos.png" alt="Kasper Logo">
+                    <img src="img/logo.png" alt="TDKTeam Logo">
                 </a>
             </h1>
             <!-- /logo -->
@@ -28,11 +28,11 @@ Fixed Navigation
                     if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
                 %>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="#timve">Tìm vé</a></li>
-                <li><a href="#khuyenmai">Khuyến mãi</a></li>
-                <li><a href="#tintuc">Tin tức</a></li>
-                <li><a href="#service">Điều khoản</a></li>
-                <li><a href="#contact">Phản hồi</a></li>
+                <li><a href="index.jsp#timve">Tìm vé</a></li>
+                <li><a href="index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="index.jsp#service">Điều khoản</a></li>
+                <li><a href="index.jsp#contact">Phản hồi</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
@@ -46,11 +46,11 @@ Fixed Navigation
                 } else {
                 %>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="#timve">Tìm vé</a></li>
-                <li><a href="#khuyenmai">Khuyến mãi</a></li>
-                <li><a href="#tintuc">Tin tức</a></li>
-                <li><a href="#service">Điều khoản</a></li>
-                <li><a href="#contact">Phản hồi</a></li>
+                <li><a href="index.jsp#timve">Tìm vé</a></li>
+                <li><a href="index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="index.jsp#service">Điều khoản</a></li>
+                <li><a href="index.jsp#contact">Phản hồi</a></li>
                 <li><a href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a></li>
                     <%
                         }
