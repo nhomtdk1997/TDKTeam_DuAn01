@@ -26,11 +26,11 @@
             ArrayList<Chuyenbay> listChuyenbay = null;
             ChuyenbayService chuyenbayservice = new ChuyenbayService();
 
-            if (request.getParameter("pagenumber") != null) {
-                session.setAttribute("pagenumber", request.getParameter("pagenumber"));
-                pageNumber = Integer.parseInt(request.getParameter("pagenumber"));
+            if (request.getParameter("Page") != null) {
+                session.setAttribute("Page", request.getParameter("Page"));
+                pageNumber = Integer.parseInt(request.getParameter("Page"));
             } else {
-                session.setAttribute("pagenumber", "1");
+                session.setAttribute("Page", "1");
             }
             String Diemkhoihanh = "";
             String Diemden = "";
@@ -43,7 +43,9 @@
                 Diemden = request.getParameter("Den");
                 ngaykhoihanh = request.getParameter("NgayKhoiHanh");
                 listChuyenbay = chuyenbayservice.SearchChuyenbay(pageSize, pageNumber, Diemkhoihanh, Diemden, ngaykhoihanh);
-                session.removeAttribute("searchkey");
+                session.removeAttribute("searchkeyDiemkhoihanh");
+                session.removeAttribute("searchkeyDiemden");
+                session.removeAttribute("searchkeyNgaykhoihanh");
             } else {
                 listChuyenbay = chuyenbayservice.GetAllChuyenbay(pageSize, pageNumber);
             }
@@ -193,7 +195,7 @@
                 </table>
                 <%
                     String keyurl = "";
-                    if (!Diemkhoihanh.equals("")) {
+                    if (!Diemkhoihanh.equals("") && !Diemden.equals("") && !ngaykhoihanh.equals("")) {
                         keyurl = "&key=" + Diemkhoihanh + Diemden + ngaykhoihanh;
                     }
                 %>

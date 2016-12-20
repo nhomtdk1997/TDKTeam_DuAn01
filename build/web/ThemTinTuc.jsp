@@ -20,7 +20,7 @@
         </div>
         <div class="container" style="padding-bottom: 0;">
             <div class="row col-md-8 col-md-offset-2">
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form method="post" action="ThemTinTucServlet" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="TieuDe">Tiêu Đề: </label>
                         <input type="text" name="TieuDe" class="form-control" required id="giasanpham">
@@ -31,15 +31,17 @@
                     </div>
                     <div class="form-group">
                         <label for="NgayDang">Ngày Đăng: </label>
-                        <input type="text" name="NgayDang" class="form-control" id="mota">
+                        <input type="date" name="NgayDang" class="form-control" id="mota">
                     </div>
                     <div class="form-group">
                         <label for="GhiChu">Ghi Chú: </label>
                         <input type="text" name="GhiChu" class="form-control" id="mota">
                     </div>
                     <div class="form-group">
-                        <input type="file" name="file" size="50" />
+                        Select file to upload:
+                        <input type="file" name="file" />
                     </div>
+
                     <button type="submit" class="btn btn-default">Insert</button>
                 </form>
             </div>

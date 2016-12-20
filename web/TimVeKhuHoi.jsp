@@ -35,9 +35,9 @@
             DenVe = request.getParameter("Tu-vekhuhoi");
             NgayVe = request.getParameter("Ngayquayve-khuhoi");
 
-            listChuyenbayDi = cb.SearchChuyenbay(TuDi, DenDi, NgayDi);
+            listChuyenbayDi = cb.TimKiemChuyenbay(TuDi, DenDi, NgayDi);
             try {
-                listChuyenbayVe = cb.SearchChuyenbay(TuVe, DenVe, NgayVe);
+                listChuyenbayVe = cb.TimKiemChuyenbay(TuVe, DenVe, NgayVe);
             } catch (Exception e) {
             }
 

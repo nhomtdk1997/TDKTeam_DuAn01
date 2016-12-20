@@ -412,8 +412,8 @@
         <div id="projects" class="clearfix">
 
             <figure class="mix portfolio-item app">
-                <img class="img-responsive" src="img/portfolio/portfolio-1.jpg" alt="Portfolio Item">
-                <a href="img/portfolio/portfolio-1.jpg" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
+                <img class="img-responsive" src="${img}" alt="Tin Tuc Images">
+                <a href="#" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
                     <span>Photography</span>
@@ -421,7 +421,7 @@
             </figure>
 
             <figure class="mix portfolio-item photography">
-                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-2.jpg" title="Title Two" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -430,7 +430,7 @@
             </figure>
 
             <figure class="mix portfolio-item web">
-                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -439,7 +439,7 @@
             </figure>
 
             <figure class="mix portfolio-item print">
-                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -448,7 +448,7 @@
             </figure>
 
             <figure class="mix portfolio-item app">
-                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-4.jpg" title="Title Five" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -457,7 +457,7 @@
             </figure>
 
             <figure class="mix portfolio-item photography">
-                <img class="img-responsive" src="img/portfolio/portfolio-1.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-1.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-1.jpg" title="Title Six" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -466,7 +466,7 @@
             </figure>
 
             <figure class="mix portfolio-item web app">
-                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-2.jpg" title="Title Seven" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>
@@ -475,7 +475,7 @@
             </figure>
 
             <figure class="mix portfolio-item print web">
-                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Portfolio Item">
+                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Tin Tuc Images">
                 <a href="img/portfolio/portfolio-3.jpg" title="Title Eight" rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
                     <h3>Awesome Image</h3>

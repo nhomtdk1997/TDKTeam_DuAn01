@@ -26,7 +26,7 @@ public class TintucService {
         try {
             tx = session.getTransaction();
             tx.begin();
-
+    
             Query query = session.createQuery("from Tintuc");
             listTintuc = (ArrayList) query.list();
             tx.commit();
@@ -109,7 +109,55 @@ public class TintucService {
         } finally {
             session.close();
         }
-
         return false;
+    }
+    
+    public int tintuccount = 0;
+    //Lấy tất cả tin tức
+    public ArrayList<Tintuc> GetAllTintuc(int pageSize, int pageNumber) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        ArrayList<Tintuc> listTintuc = new ArrayList<Tintuc>();
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Query query = session.createQuery("from Tintuc");
+            tintuccount = query.list().size();
+            query = query.setFirstResult(pageSize * (pageNumber - 1));
+            query.setMaxResults(pageSize);
+            listTintuc = (ArrayList) query.list();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return listTintuc;
+    }
+
+    //Tìm tin tức
+    public ArrayList<Tintuc>SearchTintuc(int pageSize, int pageNumber, String TintucKey) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        ArrayList listTintuc = new ArrayList<Tintuc>();
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Query query = session.createQuery("from Tintuc where TieuDe like '%"+TintucKey+"%' or NgayDang = '"+TintucKey+"'");
+            tintuccount = query.list().size();
+            query = query.setFirstResult(pageSize * (pageNumber - 1));
+            query.setMaxResults(pageSize);
+            listTintuc = (ArrayList) query.list();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return listTintuc;
     }
 }
