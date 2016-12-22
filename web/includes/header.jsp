@@ -14,7 +14,7 @@ Fixed Navigation
 
             <!-- logo -->
             <h1 class="navbar-brand">
-                <a href="#body">
+                <a href="${pageContext.request.contextPath}/index.jsp#home">
                     <img src="img/logo.png" alt="TDKTeam Logo">
                 </a>
             </h1>
@@ -25,36 +25,132 @@ Fixed Navigation
         <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <%
-                    if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
+                    if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("1")) {
                 %>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="index.jsp#timve">Tìm vé</a></li>
-                <li><a href="index.jsp#khuyenmai">Khuyến mãi</a></li>
-                <li><a href="index.jsp#tintuc">Tin tức</a></li>
-                <li><a href="index.jsp#service">Điều khoản</a></li>
-                <li><a href="index.jsp#contact">Phản hồi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
-                        <li><a href="#">Thông tin tài khoản</a></li>
-                        <li><a href="Logout.jsp">Đăng xuất</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/TaiKhoan.jsp">Tài khoản <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/QuanLyTinTuc.jsp">Tin Tức <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
+                    </ul>
+                </li>
+                <%
+                } else if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("2")) {
+                %>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/QuanLyTinTuc.jsp">Tin Tức <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
+                    </ul>
+                </li>
+                <%
+                } else if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("3")) {
+                %>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
+                    </ul>
+                </li>
+                <%
+                } else if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("4")) {
+                %>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
+                    </ul>
+                </li>
+                <%
+                } else if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("5")) {
+                %>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
+                    </ul>
+                </li>
+                <%
+                } else if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null && session.getAttribute("TKRole").toString().equals("6")) {
+                %>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
+                        <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
                 </li>
                 <%
                 } else {
                 %>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="index.jsp#timve">Tìm vé</a></li>
-                <li><a href="index.jsp#khuyenmai">Khuyến mãi</a></li>
-                <li><a href="index.jsp#tintuc">Tin tức</a></li>
-                <li><a href="index.jsp#service">Điều khoản</a></li>
-                <li><a href="index.jsp#contact">Phản hồi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#timve">Tìm vé</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#khuyenmai">Khuyến mãi</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#tintuc">Tin tức</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
+                <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
                 <li><a href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a></li>
-                    <%
-                        }
-                    %>
+                <%
+                    }
+                %>
             </ul>
         </nav>
         <!-- /main nav -->
