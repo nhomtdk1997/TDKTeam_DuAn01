@@ -23,6 +23,7 @@
                     session.removeAttribute("NgaysinhNguoidung");
                     session.removeAttribute("SDTNguoidung");
                     session.removeAttribute("CMNDNguoidung");
+                    session.removeAttribute("TKRole");
                     response.sendRedirect("index.jsp");
                 }
             %>
