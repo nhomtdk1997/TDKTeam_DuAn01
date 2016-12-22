@@ -419,6 +419,9 @@ td.text-right {
 .required{
     color: red;
 }
+.quanly{
+    color: #67b168;
+}
 #idghichu{
     line-height: 2;
 }
