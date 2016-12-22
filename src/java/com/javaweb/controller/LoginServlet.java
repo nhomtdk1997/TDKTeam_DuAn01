@@ -62,6 +62,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("NgaysinhNguoidung", nguoidung.getNgaySinh());
             session.setAttribute("SDTNguoidung", nguoidung.getSdt());
             session.setAttribute("CMNDNguoidung", nguoidung.getSoCmnd());
+            session.setAttribute("TKRole", taikhoan.getIdLoaiTk());
             try {
                 Thread.sleep(1000);
                 String url = "/index.jsp";
