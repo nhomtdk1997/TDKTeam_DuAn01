@@ -16,7 +16,7 @@
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
+        <%@include file="includes/headerStaff.jsp" %>
         <%@include file="includes/slider.jsp" %>
 
         <%            
