@@ -468,15 +468,14 @@ width: 11px;
 }
 
 .plus {
-  background: url("../img/icons/plus.png") no-repeat scroll center center #0faed9;
-  border-radius: 50%;
+  background:#1F2021;
   display: block;
-  height: 80px;
-  left: 50%;
+  height: 270px;
   margin: -40px 0 0 -40px;
   position: absolute;
-  top: -41px;
-  width: 80px;
+  top: -230px;
+  width: 412px;
+  opacity: 0.2;
     
     -webkit-transition: 0.3s ease-out 0s;
        -moz-transition: 0.3s ease-out 0s;
@@ -486,6 +485,7 @@ width: 11px;
 }
 
 figcaption.mask {
+  opacity: 0.9;
   background-color: #fff;
   bottom: -101px;
   left: 0;
@@ -505,7 +505,7 @@ figcaption.mask {
 }
 
 .portfolio-item:hover .plus {
-    top: 30%;
+    top: 10%;
 }
 
 figcaption.mask h3 {
