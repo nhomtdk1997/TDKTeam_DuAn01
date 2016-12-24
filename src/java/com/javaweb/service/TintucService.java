@@ -17,7 +17,7 @@ import org.hibernate.Transaction;
  * @author DuongNguyen
  */
 public class TintucService {
-    
+
     //Lấy tất cả tin tức
     public ArrayList<Tintuc> GetAllTintuc() {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -26,7 +26,7 @@ public class TintucService {
         try {
             tx = session.getTransaction();
             tx.begin();
-    
+
             Query query = session.createQuery("from Tintuc");
             listTintuc = (ArrayList) query.list();
             tx.commit();
@@ -111,7 +111,7 @@ public class TintucService {
         }
         return false;
     }
-    
+
     public int tintuccount = 0;
     //Lấy tất cả tin tức
     public ArrayList<Tintuc> GetAllTintuc(int pageSize, int pageNumber) {
@@ -145,7 +145,7 @@ public class TintucService {
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from Tintuc where TieuDe like '%"+TintucKey+"%' or NgayDang = '"+TintucKey+"'");
+            Query query = session.createQuery("from Tintuc where NgayDang = '"+TintucKey+"'");
             tintuccount = query.list().size();
             query = query.setFirstResult(pageSize * (pageNumber - 1));
             query.setMaxResults(pageSize);
