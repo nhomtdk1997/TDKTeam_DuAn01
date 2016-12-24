@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 24, 2016 8:59:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Loaitintuc" table="loaitintuc" catalog="db_dailybanve" optimistic-lock="version">
+        <id name="idLoaiTin" type="int">
+            <column name="idLoaiTin" />
+            <generator class="assigned" />
+        </id>
+        <property name="loaiTin" type="string">
+            <column name="LoaiTin" length="45" not-null="true" />
+        </property>
+        <property name="moTa" type="string">
+            <column name="MoTa" />
+        </property>
+    </class>
+</hibernate-mapping>
