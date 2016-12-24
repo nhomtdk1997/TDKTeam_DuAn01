@@ -8,6 +8,9 @@
             <column name="idtintuc" />
             <generator class="identity" />
         </id>
+        <property name="idMaLoaiTin" type="int">
+            <column name="idMaLoaiTin" not-null="true" />
+        </property>
         <property name="idTaiKhoan" type="int">
             <column name="idTaiKhoan" not-null="true" />
         </property>

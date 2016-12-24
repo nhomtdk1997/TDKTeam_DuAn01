@@ -1,5 +1,5 @@
 package com.javaweb.model;
-// Generated Dec 20, 2016 11:01:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 24, 2016 8:59:52 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,6 +11,7 @@ public class Tintuc  implements java.io.Serializable {
 
 
      private Integer idtintuc;
+     private int idMaLoaiTin;
      private int idTaiKhoan;
      private String imgLink;
      private String tieuDe;
@@ -22,14 +23,16 @@ public class Tintuc  implements java.io.Serializable {
     }
 
 	
-    public Tintuc(int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang) {
+    public Tintuc(int idMaLoaiTin, int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang) {
+        this.idMaLoaiTin = idMaLoaiTin;
         this.idTaiKhoan = idTaiKhoan;
         this.imgLink = imgLink;
         this.tieuDe = tieuDe;
         this.noiDung = noiDung;
         this.ngayDang = ngayDang;
     }
-    public Tintuc(int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang, String ghiChu) {
+    public Tintuc(int idMaLoaiTin, int idTaiKhoan, String imgLink, String tieuDe, String noiDung, Date ngayDang, String ghiChu) {
+       this.idMaLoaiTin = idMaLoaiTin;
        this.idTaiKhoan = idTaiKhoan;
        this.imgLink = imgLink;
        this.tieuDe = tieuDe;
@@ -44,6 +47,13 @@ public class Tintuc  implements java.io.Serializable {
     
     public void setIdtintuc(Integer idtintuc) {
         this.idtintuc = idtintuc;
+    }
+    public int getIdMaLoaiTin() {
+        return this.idMaLoaiTin;
+    }
+    
+    public void setIdMaLoaiTin(int idMaLoaiTin) {
+        this.idMaLoaiTin = idMaLoaiTin;
     }
     public int getIdTaiKhoan() {
         return this.idTaiKhoan;
@@ -87,9 +97,6 @@ public class Tintuc  implements java.io.Serializable {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
-
-
-
 
 }
 
