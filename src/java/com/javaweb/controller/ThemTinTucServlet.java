@@ -53,8 +53,9 @@ public class ThemTinTucServlet extends HttpServlet {
 
         //response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
-        session.removeAttribute("errorreg");
+//        session.removeAttribute("errorreg");
         String TieuDe = "", NoiDung = "", ngaydang = "", GhiChu = "", fileName = "";
+        int idloaitin = 1, idTK = 0;
 
         TintucService tintucservice = new TintucService();
 
@@ -119,6 +120,10 @@ public class ThemTinTucServlet extends HttpServlet {
                         ngaydang = fi.getString("UTF-8");
                     } else if (fi.getFieldName().equalsIgnoreCase("GhiChu")) {
                         GhiChu = fi.getString("UTF-8");
+                    } else if (fi.getFieldName().equalsIgnoreCase("loaitin")) {
+                        idloaitin = Integer.parseInt(fi.getString("UTF-8"));
+                    } else if (fi.getFieldName().equalsIgnoreCase("idtaikhoan")) {
+                        idTK = Integer.parseInt(fi.getString("UTF-8"));
                     }
                 }
             }
@@ -128,11 +133,16 @@ public class ThemTinTucServlet extends HttpServlet {
         }
 
         Date NgayDang = new SimpleDateFormat("yyyy-MM-dd").parse(ngaydang);
-        Tintuc tintuc = new Tintuc(1, fileName, TieuDe, NoiDung, NgayDang, GhiChu);
+        Tintuc tintuc = new Tintuc(idloaitin, idTK, fileName, TieuDe, NoiDung, NgayDang, GhiChu);
 
-        tintucservice.InsertTintuc(tintuc);
-        String url = "/QuanLyTinTuc.jsp";
-        getServletContext().getRequestDispatcher(url).forward(request, response);
+        boolean rs = tintucservice.InsertTintuc(tintuc);
+        if (rs) {
+            String url = "index.jsp";
+            response.sendRedirect(url);
+        } else {
+            String url = "Themtintuc.jsp";
+            response.sendRedirect(url);
+        }
 
 //        try (PrintWriter out = response.getWriter()) {
 //            /* TODO output your page here. You may use following sample code. */
