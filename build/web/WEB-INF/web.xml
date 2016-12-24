@@ -96,7 +96,7 @@
     </filter-mapping>
     <error-page>
         <exception-type>404</exception-type>
-        <location>/Errorpage.jsp</location>
+        <location>/PageError.jsp</location>
     </error-page>
     <!-- Send mail -->
     <context-param>
