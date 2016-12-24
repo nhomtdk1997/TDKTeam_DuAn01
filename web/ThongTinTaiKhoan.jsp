@@ -10,8 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Thông tin tài khoản</title>
+        <%@include file="includes/headtag.jsp" %>
+        <%@include file="includes/headerFix.jsp" %>
     </head>
     <body>
         <h1>Thông tin tài khoản page!</h1>
+        <%@include file="includes/footer.jsp" %>
     </body>
 </html>
