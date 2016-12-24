@@ -15,6 +15,7 @@
         <section>
             <%
                 if (session != null) {
+                    session.removeAttribute("usName");
                     session.removeAttribute("youruser");
                     session.removeAttribute("iduser");
                     session.removeAttribute("HoNguoidung");
