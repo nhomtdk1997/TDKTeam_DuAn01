@@ -52,6 +52,15 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         if (KiemTra) {
+            if (session.getAttribute("usName") != null) {
+                String usname = (String) session.getAttribute("usName");
+                System.out.println(usname);
+                if (usname.equals(username)) {
+                    String url = "/ErrorSession.jsp";
+                    getServletContext().getRequestDispatcher(url).forward(request, response);
+                }
+            }
+            session.setAttribute("usName", username);
             Taikhoan taikhoan = tk.GetUserByEmailOrUserName(username);
             Nguoidung nguoidung = ndsv.GetUserByIdTaikhoan(taikhoan.getIdTaiKhoan());
             session.setAttribute("youruser", nguoidung.getHo() + " " + nguoidung.getDemVaTen());
