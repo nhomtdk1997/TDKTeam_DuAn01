@@ -89,8 +89,8 @@ public class TaikhoanService {
     }
 
     //Kiểm tra đăng nhập
-    public boolean CheckLogin(String GiaTriNhap, String MatKhau) {
-        Taikhoan tk = GetUserByEmailOrUserName(GiaTriNhap);
+    public boolean CheckLogin(String Username, String MatKhau) {
+        Taikhoan tk = GetUserByEmailOrUserName(Username);
         if (tk == null) {
             return false;
         } else if (tk.getMatKhau().equals(MatKhau)) {
