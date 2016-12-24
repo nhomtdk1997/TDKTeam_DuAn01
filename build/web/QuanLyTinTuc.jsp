@@ -16,7 +16,7 @@
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
+        <%@include file="includes/headerStaff.jsp" %>
         <%@include file="includes/slider.jsp" %>
 
         <%            
@@ -67,11 +67,11 @@
                         <div class="col-md-2">
                             <a href="ThemTinTuc.jsp"><button class="col-md-9 btn btn-success">Thêm tin tức</button></a>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-2 col-md-offset-8">
                             <form action="QuanLyTinTuc.jsp" method="get">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="Timkiem" placeholder="Tìm kiếm theo Tiêu dề hoặc Ngày đăng...">
-                                    <span class="input-group-btn">                                        
+                                    <input type="date" class="form-control" name="Timkiem" placeholder="Tìm kiếm theo ngày đăng...">
+                                    <span class="input-group-btn">     
                                         <button class="btn btn-warning" type="submit">Search!</button>
                                     </span>
                                 </div>
@@ -84,7 +84,7 @@
                     <thead>
                         <tr>
                             <th>STT</th>                        
-                            <th>ID Tài khoản</th>                        
+                            <th>idTK</th>                        
                             <th>Hình ảnh</th>                                               
                             <th>Tiêu đề</th>                                               
                             <th>Nội dung</th>                       
@@ -92,6 +92,7 @@
                             <th>Ghi chú</th>
                             <th>Sửa</th>                       
                             <th>Xóa</th>                       
+                            <th>Chi tiết ...</th>                       
                         </tr>
                     </thead>
                     <tbody>
@@ -103,16 +104,19 @@
                         <tr>
                             <td><%=i%></td>                        
                             <td><%= tintuc.getIdTaiKhoan()%></td>
-                            <td><img class="img-thumbnail" src="<%=folderupload%><%=tintuc.getImgLink()%>"></td>
-                            <td><%= tintuc.getTieuDe()%></td>
+                            <td style="width: 200px;"><img class="img-thumbnail" src="<%=folderupload%><%=tintuc.getImgLink()%>"></td>
+                            <td style="width: 200px;"><%= tintuc.getTieuDe()%></td>
                             <td><%= tintuc.getNoiDung()%></td>
-                            <td><%= tintuc.getNgayDang()%></td>
-                            <td><%= tintuc.getGhiChu()%></td>
+                            <td style="width: 100px;"><%= tintuc.getNgayDang()%></td>
+                            <td style="width: 150px;"><%= tintuc.getGhiChu()%></td>
                             <td style="width: 40px;">
                                 <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-primary" name="suatintuc" value="Sửa"/> </a>
                             </td>
                             <td style="width: 47px;">
                                 <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" /> </a>
+                            </td>
+                            <td style="width: 57px;">
+                                <a href="TinTucDetail.jsp?newsid=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" /> </a>
                             </td>
                         </tr>
                         <%
