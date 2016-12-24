@@ -8,7 +8,7 @@
 
 <%
     if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") && !session.getAttribute("TKRole").toString().equals("2")) {
-        response.sendRedirect("Errorpage.jsp");
+        response.sendRedirect("PageError.jsp");
     }
 %>
 

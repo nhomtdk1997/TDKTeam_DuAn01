@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Error!</title>
     </head>
     <body>
         <h1>Bạn không được phép truy cập vào trang này!</h1>
