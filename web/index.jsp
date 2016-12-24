@@ -629,7 +629,7 @@
 
                 <div class="col-md-8 col-sm-9 wow fadeInLeft">
                     <div class="contact-form clearfix">
-                        <form action="index.html" method="post">
+                        <form action="SendMailServlet" method="post">
                             <div class="input-field">
                                 <input type="text" class="form-control" name="name" placeholder="Your Name" required="">
                             </div>
