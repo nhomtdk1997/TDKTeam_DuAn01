@@ -47,6 +47,7 @@ Contributor(s):
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">duongnguyen97</property>
     <mapping resource="com/javaweb/model/Chuyenbay.hbm.xml"/>
+    <mapping resource="com/javaweb/model/Loaitintuc.hbm.xml"/>
     <mapping resource="com/javaweb/model/Phanhoi.hbm.xml"/>
     <mapping resource="com/javaweb/model/Quoctich.hbm.xml"/>
     <mapping resource="com/javaweb/model/Loaive.hbm.xml"/>

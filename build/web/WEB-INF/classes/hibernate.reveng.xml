@@ -2,14 +2,15 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="db_dailybanve"/>
-  <table-filter match-name="taikhoan"/>
-  <table-filter match-name="baocao"/>
+  <table-filter match-name="loaitaikhoan"/>
+  <table-filter match-name="nguoidung"/>
+  <table-filter match-name="ve"/>
+  <table-filter match-name="chuyenbay"/>
   <table-filter match-name="loaive"/>
   <table-filter match-name="quoctich"/>
-  <table-filter match-name="nguoidung"/>
-  <table-filter match-name="tintuc"/>
-  <table-filter match-name="ve"/>
-  <table-filter match-name="loaitaikhoan"/>
-  <table-filter match-name="chuyenbay"/>
   <table-filter match-name="phanhoi"/>
+  <table-filter match-name="baocao"/>
+  <table-filter match-name="taikhoan"/>
+  <table-filter match-name="tintuc"/>
+  <table-filter match-name="loaitintuc"/>
 </hibernate-reverse-engineering>
