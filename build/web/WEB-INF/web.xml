@@ -32,6 +32,10 @@
         <servlet-name>DatVeKhuHoiServlet</servlet-name>
         <servlet-class>com.javaweb.controller.DatVeKhuHoiServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SendMailServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.SendMailServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -64,6 +68,10 @@
         <servlet-name>DatVeKhuHoiServlet</servlet-name>
         <url-pattern>/DatVeKhuHoiServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendMailServlet</servlet-name>
+        <url-pattern>/SendMailServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -88,6 +96,23 @@
     </filter-mapping>
     <error-page>
         <exception-type>404</exception-type>
-        <location>/errorpage.jsp</location>
+        <location>/Errorpage.jsp</location>
     </error-page>
+    <!-- Send mail -->
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>kakaassasin123@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>khongbiet@123</param-value>
+    </context-param>
 </web-app>
