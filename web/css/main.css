@@ -465,6 +465,7 @@ width: 11px;
     float: left;
     overflow: hidden;
     width: 25%;
+    border: white 1px solid;
 }
 
 .plus {
