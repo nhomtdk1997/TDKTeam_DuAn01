@@ -34,8 +34,8 @@ public class ThemTinTucServlet extends HttpServlet {
 
     private boolean isMultipart;
     private String filePath;
-    private int maxFileSize = 1000 * 1024;
-    private int maxMemSize = 1000 * 1024;
+    private int maxFileSize = 1000 * 600;
+    private int maxMemSize = 1000 * 600;
     private File file;
 
     /**
@@ -71,7 +71,7 @@ public class ThemTinTucServlet extends HttpServlet {
         // maximum size that will be stored in memory
         factory.setSizeThreshold(maxMemSize);
         // Location to save data that is larger than maxMemSize.
-        factory.setRepository(new File("C:\\Windows\\Temp"));
+        factory.setRepository(new File("C:\\Windows\\Temp\\"));
 
         // Create a new file upload handler
         ServletFileUpload upload = new ServletFileUpload(factory);
@@ -137,10 +137,10 @@ public class ThemTinTucServlet extends HttpServlet {
 
         boolean rs = tintucservice.InsertTintuc(tintuc);
         if (rs) {
-            String url = "index.jsp";
+            String url = "QuanLyTinTuc.jsp";
             response.sendRedirect(url);
         } else {
-            String url = "Themtintuc.jsp";
+            String url = "ThemTinTuc.jsp";
             response.sendRedirect(url);
         }
 
