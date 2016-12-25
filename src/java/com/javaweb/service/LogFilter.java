@@ -6,6 +6,7 @@
 package com.javaweb.service;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.util.Date;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -46,11 +47,11 @@ public class LogFilter implements Filter {
         if( realIP == null )
             realIP = remoteAddress;
         
-//        String ipAddress, ipAddress2, ipAddress3;
-//
-//        InetAddress gip = InetAddress.getLocalHost();
-//        ipAddress = gip.getHostAddress();
-//        ipAddress2 = gip.getHostName();
+        String ipAddress, ipAddress2, ipAddress3;
+
+        InetAddress gip = InetAddress.getLocalHost();
+        ipAddress = gip.getHostAddress();
+        ipAddress2 = gip.getHostName();
        
         // Log the IP address and current timestamp.
         System.out.println("IP1Address " + realIP + ", Time "
@@ -66,7 +67,6 @@ public class LogFilter implements Filter {
         // Pass request back down the filter chain
         chain.doFilter(request, response);
     }
-
 
     @Override
     public void destroy() {
