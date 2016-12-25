@@ -116,7 +116,7 @@
                                 <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" /> </a>
                             </td>
                             <td style="width: 57px;">
-                                <a href="TinTucDetail.jsp?newsid=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" /> </a>
+                                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" /> </a>
                             </td>
                         </tr>
                         <%
