@@ -4,7 +4,7 @@
     Author     : DuongNguyen
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<link rel="icon" type="image/png" href="img/logo/tablogo.png">
 <!--Sweetalert ===============================================-->
 <!--Sweetalert.min-->
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
