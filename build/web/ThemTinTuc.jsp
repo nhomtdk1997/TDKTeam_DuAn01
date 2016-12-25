@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="comment">Nội dung: </label>
-                        <textarea class="form-control" name="NoiDung" id="editor1" name="editor1" rows="5"></textarea>
+                        <textarea required="" class="form-control" name="NoiDung" id="editor1" name="editor1" rows="5"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="GhiChu">Ghi chú: </label>

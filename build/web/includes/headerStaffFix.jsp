@@ -23,7 +23,7 @@ Fixed Navigation
             <!-- logo -->
             <h1 class="navbar-brand">
                 <a href="${pageContext.request.contextPath}/index.jsp#home">
-                    <img src="img/logo.png" alt="TDKTeam Logo">
+                    <img src="img/logo/logo.png" alt="TDKTeam Logo">
                 </a>
             </h1>
             <!-- /logo -->

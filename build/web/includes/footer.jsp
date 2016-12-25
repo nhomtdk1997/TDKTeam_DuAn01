@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-4">
                 <div class="footer-logo wow fadeInDown">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo/logo.png" alt="logo">
                 </div>
 
                 <div class="footer-social wow fadeInUp">

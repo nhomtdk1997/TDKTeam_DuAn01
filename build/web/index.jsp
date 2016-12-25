@@ -3,6 +3,9 @@
     Created on : Oct 12, 2016, 3:43:01 PM
     Author     : DuongNguyen
 --%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.javaweb.model.Tintuc"%>
+<%@page import="com.javaweb.service.TintucService"%>
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
@@ -140,7 +143,7 @@
                         </div>
                         <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
                     </form>
-                    
+
                     <form id="form-vekhuhoiindex" action="TimChuyenBayKhuHoiServlet" method="post" style="display: none;">
                         <div class="modal-body">
                             <div class="row tu-den col-md-6">
@@ -230,7 +233,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-2">
                                         <span id="idghichu">Ngày quay về<span class="required"> *</span></span>
@@ -243,12 +246,12 @@
                         </div>
                         <button type="submit" class="btndatve btn btn-blue col-md-12">Tìm vé</button>
                     </form>
-                    
-                    
+
+
                 </div>
 
             </div>
-            
+
         </div>
     </section>
     <!--
@@ -386,7 +389,12 @@
     End #quotes
     ========================== -->
 
-
+    <%        
+        TintucService tts = new TintucService();
+        ArrayList<Tintuc> listTintuc = null;
+        listTintuc = tts.GetAllTintuc();
+        String folderupload = getServletContext().getInitParameter("file-upload");
+    %>
     <!--
     #tintuc
     ========================== -->
@@ -402,87 +410,70 @@
         <nav class="project-filter clearfix text-center wow fadeInLeft"  data-wow-delay="0.5s">
             <ul class="list-inline">
                 <li><a href="javascript:;" class="filter" data-filter="all">Tất cả</a></li>
-                <li><a href="javascript:;" class="filter" data-filter=".app">Tin nổi bật</a></li>
-                <li><a href="javascript:;" class="filter" data-filter=".photography">Tin khuyến mãi</a></li>
-                <li><a href="javascript:;" class="filter" data-filter=".web">Tin dịch vụ</a></li>
-                <li><a href="javascript:;" class="filter" data-filter=".print">Tin khác</a></li>
+                <li><a href="javascript:;" class="filter" data-filter=".tinnoibat">Tin nổi bật</a></li>
+                <li><a href="javascript:;" class="filter" data-filter=".tinkhuyenmai">Tin khuyến mãi</a></li>
+                <li><a href="javascript:;" class="filter" data-filter=".tindichvu">Tin dịch vụ</a></li>
+                <li><a href="javascript:;" class="filter" data-filter=".tinkhac">Tin khác</a></li>
             </ul>
         </nav>
 
         <div id="projects" class="clearfix">
 
-            <figure class="mix portfolio-item app">
-                <img class="img-responsive" src="${img}" alt="Tin Tuc Images">
-                <a href="#" title="Title One" rel="portfolio" class="fancybox"><span class="plus"></span></a>
+            <%
+                for (int i = 0; i < listTintuc.size(); i++) {
+                    Tintuc tintuc = listTintuc.get(i);
+                    int idLoaiTin = tintuc.getIdMaLoaiTin();
+            %>  
+
+            <%
+                if (idLoaiTin == 1) {
+            %>
+            <figure class="mix portfolio-item tinnoibat">
+                <img class="img-responsive" src="<%=folderupload%><%=tintuc.getImgLink()%>" alt="Tin Tuc Images">
+                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>" title="Xem thêm..." rel="portfolio" class="fancybox"><span class="plus"></span></a>
                 <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
+                    <h3><%= tintuc.getTieuDe()%></h3>
+                    <span><a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>">Xem thêm</a></span>
+                </figcaption>
+            </figure>
+            <%
+            } else if (idLoaiTin == 2) {
+            %>
+            <figure class="mix portfolio-item tinkhuyenmai">
+                <img class="img-responsive" src="<%=folderupload%><%=tintuc.getImgLink()%>" alt="Tin Tuc Images">
+                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>" title="Xem thêm..." rel="portfolio" class="fancybox"><span class="plus"></span></a>
+                <figcaption class="mask">
+                    <h3><%= tintuc.getTieuDe()%></h3>
+                    <span><a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>">Xem thêm</a></span>
+                </figcaption>
+            </figure>
+            <%
+            } else if (idLoaiTin == 3) {
+            %>
+            <figure class="mix portfolio-item tindichvu">
+                <img class="img-responsive" src="<%=folderupload%><%=tintuc.getImgLink()%>" alt="Tin Tuc Images">
+                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>" title="Xem thêm..." rel="portfolio" class="fancybox"><span class="plus"></span></a>
+                <figcaption class="mask">
+                    <h3><%= tintuc.getTieuDe()%></h3>
+                    <span><a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>">Xem thêm</a></span>
+                </figcaption>
+            </figure>
+            <%
+            } else if (idLoaiTin == 4) {
+            %>
+            <figure class="mix portfolio-item tinkhac">
+                <img class="img-responsive" src="<%=folderupload%><%=tintuc.getImgLink()%>" alt="Tin Tuc Images">
+                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>" title="Xem thêm..." rel="portfolio" class="fancybox"><span class="plus"></span></a>
+                <figcaption class="mask">
+                    <h3><%= tintuc.getTieuDe()%></h3>
+                    <span><a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>">Xem thêm</a></span>
                 </figcaption>
             </figure>
 
-            <figure class="mix portfolio-item photography">
-                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-2.jpg" title="Title Two" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item web">
-                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-3.jpg" title="Title Three" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item print">
-                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-4.jpg" title="Title Four" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item app">
-                <img class="img-responsive" src="img/portfolio/portfolio-4.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-4.jpg" title="Title Five" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item photography">
-                <img class="img-responsive" src="img/portfolio/portfolio-1.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-1.jpg" title="Title Six" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item web app">
-                <img class="img-responsive" src="img/portfolio/portfolio-2.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-2.jpg" title="Title Seven" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
-            <figure class="mix portfolio-item print web">
-                <img class="img-responsive" src="img/portfolio/portfolio-3.jpg" alt="Tin Tuc Images">
-                <a href="img/portfolio/portfolio-3.jpg" title="Title Eight" rel="portfolio" class="fancybox"><span class="plus"></span></a>
-                <figcaption class="mask">
-                    <h3>Awesome Image</h3>
-                    <span>Photography</span>
-                </figcaption>
-            </figure>
-
+            <%
+                    }
+                }
+            %>
         </div> <!-- end #projects -->
 
     </section>
@@ -646,13 +637,13 @@
 
                 <div class="col-md-4 col-sm-3 wow fadeInRight">
                     <div class="contact-details">
-                        <span>GET IN TOUCH</span>
-                        <p>+00 123.456.789 <br> <br> +00 123.456.789</p>
+                        <span>SĐT LIÊN HỆ</span>
+                        <p>+84 123.456.789 <br> <br> +84 987.654.321</p>
                     </div> <!-- end .contact-details -->
 
                     <div class="contact-details">
-                        <span>GET IN TOUCH</span>
-                        <p>+00 123.456.789 <br> <br> +00 123.456.789</p>
+                        <span>SĐT LIÊN HỆ</span>
+                        <p>+84 987.654.321 <br> <br> +84 123.456.789</p>
                     </div> <!-- end .contact-details -->
                 </div> <!-- .col-md-4 -->
 

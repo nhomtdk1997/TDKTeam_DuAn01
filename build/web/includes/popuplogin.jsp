@@ -27,6 +27,7 @@
             <div class="modal-body">
                 <form action="LoginServlet" method="post">
                     <div class="form-group">
+                        <span id="idghichu">Tên tài khoản<span class="required"> *</span></span>
                         <div class="input-group">
                             <input type="text" name="username" id="username" class="form-control form-popup" placeholder="Email hoặc Username" required="">
                             <label class="input-group-addon glyphicon glyphicon-user"></label>
@@ -34,8 +35,9 @@
                     </div> <!-- /.form-group -->
 
                     <div class="form-group">
+                        <span id="idghichu">Mật khẩu<span class="required"> *</span></span>
                         <div class="input-group">
-                            <input type="password" name="pwd" id="pwd" class="form-control form-popup" id="uPassword" placeholder="Mật khẩu" required="">
+                            <input type="password" name="pwd" id="pwd" class="form-control form-popup" id="uPassword" required="">
                             <label class="input-group-addon glyphicon glyphicon-lock"></label>
                         </div> <!-- /.input-group -->
                     </div> <!-- /.form-group -->
