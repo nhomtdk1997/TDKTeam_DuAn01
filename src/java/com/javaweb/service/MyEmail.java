@@ -68,7 +68,7 @@ public class MyEmail {
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart);
             msg.setContent(multipart);
-            msg.setContent("Email address submitted: "+Email+"\n"+message, "text/plain; charset=UTF-8");
+            msg.setContent("Email address submitted: "+Email+"\nNội dung phản hồi:\n"+message, "text/plain; charset=UTF-8");
 
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(MyEmail.class.getName()).log(Level.SEVERE, null, ex);
