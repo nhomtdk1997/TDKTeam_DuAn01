@@ -70,7 +70,8 @@
                 <!-- Default panel contents -->
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-1"><button class="btn btn-success form-control">+ Chuyến bay</button></div>
+                        <div class="col-md-10 col-md-offset-1">
                             <form action="ChuyenBay.jsp" method="get">
                                 <div class="input-group col-md-12">
                                     <div class="row">
@@ -142,7 +143,7 @@
                                             <input name="NgayKhoiHanh" type="date" class="form-control" required="">
                                         </div>
                                         <div class="col-md-1">
-                                            <button class="form-control btn btn-success" type="submit">Tìm kiếm!</button>
+                                            <button class="form-control btn btn-warning" type="submit">Tìm kiếm!</button>
                                         </div>
                                     </div>
                                 </div>
