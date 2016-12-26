@@ -148,9 +148,9 @@ Fixed Navigation
                 <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
                 <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
                 <li><a href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a></li>
-                <%
-                    }
-                %>
+                    <%
+                        }
+                    %>
             </ul>
         </nav>
         <!-- /main nav -->
