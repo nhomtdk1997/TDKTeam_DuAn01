@@ -37,7 +37,7 @@
                     <div class="form-group">
                         <span id="idghichu">Mật khẩu<span class="required"> *</span></span>
                         <div class="input-group">
-                            <input type="password" name="pwd" id="pwd" class="form-control form-popup" id="uPassword" required="">
+                            <input type="password" name="pwd" id="pwd" class="form-control form-popup" id="uPassword" placeholder="Mật khẩu" required="">
                             <label class="input-group-addon glyphicon glyphicon-lock"></label>
                         </div> <!-- /.input-group -->
                     </div> <!-- /.form-group -->
@@ -46,7 +46,6 @@
                             <a href="Register.jsp">Đăng ký tại đây!</a>
                         </label>
                     </div> <!-- /.dangky -->
-                    <br>
                     <div class="inputdn">
                         <button id="btndangnhap" type="submit" class="form-control btn btn-primary" onclick="LoginFunction()">ĐĂNG NHẬP</button>
                         <div class="progress" style="display: none;">
