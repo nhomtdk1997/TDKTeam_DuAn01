@@ -147,4 +147,54 @@ public class TaikhoanService {
         return null;
     }
     
+    public int taikhoancount = 0;
+
+    //Lấy tất cả thông tin tài khoản
+    public ArrayList<Taikhoan> GetAllTaikhoan(int pageSize, int pageNumber) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        ArrayList<Taikhoan> listTaikhoan = new ArrayList<Taikhoan>();
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Query query = session.createQuery("from Taikhoan");
+            taikhoancount = query.list().size();
+            query = query.setFirstResult(pageSize * (pageNumber - 1));
+            query.setMaxResults(pageSize);
+            listTaikhoan = (ArrayList) query.list();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return listTaikhoan;
+    }
+
+    //Tìm Tài khoản
+    public ArrayList<Taikhoan> SearchTaikhoan(int pageSize, int pageNumber, String Email) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        ArrayList listTaikhoan = new ArrayList<Taikhoan>();
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Query query = session.createQuery("from Taikhoan where Email like '%"+Email+"%'");
+            taikhoancount = query.list().size();
+            query = query.setFirstResult(pageSize * (pageNumber - 1));
+            query.setMaxResults(pageSize);
+            listTaikhoan = (ArrayList) query.list();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return listTaikhoan;
+    }
+    
 }
