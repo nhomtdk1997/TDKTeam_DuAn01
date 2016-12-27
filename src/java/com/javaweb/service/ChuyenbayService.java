@@ -17,10 +17,55 @@ import org.hibernate.Transaction;
  * @author DuongNguyen
  */
 public class ChuyenbayService {
-    
-    
+
+    //Cập nhật Chuyến bay
+    public boolean InsertChuyenbay(Chuyenbay cb) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            session.saveOrUpdate(cb);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        } finally {
+            session.close();
+        }
+        return false;
+    }
+
+    //Xóa Chuyến bay
+    public boolean DeleteChuyenbay(int idCB) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Chuyenbay cb = new Chuyenbay();
+            cb.setIdchuyenbay(idCB);
+            session.delete(cb);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        } finally {
+            session.close();
+        }
+        return false;
+    }
+
     //Tìm kiếm chuyến bay theo yêu cầu khách hàng
-    public ArrayList<Chuyenbay>TimKiemChuyenbay(String Tu, String Den, String NgayKhoiHanh) {
+    public ArrayList<Chuyenbay> TimKiemChuyenbay(String Tu, String Den, String NgayKhoiHanh) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = null;
         ArrayList listChuyenbay = new ArrayList<Chuyenbay>();
@@ -94,7 +139,7 @@ public class ChuyenbayService {
     }
 
     //Tìm chuyến bay
-    public ArrayList<Chuyenbay>SearchChuyenbay(int pageSize, int pageNumber, String Tu, String Den, String NgayKhoiHanh) {
+    public ArrayList<Chuyenbay> SearchChuyenbay(int pageSize, int pageNumber, String Tu, String Den, String NgayKhoiHanh) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = null;
         ArrayList listChuyenbay = new ArrayList<Chuyenbay>();
