@@ -36,6 +36,18 @@
         <servlet-name>SendMailServlet</servlet-name>
         <servlet-class>com.javaweb.controller.SendMailServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SuaTinTucServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.SuaTinTucServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ThemChuyenBayServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.ThemChuyenBayServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SuaChuyenBayServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.SuaChuyenBayServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -71,6 +83,18 @@
     <servlet-mapping>
         <servlet-name>SendMailServlet</servlet-name>
         <url-pattern>/SendMailServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuaTinTucServlet</servlet-name>
+        <url-pattern>/SuaTinTucServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThemChuyenBayServlet</servlet-name>
+        <url-pattern>/ThemChuyenBayServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuaChuyenBayServlet</servlet-name>
+        <url-pattern>/SuaChuyenBayServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
