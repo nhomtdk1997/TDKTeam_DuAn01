@@ -64,7 +64,7 @@ public class TintucService {
     }
 
     //Get tin tức ID
-    public Tintuc GetTintucID(String TintucID) {
+    public Tintuc GetTintucID(int TintucID) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = null;
 
