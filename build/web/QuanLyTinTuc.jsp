@@ -102,9 +102,9 @@
                         %>        
 
                         <tr>
-                            <td><%=i%></td>                        
-                            <td><%= tintuc.getIdTaiKhoan()%></td>
-                            <td style="width: 200px;"><img class="img-thumbnail" src="<%=folderupload%><%=tintuc.getImgLink()%>"></td>
+                            <td style="width: 50px;"><%=i%></td>                        
+                            <td style="width: 50px;"><%= tintuc.getIdTaiKhoan()%></td>
+                            <td style="width: 300px;"><img class="img-thumbnail" src="<%=folderupload%><%=tintuc.getImgLink()%>"></td>
                             <td style="width: 200px;"><%= tintuc.getTieuDe()%></td>
                             <td><%= tintuc.getNoiDung()%></td>
                             <td style="width: 100px;"><%= tintuc.getNgayDang()%></td>
@@ -113,7 +113,7 @@
                                 <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-primary" name="suatintuc" value="Sửa"/> </a>
                             </td>
                             <td style="width: 47px;">
-                                <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" /> </a>
+                                <a href="XoaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" /> </a>
                             </td>
                             <td style="width: 57px;">
                                 <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" /> </a>

@@ -163,3 +163,28 @@ $(function getdate() {
     document.getElementById("Ngaykhoihanh-khuhoi-getdate").setAttribute("min", today);
     document.getElementById("Ngayquayve-khuhoi-getdate").setAttribute("min", today);
 });
+
+
+/* ---------------------------------------------------------------------- */
+/*      Set Getdate
+ /* ---------------------------------------------------------------------- */
+function setValue(id, newvalue) {
+    var s = document.getElementById(id);
+    s.value = newvalue;
+}
+window.onload = function () {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+    var today = yyyy + '-' + mm + '-' + dd;
+    setValue("ngaydangtt", today);
+}

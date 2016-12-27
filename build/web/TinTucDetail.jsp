@@ -21,7 +21,7 @@
             TintucService ns = new TintucService();
             Tintuc news = null;
             if(request.getParameter("idTintuc")!= null){
-            String id = request.getParameter("idTintuc");
+            int id = Integer.parseInt(request.getParameter("idTintuc"));
             news = ns.GetTintucID(id);
             }else{
                 response.sendRedirect("index.jsp");

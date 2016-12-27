@@ -70,7 +70,7 @@
                 <!-- Default panel contents -->
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-md-1"><button class="btn btn-success form-control">+ Chuyến bay</button></div>
+                        <div class="col-md-1"><a href="ThemChuyenBay.jsp"><button class="btn btn-success form-control">+ Chuyến bay</button></a></div>
                         <div class="col-md-10 col-md-offset-1">
                             <form action="ChuyenBay.jsp" method="get">
                                 <div class="input-group col-md-12">

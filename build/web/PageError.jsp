@@ -11,7 +11,7 @@
 
         <!--- basic page needs ================================================== -->
         <meta charset="utf-8">
-        <title>Error page</title>
+        <title>Error page!</title>
         <meta name="description" content="">  
         <meta name="author" content="">
 
@@ -37,7 +37,7 @@
         <header class="main-header">
             <div class="row">
                 <div class="logo">
-                    <a href="index.jsp">Quatro</a>
+                    <a href="index.jsp">TDKTeam</a>
                 </div>   		
             </div>   
 
@@ -54,7 +54,7 @@
                 <li><a href="index.jsp#khuyenmai" title="">Khuyến mãi</a></li>
                 <li><a href="index.jsp#tintuc" title="">Tin tức</a></li>
                 <li><a href="index.jsp#service" title="">Điều khoản</a></li>					
-                <li><a href="/index.jsp#contact" title="">Phản hồi</a></li>					
+                <li><a href="index.jsp#contact" title="">Phản hồi</a></li>					
             </ul>
 
             <h5>Giới thiệu</h5>  
