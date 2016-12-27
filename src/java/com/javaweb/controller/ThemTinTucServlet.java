@@ -55,7 +55,7 @@ public class ThemTinTucServlet extends HttpServlet {
         HttpSession session = request.getSession();
 //        session.removeAttribute("errorreg");
         String TieuDe = "", NoiDung = "", ngaydang = "", GhiChu = "", fileName = "";
-        int idloaitin = 1, idTK = 0;
+        int idloaitin = 0, idTK = 0;
 
         TintucService tintucservice = new TintucService();
 
