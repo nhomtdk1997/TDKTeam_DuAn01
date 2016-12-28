@@ -113,7 +113,7 @@
 
                         <tr>
                             <td><%= taikhoan.getIdTaiKhoan()%></td>
-                            <td><%= nd.getHo()+" "+nd.getDemVaTen()%></td>
+                            <td><a href="SuaNguoidung.jsp?idNguoidung=<%=taikhoan.getIdnguoidung()%>"><%= nd.getHo()+" "+nd.getDemVaTen()%></a></td>
                             <td><%= taikhoan.getTenDangNhap()%></td>
                             <td><%= taikhoan.getEmail()%></td>
                             <td><input class="form-control" type="password" disabled="" value="<%= taikhoan.getMatKhau()%>"></td>
