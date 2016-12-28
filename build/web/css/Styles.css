@@ -435,3 +435,10 @@ td.text-right {
 .panel .pagination{
     display: block;
 }
+
+/*
+    Fix input form-control
+*/
+html .form-control{
+    border-radius:inherit;
+}
