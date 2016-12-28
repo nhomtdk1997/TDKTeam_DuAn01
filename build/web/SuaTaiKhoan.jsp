@@ -78,8 +78,9 @@
                     </div>
                     <div class="form-group col-md-8 col-md-offset-2">
                         <div style="padding-left: 0px;" class="col-md-6 col-xs-6">
-                            <p style="padding-top: 0px;">Sửa thông tin người dùng:<br>
-                                <a href="SuaNguoidung.jsp?idNguoidung=<%=tk.getIdnguoidung()%>"><%=nd.getHo() + " " + nd.getDemVaTen()%></a>
+                            <p style="padding-top: 0px;">Sửa thông tin người dùng: 
+                                <a href="SuaNguoidung.jsp?idNguoidung=<%=tk.getIdnguoidung()%>"><%=nd.getHo() + " " + nd.getDemVaTen()%></a><br>
+                                <a href="TaiKhoan.jsp">&laquo; Về trang quản lý</a>
                             </p>
                         </div>
                         <div style="padding-right: 0px;" class="col-md-6 col-xs-6">
