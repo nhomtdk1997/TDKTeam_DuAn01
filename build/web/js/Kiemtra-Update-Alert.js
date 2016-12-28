@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-//Windows open center
+//Windows center open
 function open_window(url, width, height) {
     var my_window;
     var center_left = (screen.width / 2) - (width / 2);
@@ -13,7 +13,7 @@ function open_window(url, width, height) {
     my_window.focus();
 }
 
-//Kiểm tra tài khoản
+//Kiểm tra Tài khoản
 function kiemtrataikhoan() {
     var a = document.getElementById("kiemtra").value;
     if (a == 1) {
@@ -43,5 +43,36 @@ function kiemtrataikhoan() {
                     }, 1000);
                 });
     }
-}
-;
+};
+
+//Kiểm tra Người dùng
+function kiemtrataikhoan() {
+    var a = document.getElementById("kiemtra").value;
+    if (a == 1) {
+        swal({
+            title: "Cập nhật thông tin thành công!",
+            text: "Chờ 3s để trở về trang quản lý!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "TaiKhoan.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal({
+            title: "Cập nhật thông tin thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi cập nhật!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+                function () {
+                    setTimeout(function () {
+                        swal("Kiểm tra lại các thông tin!", "Có thể SĐT hoặc CMND bạn nhập đã được đăng ký!", "info");
+                    }, 1000);
+                });
+    }
+};
