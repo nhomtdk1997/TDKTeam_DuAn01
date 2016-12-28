@@ -61,3 +61,4 @@
 <script src="js/wow.min.js"></script>
 <!-- theme custom scripts -->
 <script src="js/main.js"></script>
+<script src="js/Kiemtra-Update-Alert.js" type="text/javascript"></script>
