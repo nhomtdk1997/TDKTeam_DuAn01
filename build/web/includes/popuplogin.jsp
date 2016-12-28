@@ -48,9 +48,9 @@
                     </div> <!-- /.dangky -->
                     <div class="inputdn">
                         <button id="btndangnhap" type="submit" class="form-control btn btn-primary" onclick="LoginFunction()">ĐĂNG NHẬP</button>
-                        <div class="progress" style="display: none;">
+                        <div class="progress" style="display: none; margin-bottom: 0px; height: 30px;">
                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
-                                <span class="sr-only">progress</span>
+                                <p style="padding-top: 5px;">Đang đăng nhập...</p>
                             </div>
                         </div>
                     </div>
