@@ -40,14 +40,14 @@ public class NguoidungService {
     }
     
     //Lấy thông tin người dùng theo IDTaikhoan
-    public Nguoidung GetUserByIdTaikhoan(int taikhoanID) {
+    public Nguoidung GetUserByIdNguoidung(int idNguoidung) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = null;
 
         try {
             tx = session.getTransaction();
             tx.begin();
-            String strQuery = "from Nguoidung where idnguoidung = " + taikhoanID;
+            String strQuery = "from Nguoidung where idnguoidung = " + idNguoidung;
             Query query = session.createQuery(strQuery);
             Nguoidung nd = (Nguoidung) query.uniqueResult();
             tx.commit();
