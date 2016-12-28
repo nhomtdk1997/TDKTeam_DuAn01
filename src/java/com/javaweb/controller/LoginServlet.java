@@ -62,7 +62,7 @@ public class LoginServlet extends HttpServlet {
             }
             session.setAttribute("usName", username);
             Taikhoan taikhoan = tk.GetUserByEmailOrUserName(username);
-            Nguoidung nguoidung = ndsv.GetUserByIdTaikhoan(taikhoan.getIdTaiKhoan());
+            Nguoidung nguoidung = ndsv.GetUserByIdNguoidung(taikhoan.getIdTaiKhoan());
             session.setAttribute("youruser", nguoidung.getHo() + " " + nguoidung.getDemVaTen());
             session.setAttribute("iduser", taikhoan.getIdTaiKhoan());
             session.setAttribute("HoNguoidung", nguoidung.getHo());
