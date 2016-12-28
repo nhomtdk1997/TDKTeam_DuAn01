@@ -48,6 +48,10 @@
         <servlet-name>SuaChuyenBayServlet</servlet-name>
         <servlet-class>com.javaweb.controller.SuaChuyenBayServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SuaTaiKhoanServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.SuaTaiKhoanServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>SuaChuyenBayServlet</servlet-name>
         <url-pattern>/SuaChuyenBayServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuaTaiKhoanServlet</servlet-name>
+        <url-pattern>/SuaTaiKhoanServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

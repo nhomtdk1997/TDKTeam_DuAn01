@@ -11,11 +11,5 @@ function LoginFunction() {
         $('.progress').show();
         $('.progress-bar').animate({width: "100%"}, 100);
         $('#btndangnhap').hide();
-        swal({
-            title: "Please wait...",
-            text: "Database loading...",
-            timer: 2000,
-            showConfirmButton: false
-        });
     }
 }

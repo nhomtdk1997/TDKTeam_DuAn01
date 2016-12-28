@@ -4,6 +4,10 @@
     Author     : DuongNguyen
 --%>
 
+<%@page import="com.javaweb.service.LoaitaikhoanService"%>
+<%@page import="com.javaweb.model.Loaitaikhoan"%>
+<%@page import="com.javaweb.service.NguoidungService"%>
+<%@page import="com.javaweb.model.Nguoidung"%>
 <%@page import="com.javaweb.service.TaikhoanService"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.javaweb.model.Taikhoan"%>
@@ -16,10 +20,9 @@
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
-        <%@include file="includes/headerAdmin.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerAdminFix.jsp" %>
 
-        <%            
+        <%
             int pageSize = 15;
             int pageNumber = 1;
             request.setCharacterEncoding("UTF-8");
@@ -49,9 +52,9 @@
                     ? (pageNumber + 1) : pageNumber) + "";
             String prePage = (pageNumber <= 1 ? 1 : pageNumber - 1) + "";
         %>
-
+        <%session.removeAttribute("kiemtra");%>
         <section class="container-fluid">
-            <div class="row">
+            <div class="row" style="padding-top: 50px;">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
                         <h2>Tài khoản management</h2>
@@ -64,7 +67,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="#" onClick="javascript:window.open('DangKy.jsp', '_blank', 'toolbar=0,location=0,menubar=0,width=700,height=800');">
+                            <a href="#" onClick="open_window('DangKy.jsp', 1200, 700)">
                                 <button class="col-md-9 btn btn-success">+ Tài khoản</button>
                             </a>
                         </div>
@@ -84,7 +87,7 @@
                     <thead>
                         <tr>
                             <th>ID Tài khoản</th>
-                            <th>ID Người dùng</th>
+                            <th>Người dùng</th>
                             <th>Tên đăng nhập</th>
                             <th>Email</th>
                             <th>Mật khẩu</th>
@@ -97,15 +100,24 @@
                         <%
                             for (int i = 0; i < listTaikhoan.size(); i++) {
                                 Taikhoan taikhoan = listTaikhoan.get(i);
+                                Nguoidung nd = new Nguoidung();
+                                NguoidungService ndsv = new NguoidungService();
+                                Loaitaikhoan ltk = new Loaitaikhoan();
+                                LoaitaikhoanService ltksv = new LoaitaikhoanService();
+
+                                int idnd = taikhoan.getIdnguoidung();
+                                nd = ndsv.GetUserByIdNguoidung(idnd);
+                                int idLoaiTK = taikhoan.getIdLoaiTk();
+                                ltk = ltksv.GetLoaitaikhoanByID(idLoaiTK);
                         %>        
 
                         <tr>
                             <td><%= taikhoan.getIdTaiKhoan()%></td>
-                            <td><%= taikhoan.getIdnguoidung()%></td>
+                            <td><%= nd.getHo()+" "+nd.getDemVaTen()%></td>
                             <td><%= taikhoan.getTenDangNhap()%></td>
                             <td><%= taikhoan.getEmail()%></td>
-                            <td><%= taikhoan.getMatKhau()%></td>
-                            <td><%= taikhoan.getIdLoaiTk()%></td>
+                            <td><input class="form-control" type="password" disabled="" value="<%= taikhoan.getMatKhau()%>"></td>
+                            <td><%= ltk.getLoaiTk()%></td>
                             <td style="width: 40px;">
                                 <a href="SuaTaiKhoan.jsp?idTaikhoan=<%= taikhoan.getIdTaiKhoan()%>&idNguoidung=<%= taikhoan.getIdnguoidung()%>">
                                     <input type="button" class="btn btn-primary" name="suataikhoan" value="Sửa"/>
