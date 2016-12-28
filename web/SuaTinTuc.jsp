@@ -34,7 +34,6 @@
             tt = ttsv.GetTintucID(idtintuc);
             int idloaitin = tt.getIdMaLoaiTin();
             ltt = lttsv.GetLoaitintucByID(idloaitin);
-            
         %>
 
         <div class="container-fluid" style="padding-bottom: 0;">
