@@ -52,6 +52,10 @@
         <servlet-name>SuaTaiKhoanServlet</servlet-name>
         <servlet-class>com.javaweb.controller.SuaTaiKhoanServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SuaNguoiDungServlet</servlet-name>
+        <servlet-class>com.javaweb.controller.SuaNguoiDungServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>SuaTaiKhoanServlet</servlet-name>
         <url-pattern>/SuaTaiKhoanServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuaNguoiDungServlet</servlet-name>
+        <url-pattern>/SuaNguoiDungServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
