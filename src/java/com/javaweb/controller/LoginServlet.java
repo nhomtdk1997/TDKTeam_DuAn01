@@ -74,15 +74,15 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("TKRole", taikhoan.getIdLoaiTk());
             try {
                 Thread.sleep(1000);
-                String url = "/index.jsp";
-                getServletContext().getRequestDispatcher(url).forward(request, response);
+                String url = "index.jsp";
+                response.sendRedirect(url);
             } catch (InterruptedException e) {
             }
         } else {
             try {
                 Thread.sleep(1000);
-                String url = "/index.jsp";
-                getServletContext().getRequestDispatcher(url).forward(request, response);
+                String url = "index.jsp";
+                response.sendRedirect(url);
             } catch (InterruptedException e) {
             }
         }
