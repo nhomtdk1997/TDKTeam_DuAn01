@@ -17,8 +17,7 @@
         <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerFix.jsp" %>
 
         <%            
             ChuyenbayService cb = new ChuyenbayService();
@@ -32,7 +31,7 @@
             listChuyenbay = cb.TimKiemChuyenbay(Tu, Den, Ngaykhoihanh);
         %>
 
-        <section id="TimVeMotChieu" class="container">
+        <section id="TimVeMotChieu" class="container" style="margin-top: 50px">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
