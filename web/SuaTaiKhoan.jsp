@@ -17,10 +17,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sửa tài khoản</title>
         <%@include file="includes/headtag.jsp" %>
-        <%@include file="includes/headerFix.jsp" %>
+        <%@include file="includes/headerAdminFix.jsp" %>
     </head>
     <body onload="kiemtrataikhoan()">
-        <section class="container" style="padding-top: 150px;">
+        <section class="container" style="margin-top: 50px;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
