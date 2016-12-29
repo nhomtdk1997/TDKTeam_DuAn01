@@ -21,12 +21,15 @@
         <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
     </head>
     <body>
-        <%@include file="includes/header.jsp"  %>
-        <%@include file="includes/slider.jsp" %>
-        <div class="row col-md-8 col-md-offset-2 text-center" style="margin-top: 90px;">
-            <h1>Thêm Tin Tức</h1>
-        </div>
-        <div class="container-fluid" style="padding-bottom: 0;">
+        <%@include file="includes/headerManageFix.jsp"  %>
+        <section class="container-fluid" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Thêm tin tức</h2>
+                    </div>
+                </div>
+            </div>
             <div class="row col-md-8 col-md-offset-2">
                 <form method="post" action="ThemTinTucServlet" enctype="multipart/form-data">
                     <div class="row">
@@ -70,7 +73,7 @@
                 </form>
                 <ckeditor:replace replace="editor1" basePath="/ckeditor/" />
             </div>
-        </div>
+        </section>
         <%@include file="includes/footer.jsp" %>
     </body>
 </html>
