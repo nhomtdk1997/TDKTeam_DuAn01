@@ -19,24 +19,27 @@
         <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
     </head>
     <body>
-        <%@include file="includes/header.jsp"  %>
-        <%@include file="includes/slider.jsp" %>
-        <div class="row col-md-8 col-md-offset-2 text-center" style="margin-top: 90px;">
-            <h1>Sửa tin tức</h1>
-        </div>
+        <%@include file="includes/headerManageFix.jsp"  %>
+        <section class="container-fluid" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Sửa tin tức</h2>
+                    </div>
+                </div>
+            </div>
 
-        <%            
-            TintucService ttsv = new TintucService();
-            Tintuc tt = null;
-            LoaitintucService lttsv = new LoaitintucService();
-            Loaitintuc ltt = new Loaitintuc();
-            int idtintuc = Integer.parseInt(request.getParameter("idTintuc"));
-            tt = ttsv.GetTintucID(idtintuc);
-            int idloaitin = tt.getIdMaLoaiTin();
-            ltt = lttsv.GetLoaitintucByID(idloaitin);
-        %>
+            <%
+                TintucService ttsv = new TintucService();
+                Tintuc tt = null;
+                LoaitintucService lttsv = new LoaitintucService();
+                Loaitintuc ltt = new Loaitintuc();
+                int idtintuc = Integer.parseInt(request.getParameter("idTintuc"));
+                tt = ttsv.GetTintucID(idtintuc);
+                int idloaitin = tt.getIdMaLoaiTin();
+                ltt = lttsv.GetLoaitintucByID(idloaitin);
+            %>
 
-        <div class="container-fluid" style="padding-bottom: 0;">
             <div class="row col-md-8 col-md-offset-2">
                 <form method="post" action="SuaTinTucServlet" enctype="multipart/form-data">
                     <div class="row">
@@ -96,7 +99,7 @@
                 </form>
                 <ckeditor:replace replace="editor1" basePath="/ckeditor/" />
             </div>
-        </div>
+        </section>
         <%@include file="includes/footer.jsp" %>
     </body>
 </html>
