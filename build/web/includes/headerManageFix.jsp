@@ -1,15 +1,14 @@
 <%-- 
-    Document   : headerStaff
-    Created on : Dec 21, 2016, 11:44:24 AM
+    Document   : headerStaffFix
+    Created on : Dec 24, 2016, 4:52:03 PM
     Author     : DuongNguyen
 --%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") 
-            && !session.getAttribute("TKRole").toString().equals("2") 
-            && !session.getAttribute("TKRole").toString().equals("3")) {
+    if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") && !session.getAttribute("TKRole").toString().equals("2")) {
         response.sendRedirect("PageError.jsp");
     }
 %>
@@ -17,7 +16,7 @@
 <!--
 Fixed Navigation
 ==================================== -->
-<header id="navigation" class="navbar-fixed-top">
+<header class="navbar-fixed-top animated-nav" style="background-color: rgb(0, 199, 252);">
     <div class="container">
         <div class="navbar-header">
 

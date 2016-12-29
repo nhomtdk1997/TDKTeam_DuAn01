@@ -5,6 +5,7 @@
 --%>
 
 <%@page import="com.javaweb.service.TaikhoanService"%>
+<%@page import="com.javaweb.service.NguoidungService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,18 @@
         <title>Xóa tài khoản</title>
     </head>
     <body>
-
+        <%
+            NguoidungService ndsv = new NguoidungService();
+            int idnd = Integer.parseInt(request.getParameter("idNguoidung"));
+            boolean xnd = ndsv.DeleteNguoidung(idnd);
+            if (xnd) {
+                TaikhoanService tksv = new TaikhoanService();
+                int idtk = Integer.parseInt(request.getParameter("idTaikhoan"));
+                boolean xtk = tksv.DeleteTaikhoan(idtk);
+                if (xtk) {
+                    response.sendRedirect("TaiKhoan.jsp");
+                }
+            }
+        %>
     </body>
 </html>

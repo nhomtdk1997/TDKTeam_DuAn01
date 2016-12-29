@@ -13,10 +13,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Đặt vé khứ hồi</title>
         <%@include file="includes/headtag.jsp" %>
+        <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerFix.jsp" %>
 
         <%            
             ChuyenbayService cbservice = new ChuyenbayService();
@@ -30,13 +30,12 @@
             chuyenbayve = cbservice.GetChuyenbayById(idChuyenbayve);
         %>
 
-        <section id="datve">
+        <section id="datve" style="margin-top: 50px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title text-center wow fadeInDown">
-                            <h2>Đặt vé</h2>
-                            <p>Đặt vé</p>
+                            <h2>Đặt vé khứ hồi</h2>
                         </div>
                     </div>
                 </div>
@@ -117,7 +116,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
+                                            <span>Trẻ em (2<12 tuổi)</span>
                                             <select name="sotreem-vedi" class="selectpicker form-control">
                                                 <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>
@@ -129,7 +128,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
+                                            <span>Em bé (<2 tuổi)</span>
                                             <select name="soembe-vedi" class="selectpicker form-control">
                                                 <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>
@@ -216,7 +215,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>Trẻ em (2<12 tuổi)<span class="required"> *</span></span>
+                                            <span>Trẻ em (2<12 tuổi)</span>
                                             <select name="sotreem-veve" class="selectpicker form-control">
                                                 <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>
@@ -228,7 +227,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <span>Em bé (<2 tuổi)<span class="required"> *</span></span>
+                                            <span>Em bé (<2 tuổi)</span>
                                             <select name="soembe-veve" class="selectpicker form-control">
                                                 <option value="0" selected="">0 người</option>
                                                 <option value="1">1 người</option>

@@ -14,13 +14,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Chuyến bay</title>
         <%@include file="includes/headtag.jsp" %>
+        <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
-        <%@include file="includes/headerStaff.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerStaffFix.jsp" %>
 
         <%            
-            int pageSize = 20;
+            int pageSize = 50;
             int pageNumber = 1;
             request.setCharacterEncoding("UTF-8");
             ArrayList<Chuyenbay> listChuyenbay = null;
@@ -57,7 +57,7 @@
                     ? (pageNumber + 1) : pageNumber) + "";
             String prePage = (pageNumber <= 1 ? 1 : pageNumber - 1) + "";
         %>
-        <section class="container-fluid">
+        <section class="container-fluid" style="margin-top: 50px">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">

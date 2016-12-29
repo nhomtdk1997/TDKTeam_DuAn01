@@ -7,9 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") 
-            && !session.getAttribute("TKRole").toString().equals("2") 
-            && !session.getAttribute("TKRole").toString().equals("3")) {
+    if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") && !session.getAttribute("TKRole").toString().equals("2")) {
         response.sendRedirect("PageError.jsp");
     }
 %>

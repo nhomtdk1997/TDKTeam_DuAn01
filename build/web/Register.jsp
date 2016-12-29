@@ -14,11 +14,17 @@
         <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerFix.jsp" %>
 
-        <section id="contact">
+        <section id="contact" style="margin-top: 50px;">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center wow fadeInDown">
+                            <h2>Đăng ký tài khoản</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="row col-md-12">
                     <form action="RegisterServlet" method="post">
 

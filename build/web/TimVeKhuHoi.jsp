@@ -17,8 +17,7 @@
         <%@include file="includes/popuplogin.jsp" %>
     </head>
     <body>
-        <%@include file="includes/header.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerFix.jsp" %>
 
         <%            
             ChuyenbayService cb = new ChuyenbayService();
@@ -43,7 +42,7 @@
 
         %>
 
-        <section class="container">
+        <section class="container" style="margin-top: 50px;">
             <form action="ChonChuyenBayServlet" method="post">
                 <div class="row">
                     <div class="col-md-12">
