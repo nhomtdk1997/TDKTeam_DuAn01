@@ -43,10 +43,11 @@ function kiemtrataikhoan() {
                     }, 1000);
                 });
     }
-};
+}
+;
 
 //Kiểm tra Người dùng
-function kiemtrataikhoan() {
+function kiemtranguoidung() {
     var a = document.getElementById("kiemtra").value;
     if (a == 1) {
         swal({
@@ -75,4 +76,33 @@ function kiemtrataikhoan() {
                     }, 1000);
                 });
     }
-};
+}
+;
+
+//Kiểm tra Xóa thông tin tài khoản + người dùng
+function kiemtraxoataikhoan(idTaikhoan, idNguoidung) {
+    var a = document.getElementById('xoataikhoan');
+    swal({
+        title: "Bạn chắc chắn muốn xóa?",
+        text: "Nếu bạn xóa, tất cả thông tin tài khoản lẫn thông tin người dùng đều sẽ bị xóa hết!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Xóa bỏ!",
+        cancelButtonText: "Hủy bỏ!",
+        closeOnConfirm: false,
+        closeOnCancel: false,
+        showLoaderOnConfirm: true
+    },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal("Xóa tài khoản!", "Tài khoản và các thông tin của bạn sẽ bị xóa...", "success");
+                    setTimeout(function () {
+                        window.location = "XoaTaiKhoan.jsp?idTaikhoan=" + idTaikhoan + "&idNguoidung=" + idNguoidung;
+                    }, 1500);
+                } else {
+                    swal("Hủy bỏ xóa!", "Thông tin của bạn đã được an toàn, không bị xóa!", "error");
+                }
+            });
+}
+;
