@@ -16,8 +16,7 @@
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
-        <%@include file="includes/headerStaff.jsp" %>
-        <%@include file="includes/slider.jsp" %>
+        <%@include file="includes/headerManageFix.jsp" %>
 
         <%            
             int pageSize = 5;
@@ -51,7 +50,7 @@
 
             String folderupload = getServletContext().getInitParameter("file-upload");
         %>
-        <section class="container-fluid">
+        <section class="container-fluid" style="margin-top: 50px;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
@@ -65,7 +64,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="ThemTinTuc.jsp"><button class="col-md-9 btn btn-success">Thêm tin tức</button></a>
+                            <a href="ThemTinTuc.jsp"><button class="col-md-9 btn btn-success">+ Thêm tin tức</button></a>
                         </div>
                         <div class="col-md-2 col-md-offset-8">
                             <form action="QuanLyTinTuc.jsp" method="get">
