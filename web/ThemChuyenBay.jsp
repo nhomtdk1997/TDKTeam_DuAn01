@@ -13,8 +13,15 @@
         <%@include file="includes/headtag.jsp" %>
     </head>
     <body>
-        <%@include file="includes/headerFix.jsp" %>
-        <div class="container" style="padding-bottom: 0;">
+        <%@include file="includes/headerStaffFix.jsp" %>
+        <section class="container" style="margin-top: 50px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Thêm chuyến bay</h2>
+                    </div>
+                </div>
+            </div>
             <div class="row col-md-12">
                 <form action="ThemChuyenBayServlet" method="post">
                     <div class="row">
@@ -118,7 +125,7 @@
                     <button type="submit" class="btn btn-success form-control col-md-12">Insert</button>
                 </form>
             </div>
-        </div>
+        </section>
         <%@include file="includes/footer.jsp" %>
     </body>
 </html>
