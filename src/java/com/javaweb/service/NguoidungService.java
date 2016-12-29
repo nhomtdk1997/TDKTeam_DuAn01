@@ -62,4 +62,28 @@ public class NguoidungService {
         }
         return null;
     }
+    
+    //Xóa Người dùng
+    public boolean DeleteNguoidung(int idND) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Nguoidung nd = new Nguoidung();
+            nd.setIdnguoidung(idND);
+            session.delete(nd);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        } finally {
+            session.close();
+        }
+        return false;
+    }
 }
