@@ -22,7 +22,7 @@
     <body>
         <%@include file="includes/headerAdminFix.jsp" %>
 
-        <%
+        <%            
             int pageSize = 15;
             int pageNumber = 1;
             request.setCharacterEncoding("UTF-8");
@@ -113,7 +113,7 @@
 
                         <tr>
                             <td><%= taikhoan.getIdTaiKhoan()%></td>
-                            <td><a href="SuaNguoidung.jsp?idNguoidung=<%=taikhoan.getIdnguoidung()%>"><%= nd.getHo()+" "+nd.getDemVaTen()%></a></td>
+                            <td><a href="SuaNguoidung.jsp?idNguoidung=<%=taikhoan.getIdnguoidung()%>"><%= nd.getHo() + " " + nd.getDemVaTen()%></a></td>
                             <td><%= taikhoan.getTenDangNhap()%></td>
                             <td><%= taikhoan.getEmail()%></td>
                             <td><input class="form-control" type="password" disabled="" value="<%= taikhoan.getMatKhau()%>"></td>
@@ -124,7 +124,7 @@
                                 </a>
                             </td>
                             <td style="width: 47px;">
-                                <a href="XoaTaiKhoan.jsp?idTaikhoan=<%= taikhoan.getIdTaiKhoan()%>&idNguoidung=<%= taikhoan.getIdnguoidung()%>">
+                                <a id="xoataikhoan" onclick="kiemtraxoataikhoan(<%= taikhoan.getIdTaiKhoan()%>,<%= taikhoan.getIdnguoidung()%>)">
                                     <input type="button" class="btn btn-danger" name="xoataikhoan" value="Xóa" />
                                 </a>
                             </td>
