@@ -72,8 +72,7 @@ public class DatVeMotChieuServlet extends HttpServlet {
             veservice.InsertVe(ve);
         }
 
-        String url = "/index.jsp";
-        getServletContext().getRequestDispatcher(url).forward(request, response);
+        response.sendRedirect("index.jsp");
 
 //        try (PrintWriter out = response.getWriter()) {
 //            /* TODO output your page here. You may use following sample code. */
