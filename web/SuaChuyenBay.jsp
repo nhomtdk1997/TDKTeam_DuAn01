@@ -16,8 +16,7 @@
     </head>
     <body>
         <%@include file="includes/headerStaffFix.jsp" %>
-        <%            
-            ChuyenbayService cbsv = new ChuyenbayService();
+        <%            ChuyenbayService cbsv = new ChuyenbayService();
             Chuyenbay cb = null;
             String idchuyenbay = request.getParameter("idChuyenbay");
             cb = cbsv.GetChuyenbayById(idchuyenbay);
@@ -31,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row col-md-12">
+                <div class="row col-md-8 col-md-offset-2">
                     <form action="SuaChuyenBayServlet" method="post">
                         <input style="display: none;" name="idCB" value="<%=idchuyenbay%>">
                         <div class="row">
@@ -132,7 +131,14 @@
                                 <input type="number" name="Giachuyenbay" class="form-control" value="<%=cb.getGiaChuyenBay()%>" required="">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-success form-control col-md-12">Cập nhật thông tin chuyến bay</button>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <button type="submit" class="btn btn-success form-control">Cập nhật thông tin chuyến bay</button>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <a href="javascript:history.go(-1)"><button class="btn btn-danger form-control">Hủy bỏ</button></a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
