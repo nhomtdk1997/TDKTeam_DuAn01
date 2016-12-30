@@ -86,7 +86,6 @@
                             <th>idTK</th>                        
                             <th>Hình ảnh</th>                                               
                             <th>Tiêu đề</th>                                               
-                            <th>Nội dung</th>                       
                             <th>Ngày đăng</th>
                             <th>Ghi chú</th>
                             <th>Sửa</th>                       
@@ -101,13 +100,12 @@
                         %>        
 
                         <tr>
-                            <td style="width: 50px;"><%=i%></td>                        
-                            <td style="width: 50px;"><%= tintuc.getIdTaiKhoan()%></td>
+                            <td><%=i%></td>                        
+                            <td><%= tintuc.getIdTaiKhoan()%></td>
                             <td style="width: 300px;"><img class="img-thumbnail" src="<%=folderupload%><%=tintuc.getImgLink()%>"></td>
-                            <td style="width: 200px;"><%= tintuc.getTieuDe()%></td>
-                            <td><%= tintuc.getNoiDung()%></td>
-                            <td style="width: 100px;"><%= tintuc.getNgayDang()%></td>
-                            <td style="width: 150px;"><%= tintuc.getGhiChu()%></td>
+                            <td><%= tintuc.getTieuDe()%></td>
+                            <td style="width: 200px;"><%= tintuc.getNgayDang()%></td>
+                            <td><%= tintuc.getGhiChu()%></td>
                             <td style="width: 40px;">
                                 <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-primary" name="suatintuc" value="Sửa"/> </a>
                             </td>

@@ -44,7 +44,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/TaiKhoan.jsp">Tài khoản <span class="quanly"> Management</span></a></li>
@@ -65,7 +64,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/QuanLyTinTuc.jsp">Tin Tức <span class="quanly"> Management</span></a></li>
@@ -85,7 +83,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
@@ -104,7 +101,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
@@ -122,7 +118,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
@@ -140,7 +135,6 @@ Fixed Navigation
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Xin Chào: <%=session.getAttribute("youruser")%>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="display: none;"><a href="#">ID Tài khoản = <%=session.getAttribute("iduser")%></a></li>
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>

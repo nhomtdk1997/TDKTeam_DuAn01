@@ -19,7 +19,18 @@
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/headerAdminFix.jsp" %>
     </head>
-    <body onload="kiemtrataikhoan()">
+    <%            
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtrataikhoan(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
+    <body>
+        <%
+            }
+        %>
         <section class="container" style="margin-top: 50px;">
             <div class="row">
                 <div class="col-md-12">
@@ -28,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <%                
+            <%
                 TaikhoanService tksv = new TaikhoanService();
                 Taikhoan tk = null;
                 NguoidungService ndsv = new NguoidungService();
@@ -45,8 +56,6 @@
             <form action="SuaTaiKhoanServlet" method="post">
                 <div class="col-md-12">
 
-                    <input class="hidden" id="kiemtra" value="<%=session.getAttribute("kiemtra")%>">
-
                     <input class="hidden" name="idTaikhoan" value="<%=idtk%>">
                     <div class="form-group col-md-8 col-md-offset-2">
                         <label>Tên đăng nhập<span class="required"> *</span></label>
@@ -54,11 +63,11 @@
                     </div>
                     <div class="form-group col-md-8 col-md-offset-2">
                         <label>Mật khẩu<span class="required"> *</span></label>
-                        <input name="Passwd" type="password" required placeholder="Nhập mật khẩu mới!" class="form-control">
+                        <input name="Passwd" type="password" required placeholder="Nhập mật khẩu mới!" value="<%=tk.getMatKhau()%>" class="form-control">
                     </div>
                     <div class="form-group col-md-8 col-md-offset-2">
                         <label>Xác nhận mật khẩu<span class="required"> *</span></label>
-                        <input name="Passwd2nd" type="password" required placeholder="Nhập để xác nhận lại mật khẩu!" class="form-control">
+                        <input name="Passwd2nd" type="password" required placeholder="Nhập để xác nhận lại mật khẩu!" value="<%=tk.getMatKhau()%>" class="form-control">
                     </div>
                     <div class="form-group col-md-8 col-md-offset-2">
                         <label>Địa chỉ Email<span class="required"> *</span></label>

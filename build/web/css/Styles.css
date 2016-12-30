@@ -379,6 +379,8 @@ td.text-right {
 }
 .container .timve-index .formdatve{
     border-radius: inherit;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 .loaive-index{
     float: left;
@@ -441,4 +443,23 @@ td.text-right {
 */
 html .form-control{
     border-radius:inherit;
+}
+
+
+body .baidang p{
+    line-height: 35px;
+    font-size: 18px;
+    color: black;
+}
+body .baidang img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+body .baidang h2{
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #090909;
 }

@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row col-md-12">
+            <div class="row col-md-8 col-md-offset-2">
                 <form action="ThemChuyenBayServlet" method="post">
                     <div class="row">
                         <div class="form-group col-md-6">
@@ -122,7 +122,16 @@
                             <input type="number" name="Giachuyenbay" class="form-control" required="">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success form-control col-md-12">Insert</button>
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <button type="submit" class="btn btn-success form-control">+ Thêm chuyến bay mới</button>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <a href="javascript:history.go(-1)"><button class="btn btn-danger form-control">Hủy bỏ</button></a>
+                        </div>
+
+                    </div>
+                    
                 </form>
             </div>
         </section>

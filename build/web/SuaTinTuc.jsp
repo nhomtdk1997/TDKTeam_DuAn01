@@ -91,7 +91,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="GhiChu">Chọn hình ảnh để tải lên:</label>
-                            <input class="" required="" type="file" name="file" />
+                            <input class="" type="file" name="file" />
                             <label></label>
                             <button type="submit" class="form-control btn btn-success">Đăng bài</button>
                         </div>

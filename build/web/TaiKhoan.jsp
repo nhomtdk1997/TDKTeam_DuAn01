@@ -52,7 +52,6 @@
                     ? (pageNumber + 1) : pageNumber) + "";
             String prePage = (pageNumber <= 1 ? 1 : pageNumber - 1) + "";
         %>
-        <%session.removeAttribute("kiemtra");%>
         <section class="container-fluid">
             <div class="row" style="padding-top: 50px;">
                 <div class="col-md-12">
@@ -67,7 +66,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="#" onClick="open_window('DangKy.jsp', 1200, 700)">
+                            <a href="#" onClick="open_window('Register.jsp', 1200, 700)">
                                 <button class="col-md-9 btn btn-success">+ Tài khoản</button>
                             </a>
                         </div>

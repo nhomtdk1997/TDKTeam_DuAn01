@@ -1,15 +1,13 @@
 <%-- 
-    Document   : headerStaff
-    Created on : Dec 21, 2016, 11:44:24 AM
+    Document   : headerUser
+    Created on : Dec 29, 2016, 4:43:55 PM
     Author     : DuongNguyen
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    if (session.getAttribute("TKRole") == null || !session.getAttribute("TKRole").toString().equals("1") 
-            && !session.getAttribute("TKRole").toString().equals("2") 
-            && !session.getAttribute("TKRole").toString().equals("3")) {
+    if (session.getAttribute("TKRole") == null) {
         response.sendRedirect("PageError.jsp");
     }
 %>
@@ -151,9 +149,9 @@ Fixed Navigation
                 <li><a href="${pageContext.request.contextPath}/index.jsp#service">Điều khoản</a></li>
                 <li><a href="${pageContext.request.contextPath}/index.jsp#contact">Phản hồi</a></li>
                 <li><a href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a></li>
-                <%
-                    }
-                %>
+                    <%
+                        }
+                    %>
             </ul>
         </nav>
         <!-- /main nav -->

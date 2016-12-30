@@ -24,7 +24,18 @@
     <%@include file="includes/popuplogin.jsp" %>
 </head>
 
+<%
+    if (session.getAttribute("kiemtra") != null) {
+%>
+<body onload="kiemtradangnhap(<%=session.getAttribute("kiemtra")%>)">
+    <%
+        session.removeAttribute("kiemtra");
+    } else {
+    %>
 <body>
+    <%
+        }
+    %>
     <%@include file="includes/header.jsp" %>
     <%@include file="includes/slider.jsp" %>
 
@@ -42,9 +53,8 @@
                 </div>
             </div>
             <div class="row timve-index">
-
-                <div class="form-group col-md-12 modal-content formdatve">
-                    <div class="loaiveindex modal-header">
+                <div class="form-group col-md-12 panel panel-group panel-default formdatve">
+                    <div class="loaiveindex panel-heading">
                         <ul class="nav nav-loaiveindex">
                             <li id="li-vemotchang" class="active loaive-index"><a href="#timve" id="vemotchieu" onclick="vemotchang()">Một chiều</a></li>
                             <li id="li-vekhuhoi" class="loaive-index"><a href="#timve" id="vekhuhoi" onclick="vekhuhoi()">Khứ hồi</a></li>
@@ -389,8 +399,7 @@
     End #quotes
     ========================== -->
 
-    <%        
-        TintucService tts = new TintucService();
+    <%        TintucService tts = new TintucService();
         ArrayList<Tintuc> listTintuc = null;
         listTintuc = tts.GetAllTintuc();
         String folderupload = getServletContext().getInitParameter("file-upload");
@@ -596,7 +605,7 @@
 
                 <div class="col-md-4 text-left wow fadeInRight">
                     <p>Để nhận được các thông tin về các chuyến bay giá rẻ, ưu đãi đặt biệt trên website 
-                        của chúng tôi một cách nhanh nhất, hãy để lại Email chúng tôi sẽ gửi nó đến bạn!</p>
+                        chúng tôi một cách nhanh nhất, hãy để lại Email chúng tôi sẽ gửi nó đến bạn!</p>
                 </div>
             </div>
         </div>

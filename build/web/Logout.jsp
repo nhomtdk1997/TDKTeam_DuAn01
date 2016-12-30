@@ -18,6 +18,7 @@
                     session.removeAttribute("usName");
                     session.removeAttribute("youruser");
                     session.removeAttribute("iduser");
+                    session.removeAttribute("idnguoidung");
                     session.removeAttribute("HoNguoidung");
                     session.removeAttribute("DemvatenNguoidung");
                     session.removeAttribute("DiachiNguoidung");
