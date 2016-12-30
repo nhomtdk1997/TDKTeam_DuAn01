@@ -14,8 +14,7 @@ function open_window(url, width, height) {
 }
 
 //Kiểm tra Tài khoản
-function kiemtrataikhoan() {
-    var a = document.getElementById("kiemtra").value;
+function kiemtrataikhoan(a) {
     if (a == 1) {
         swal({
             title: "Cập nhật tài khoản thành công!",
@@ -47,8 +46,7 @@ function kiemtrataikhoan() {
 ;
 
 //Kiểm tra Người dùng
-function kiemtranguoidung() {
-    var a = document.getElementById("kiemtra").value;
+function kiemtranguoidung(a) {
     if (a == 1) {
         swal({
             title: "Cập nhật thông tin thành công!",
@@ -104,5 +102,85 @@ function kiemtraxoataikhoan(idTaikhoan, idNguoidung) {
                     swal("Hủy bỏ xóa!", "Thông tin của bạn đã được an toàn, không bị xóa!", "error");
                 }
             });
+}
+;
+
+//Kiểm tra Đăng nhập
+function kiemtradangnhap(a) {
+    if (a == 1) {
+        swal({
+            title: "Đăng nhập thành công!",
+            text: "Chờ 3s để trở về trang chủ...",
+            type: "success",
+            timer: 3000,
+            showConfirmButton: false
+        });
+    } else if (a == 0) {
+        swal({
+            title: "Đăng nhập thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi đăng nhập!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+                function () {
+                    setTimeout(function () {
+                        swal("Tên đăng nhập hoặc mật khẩu không đúng", "", "warning");
+                    }, 1000);
+                });
+    }
+}
+;
+
+//Kiểm tra Đăng ký
+function kiemtradangky(a) {
+    if (a == 1) {
+        swal({
+            title: "Đăng ký thành công!",
+            text: "Chờ 3s để trở về trang chủ!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "index.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal("Đăng ký thất bại", "Kiểm tra lại thông tin đăng k!", "error");
+    }
+}
+;
+
+//Kiểm tra Thông tin tài khoản
+function kiemtrathongtintaikhoan(a) {
+    if (a == 1) {
+        swal({
+            title: "Cập nhật thông tin thành công!",
+            text: "Chờ 3s để cập nhật lại thông tin!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "ThongTinTaiKhoan.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal({
+            title: "Cập nhật thông tin thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi cập nhật!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+                function () {
+                    setTimeout(function () {
+                        swal("Kiểm tra lại các thông tin!", "SĐT, CMND bị trùng hoặc không đúng mẫu!\nHoặc mật khẩu không trùng khớp!", "info");
+                    }, 1000);
+                });
+    }
 }
 ;
