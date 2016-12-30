@@ -13,7 +13,18 @@
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/popuplogin.jsp" %>
     </head>
+    <%
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtradangky(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
     <body>
+        <%
+            }
+        %>
         <%@include file="includes/headerFix.jsp" %>
 
         <section id="contact" style="margin-top: 50px;">
@@ -60,8 +71,8 @@
                             <div class="row">
                                 <div class="form-group col-md-3">
                                     <label>Giới tính<span class="required"> *</span></label>
-                                    <fieldset>
-                                        <label class="form-group">
+                                    <fieldset class="form-control">
+                                        <label style="padding-right: 15px;">
                                             <input class="form-title" type="radio" name="gender-switch" id="male" value="male" checked="checked">
                                             <span>Nam</span>
                                         </label>
