@@ -18,7 +18,18 @@
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/headerAdminFix.jsp" %>
     </head>
-    <body onload="kiemtranguoidung()">
+    <%            
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtranguoidung(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
+    <body>
+        <%
+            }
+        %>
         <section class="container" style="padding-top: 150px;">
             <div class="row">
                 <div class="col-md-12">
@@ -27,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <%                
+            <%
                 NguoidungService ndsv = new NguoidungService();
                 Nguoidung nd = new Nguoidung();
                 QuoctichService qtsv = new QuoctichService();
@@ -39,8 +50,6 @@
             %>
             <form action="SuaNguoiDungServlet" method="post">
                 <div class="col-md-12">
-
-                    <input class="hidden" id="kiemtra" value="<%=session.getAttribute("kiemtra")%>">
 
                     <input class="hidden" name="idNguoidung" value="<%=idNguoidung%>">
                     <div class="form-group col-md-3 col-md-offset-2">
@@ -171,11 +180,11 @@
                     </div>
                     <div class="form-group col-md-4 col-md-offset-2">
                         <label>Số điện thoại<span class="required"> *</span></label>
-                        <input name="SDT" type="text" required value="<%=nd.getSdt()%>" class="form-control">
+                        <input name="SDT" type="number" required value="<%=nd.getSdt()%>" class="form-control">
                     </div>
                     <div class="form-group col-md-4">
                         <label>Số CMND<span class="required"> *</span></label>
-                        <input name="CMND" type="text" required value="<%=nd.getSoCmnd()%>" class="form-control">
+                        <input name="CMND" type="number" required value="<%=nd.getSoCmnd()%>" class="form-control">
                     </div>
 
                     <div class="form-group col-md-8 col-md-offset-2">
