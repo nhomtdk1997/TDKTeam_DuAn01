@@ -11,6 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Xóa chuyến bay</title>
+        <%@include file="includes/headerStaffFix.jsp" %>
     </head>
     <body>
         <%
