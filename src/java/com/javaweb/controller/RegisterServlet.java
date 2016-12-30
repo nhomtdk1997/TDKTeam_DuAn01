@@ -45,21 +45,21 @@ public class RegisterServlet extends HttpServlet {
 
         String Ho, DemVaTen, DiaChi, SDT, SoCMND, TenDangNhap, Email, MatKhau, MatKhau2;
         int loaiTK, QuocTich;
-        
+
         //Xử lý giới tính
         String gioitinh = request.getParameter("gender-switch");
         boolean GioiTinh = true;
-        if(gioitinh.equals("female")){
+        if (gioitinh.equals("female")) {
             GioiTinh = false;
         }
-        
+
         //Xử lý ngày tháng năm sinh
         String ngay = request.getParameter("ngay");
         String thang = request.getParameter("thang");
         String nam = request.getParameter("nam");
-        String ngaysinh = nam +"-"+ thang +"-"+ ngay;
+        String ngaysinh = nam + "-" + thang + "-" + ngay;
         Date NgaySinh = new SimpleDateFormat("yyyy-MM-dd").parse(ngaysinh);
-        
+
         loaiTK = 6; // 6 là loại tài khoản đành cho khách hàng thường
         Ho = request.getParameter("LastName");
         DemVaTen = request.getParameter("FirstName");
@@ -74,28 +74,28 @@ public class RegisterServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         if (!MatKhau.equals(MatKhau2)) {
-            session.setAttribute("LoiMatKhau", "Mật khẩu không trùng khớp!");
+            session.setAttribute("kiemtra", "0");
             String url = "/Register.jsp";
             getServletContext().getRequestDispatcher(url).forward(request, response);
         } else {
             try {
+                session.setAttribute("kiemtra", "1");
                 EnDeCryption encryption = new EnDeCryption("TDKTeam_MaHoaMatKhau");
                 String Matkhaumahoa = encryption.encoding(MatKhau);
-                
+
                 //Tạo một người dùng mới với những thông tin trên sau đó thêm vào database
                 Nguoidung nd = new Nguoidung(Ho, DemVaTen, GioiTinh, NgaySinh, DiaChi, SDT, SoCMND, QuocTich);
                 NguoidungService nguoidungservice = new NguoidungService();
                 nguoidungservice.InsertNguoidung(nd);
-                
+
                 //Tạo một tài khoản mới với những thông tin trên sau đó thêm váo database
                 Taikhoan tk = new Taikhoan(nd.getIdnguoidung(), TenDangNhap, Email, Matkhaumahoa, loaiTK);
                 TaikhoanService taikhoanservice = new TaikhoanService();
                 taikhoanservice.InsertTaikhoan(tk);
-                
-                String url = "/index.jsp";
-                getServletContext().getRequestDispatcher(url).forward(request, response);
+
+                response.sendRedirect("Register.jsp");
             } catch (InvalidKeyException ex) {
-                 Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
