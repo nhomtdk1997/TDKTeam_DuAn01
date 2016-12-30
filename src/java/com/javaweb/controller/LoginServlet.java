@@ -65,6 +65,7 @@ public class LoginServlet extends HttpServlet {
             Nguoidung nguoidung = ndsv.GetUserByIdNguoidung(taikhoan.getIdTaiKhoan());
             session.setAttribute("youruser", nguoidung.getHo() + " " + nguoidung.getDemVaTen());
             session.setAttribute("iduser", taikhoan.getIdTaiKhoan());
+            session.setAttribute("idnguoidung", nguoidung.getIdnguoidung());
             session.setAttribute("HoNguoidung", nguoidung.getHo());
             session.setAttribute("DemvatenNguoidung", nguoidung.getDemVaTen());
             session.setAttribute("DiachiNguoidung", nguoidung.getDiaChi());
@@ -74,6 +75,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("TKRole", taikhoan.getIdLoaiTk());
             try {
                 Thread.sleep(1000);
+                session.setAttribute("kiemtra", "1");
                 String url = "index.jsp";
                 response.sendRedirect(url);
             } catch (InterruptedException e) {
@@ -81,6 +83,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             try {
                 Thread.sleep(1000);
+                session.setAttribute("kiemtra", "0");
                 String url = "index.jsp";
                 response.sendRedirect(url);
             } catch (InterruptedException e) {
