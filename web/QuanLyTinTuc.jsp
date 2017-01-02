@@ -107,13 +107,15 @@
                             <td style="width: 200px;"><%= tintuc.getNgayDang()%></td>
                             <td><%= tintuc.getGhiChu()%></td>
                             <td style="width: 40px;">
-                                <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-primary" name="suatintuc" value="Sửa"/> </a>
+                                <a href="SuaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-primary" name="suatintuc" value="Sửa"/></a>
                             </td>
                             <td style="width: 47px;">
-                                <a href="XoaTinTuc.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" /> </a>
+                                <a id="xoatintuc" onclick="kiemtraxoatintuc(<%= tintuc.getIdtintuc()%>)">
+                                    <input type="button" class="btn btn-danger" name="xoatintuc" value="Xóa" />
+                                </a>
                             </td>
                             <td style="width: 57px;">
-                                <a href="TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>"><input type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" /> </a>
+                                <input onclick="openInNewTab('TinTucDetail.jsp?idTintuc=<%= tintuc.getIdtintuc()%>');" type="button" class="btn btn-success" name="xoatintuc" value="Chi tiết" />
                             </td>
                         </tr>
                         <%

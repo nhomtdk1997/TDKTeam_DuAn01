@@ -12,7 +12,18 @@
         <title>Thêm chuyến bay</title>
         <%@include file="includes/headtag.jsp" %>
     </head>
+    <%        
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtrachuyenbay(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
     <body>
+        <%
+            }
+        %>
         <%@include file="includes/headerStaffFix.jsp" %>
         <section class="container" style="margin-top: 50px;">
             <div class="row">
@@ -131,7 +142,7 @@
                         </div>
 
                     </div>
-                    
+
                 </form>
             </div>
         </section>

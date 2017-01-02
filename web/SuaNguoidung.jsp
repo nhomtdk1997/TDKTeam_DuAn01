@@ -16,7 +16,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sửa người dùng</title>
         <%@include file="includes/headtag.jsp" %>
-        <%@include file="includes/headerAdminFix.jsp" %>
     </head>
     <%            
         if (session.getAttribute("kiemtra") != null) {
@@ -30,6 +29,7 @@
         <%
             }
         %>
+        <%@include file="includes/headerAdminFix.jsp" %>
         <section class="container" style="padding-top: 150px;">
             <div class="row">
                 <div class="col-md-12">

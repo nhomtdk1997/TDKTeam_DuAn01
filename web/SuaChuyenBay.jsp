@@ -14,13 +14,26 @@
         <title>Sửa chuyến bay</title>
         <%@include file="includes/headtag.jsp" %>
     </head>
+    <%
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtrachuyenbay(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
     <body>
-        <%@include file="includes/headerStaffFix.jsp" %>
-        <%            ChuyenbayService cbsv = new ChuyenbayService();
+        <%
+            }
+        %>
+
+        <%
+            ChuyenbayService cbsv = new ChuyenbayService();
             Chuyenbay cb = null;
             String idchuyenbay = request.getParameter("idChuyenbay");
             cb = cbsv.GetChuyenbayById(idchuyenbay);
         %>
+        <%@include file="includes/headerStaffFix.jsp" %>        
         <section style="margin-top: 50px;">
             <div class="container">
                 <div class="row">
