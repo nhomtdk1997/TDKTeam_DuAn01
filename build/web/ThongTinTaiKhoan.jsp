@@ -19,7 +19,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Thông tin tài khoản</title>
         <%@include file="includes/headtag.jsp" %>
-        <%@include file="includes/headerUserFix.jsp" %>
     </head>
     <%        if (session.getAttribute("kiemtra") != null) {
     %>
@@ -32,6 +31,7 @@
         <%
             }
         %>
+        <%@include file="includes/headerUserFix.jsp" %>
         <section class="container" style="margin-top: 50px;">
             <div class="row">
                 <div class="col-md-12">

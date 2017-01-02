@@ -186,7 +186,9 @@
                                 <a href="SuaChuyenBay.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" class="btn btn-primary" name="suachuyenbay" value="Sửa"/> </a>
                             </td>
                             <td style="width: 47px;">
-                                <a href="XoaChuyenBay.jsp?idChuyenbay=<%= chuyenbay.getIdchuyenbay()%>"><input type="button" class="btn btn-danger" name="xoachuyenbay" value="Xóa" /> </a>
+                                <a id="xoachuyenbay" onclick="kiemtraxoachuyenbay(<%= chuyenbay.getIdchuyenbay()%>)">
+                                    <input type="button" class="btn btn-danger" name="xoachuyenbay" value="Xóa" />
+                                </a>
                             </td>
                         </tr>
                         <%

@@ -45,6 +45,8 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
+                        <li><a href="${pageContext.request.contextPath}/QuanLyVe.jsp">Vé <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/TaiKhoan.jsp">Tài khoản <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/QuanLyTinTuc.jsp">Tin Tức <span class="quanly"> Management</span></a></li>
@@ -65,6 +67,8 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
+                        <li><a href="${pageContext.request.contextPath}/QuanLyVe.jsp">Vé <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/QuanLyTinTuc.jsp">Tin Tức <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
@@ -84,6 +88,8 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
+                        <li><a href="${pageContext.request.contextPath}/QuanLyVe.jsp">Vé <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/ChuyenBay.jsp">Chuyến bay <span class="quanly"> Management</span></a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
@@ -102,6 +108,7 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
                 </li>
@@ -119,6 +126,7 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
                 </li>
@@ -136,6 +144,7 @@ Fixed Navigation
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${pageContext.request.contextPath}/ThongTinTaiKhoan.jsp">Thông tin tài khoản</a></li>
+                        <li><a href="${pageContext.request.contextPath}/VeDaDat.jsp">Vé đã đặt</a></li>
                         <li><a href="${pageContext.request.contextPath}/Logout.jsp"><span class="required">Đăng xuất</span></a></li>
                     </ul>
                 </li>

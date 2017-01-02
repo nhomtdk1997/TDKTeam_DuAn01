@@ -20,7 +20,18 @@
         <%@include file="includes/headtag.jsp"%>
         <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
     </head>
+    <%        
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtratintuc(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
     <body>
+        <%
+            }
+        %>
         <%@include file="includes/headerManageFix.jsp"  %>
         <section class="container-fluid" style="margin-top: 50px;">
             <div class="row">

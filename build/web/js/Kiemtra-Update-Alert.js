@@ -110,24 +110,19 @@ function kiemtradangnhap(a) {
     if (a == 1) {
         swal({
             title: "Đăng nhập thành công!",
-            text: "Chờ 3s để trở về trang chủ...",
+            text: "Chờ xử lý đăng nhập...",
             type: "success",
-            timer: 3000,
+            timer: 2000,
             showConfirmButton: false
         });
     } else if (a == 0) {
         swal({
             title: "Đăng nhập thất bại!",
-            text: "Hãy kiểm tra lại các thông tin trước khi đăng nhập!",
             type: "error",
-            closeOnConfirm: false,
-            showLoaderOnConfirm: true
-        },
-                function () {
-                    setTimeout(function () {
-                        swal("Tên đăng nhập hoặc mật khẩu không đúng", "", "warning");
-                    }, 1000);
-                });
+            text: "Tên đăng nhập hoặc mật khẩu không chính xác\n<a href='' data-toggle='modal' data-target='#myModal'><button>Đăng nhập lại!</button></a>",
+            html: true,
+            showConfirmButton: false
+        });
     }
 }
 ;
@@ -148,7 +143,7 @@ function kiemtradangky(a) {
                     }, 500);
                 });
     } else if (a == 0) {
-        swal("Đăng ký thất bại", "Kiểm tra lại thông tin đăng k!", "error");
+        swal("Đăng ký thất bại", "Kiểm tra lại thông tin đăng ký!", "error");
     }
 }
 ;
@@ -184,3 +179,119 @@ function kiemtrathongtintaikhoan(a) {
     }
 }
 ;
+
+//Kiểm tra Chuyến bay
+function kiemtrachuyenbay(a) {
+    if (a == 1) {
+        swal({
+            title: "Cập nhật chuyến bay thành công!",
+            text: "Chờ 3s để trở về trang quản lý!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "ChuyenBay.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal({
+            title: "Cập nhật chuyến bay thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi cập nhật!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        });
+    }
+}
+;
+
+//Kiểm tra Xóa thông tin Chuyến bay
+function kiemtraxoachuyenbay(idChuyenbay) {
+    var a = document.getElementById('xoachuyenbay');
+    swal({
+        title: "Bạn chắc chắn muốn xóa?",
+        text: "Tất cả thông tin của chuyến bay này đều sẽ bị xóa hết!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Xóa bỏ!",
+        cancelButtonText: "Hủy bỏ!",
+        closeOnConfirm: false,
+        closeOnCancel: false,
+        showLoaderOnConfirm: true
+    },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal("Xóa chuyến bay!", "Tất cả thông tin của chuyến bay này đều sẽ bị xóa", "success");
+                    setTimeout(function () {
+                        window.location = "XoaChuyenBay.jsp?idChuyenbay=" + idChuyenbay;
+                    }, 1500);
+                } else {
+                    swal("Hủy bỏ xóa!", "Thông tin của bạn đã được an toàn!", "error");
+                }
+            });
+}
+;
+
+//Kiểm tra Tin tức
+function kiemtratintuc(a) {
+    if (a == 1) {
+        swal({
+            title: "Cập nhật tin tức thành công!",
+            text: "Chờ 3s để trở về trang quản lý!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "QuanLyTinTuc.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal({
+            title: "Cập nhật tin tức thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi cập nhật!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        });
+    }
+}
+;
+
+//Kiểm tra Xóa thông tin Tin tức
+function kiemtraxoatintuc(idTintuc) {
+    var a = document.getElementById('xoatintuc');
+    swal({
+        title: "Bạn chắc chắn muốn xóa?",
+        text: "Tất cả thông tin của tin tức này đều sẽ bị xóa hết!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Xóa bỏ!",
+        cancelButtonText: "Hủy bỏ!",
+        closeOnConfirm: false,
+        closeOnCancel: false,
+        showLoaderOnConfirm: true
+    },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal("Xóa tin tức!", "Tất cả thông tin của tin tức này đều sẽ bị xóa", "success");
+                    setTimeout(function () {
+                        window.location = "XoaTinTuc.jsp?idTintuc=" + idTintuc;
+                    }, 1500);
+                } else {
+                    swal("Hủy bỏ xóa!", "Thông tin của bạn đã được an toàn!", "error");
+                }
+            });
+}
+;
+
+//
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
