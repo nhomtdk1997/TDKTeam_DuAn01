@@ -53,7 +53,6 @@ public class SuaTinTucServlet extends HttpServlet {
 
         //response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
-//        session.removeAttribute("errorreg");
         String TieuDe = "", NoiDung = "", ngaydang = "", GhiChu = "", fileName = "";
         int idloaitin = 0, idTK = 0, idtt = 0;
 
@@ -155,7 +154,11 @@ public class SuaTinTucServlet extends HttpServlet {
 
         boolean rs = tintucservice.InsertTintuc(tt);
         if (rs) {
-            response.sendRedirect("QuanLyTinTuc.jsp");
+            session.setAttribute("kiemtra", "1");
+            response.sendRedirect("SuaTinTuc.jsp?idTintuc=" + idtt);
+        } else {
+            session.setAttribute("kiemtra", "0");
+            response.sendRedirect("SuaTinTuc.jsp?idTintuc=" + idtt);
         }
 
 //        try (PrintWriter out = response.getWriter()) {

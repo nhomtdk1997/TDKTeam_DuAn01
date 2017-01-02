@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -61,11 +62,14 @@ public class ThemChuyenBayServlet extends HttpServlet {
         ChuyenbayService cbsv = new ChuyenbayService();
         Chuyenbay cb = new Chuyenbay(Diemkhoihanh, Diemden, Ngaykhoihanh, Giocatcanh, Giohacanh, Loaimaybay, Giachuyenbay);
 
+        HttpSession session = request.getSession();
         boolean kt = cbsv.InsertChuyenbay(cb);
         if (kt) {
-            String url = "ChuyenBay.jsp";
+            session.setAttribute("kiemtra", "1");
+            String url = "ThemChuyenBay.jsp";
             response.sendRedirect(url);
         } else {
+            session.setAttribute("kiemtra", "0");
             String url = "ThemChuyenBay.jsp";
             response.sendRedirect(url);
         }

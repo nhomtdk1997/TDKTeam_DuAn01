@@ -137,9 +137,11 @@ public class ThemTinTucServlet extends HttpServlet {
 
         boolean rs = tintucservice.InsertTintuc(tintuc);
         if (rs) {
-            String url = "QuanLyTinTuc.jsp";
+            session.setAttribute("kiemtra", "1");
+            String url = "ThemTinTuc.jsp";
             response.sendRedirect(url);
         } else {
+            session.setAttribute("kiemtra", "0");
             String url = "ThemTinTuc.jsp";
             response.sendRedirect(url);
         }
