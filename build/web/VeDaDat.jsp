@@ -16,7 +16,18 @@
         <%@include file="includes/headtag.jsp" %>
         <%@include file="includes/popuplogin.jsp" %>
     </head>
+    <%            
+        if (session.getAttribute("kiemtra") != null) {
+    %>
+    <body onload="kiemtradatve(<%=session.getAttribute("kiemtra")%>)">
+        <%
+            session.removeAttribute("kiemtra");
+        } else {
+        %>
     <body>
+        <%
+            }
+        %>
         <%@include file="includes/headerUserFix.jsp" %>
         <%            
             VeService vesv = new VeService();
@@ -67,17 +78,19 @@
                         %>
                         <tr>
                             <td><%= ve.getIdve()%></td>                        
-                            <td><%= ve.getHo() +""+ ve.getDemVaTen()%></td>
-                            <td><%= ve.getDiaChi() %></td>
-                            <td><%= ve.getSdt() %></td>
-                            <td><%= ve.getSoCmnd() %></td>
-                            <td><%= ve.getIdchuyenbay() %></td>
-                            <td><%= ve.getSoNguoiLon() %></td>
-                            <td><%= ve.getSoTreEm() %></td>
-                            <td><%= ve.getSoEmBe() %></td>
-                            <td><strong><%= ve.getGiaVe() %></strong></td>
+                            <td><%= ve.getHo() + " " + ve.getDemVaTen()%></td>
+                            <td><%= ve.getDiaChi()%></td>
+                            <td><%= ve.getSdt()%></td>
+                            <td><%= ve.getSoCmnd()%></td>
+                            <td><%= ve.getIdchuyenbay()%></td>
+                            <td><%= ve.getSoNguoiLon()%></td>
+                            <td><%= ve.getSoTreEm()%></td>
+                            <td><%= ve.getSoEmBe()%></td>
+                            <td><strong><%= ve.getGiaVe()%></strong></td>
                             <td style="width: 47px;">
-                                <a href=""><input type="button" class="btn btn-danger" name="HuyVe" value="Hủy" /></a>
+                                <a id="xoave" onclick="kiemtraxoave(<%=ve.getIdve()%>)">
+                                    <input type="button" class="btn btn-danger" name="HuyVe" value="Hủy" />
+                                </a>
                             </td>
                         </tr>
                         <%

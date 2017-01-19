@@ -65,14 +65,26 @@ public class DatVeMotChieuServlet extends HttpServlet {
             idTK = Integer.parseInt(request.getParameter("idtaikhoan"));
             Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbay, idTK, soNguoilon, soTreem, soEmbe, GiaVe);
             VeService veservice = new VeService();
-            veservice.InsertVe(ve);
+            boolean kiemtra = veservice.InsertVe(ve);
+            if (kiemtra) {
+                session.setAttribute("kiemtra", "1");
+                response.sendRedirect("VeDaDat.jsp");
+            } else {
+                session.setAttribute("kiemtra", "0");
+                response.sendRedirect("VeDaDat.jsp");
+            }
         } else {
             Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbay, null, soNguoilon, soTreem, soEmbe, GiaVe);
             VeService veservice = new VeService();
-            veservice.InsertVe(ve);
+            boolean kiemtra = veservice.InsertVe(ve);
+            if (kiemtra) {
+                //session.setAttribute("kiemtra", "1");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            } else {
+                //session.setAttribute("kiemtra", "0");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
         }
-
-        response.sendRedirect("index.jsp");
 
 //        try (PrintWriter out = response.getWriter()) {
 //            /* TODO output your page here. You may use following sample code. */

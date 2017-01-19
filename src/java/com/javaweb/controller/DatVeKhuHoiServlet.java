@@ -48,7 +48,7 @@ public class DatVeKhuHoiServlet extends HttpServlet {
         soNguoilonDi = Integer.parseInt(request.getParameter("songuoilon-vedi"));
         soTreemDi = Integer.parseInt(request.getParameter("sotreem-vedi"));
         soEmbeDi = Integer.parseInt(request.getParameter("soembe-vedi"));
-        
+
         idChuyenbayVe = Integer.parseInt(request.getParameter("idchuyenbayve"));
         giachuyenbayve = request.getParameter("giachuyenbayve");
         BigDecimal GiaChuyenbayVe = new BigDecimal(giachuyenbayve);
@@ -58,7 +58,7 @@ public class DatVeKhuHoiServlet extends HttpServlet {
 
         Ho = request.getParameter("ho");
         DemVaTen = request.getParameter("demvaten");
-        
+
         //Xử lý ngày tháng năm sinh
         String ngaysinh = request.getParameter("ngaysinh");
         Date NgaySinh = new SimpleDateFormat("yyyy-MM-dd").parse(ngaysinh);
@@ -67,7 +67,7 @@ public class DatVeKhuHoiServlet extends HttpServlet {
         SDT = request.getParameter("sdt");
         SoCMND = request.getParameter("cmnd");
         idQuocTich = request.getParameter("quoctich");
-        
+
         HttpSession session = request.getSession();
         if (session.getAttribute("youruser") != null && session.getAttribute("iduser") != null) {
             idTK = Integer.parseInt(request.getParameter("idtaikhoan"));
@@ -76,16 +76,17 @@ public class DatVeKhuHoiServlet extends HttpServlet {
             VeService veservice = new VeService();
             veservice.InsertVe(ve);
             veservice.InsertVe(di);
+            session.setAttribute("kiemtra", "1");
+            request.getRequestDispatcher("VeDaDat.jsp").forward(request, response);
         } else {
             Ve ve = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayVe, null, soNguoilonVe, soTreemVe, soEmbeVe, GiaChuyenbayVe);
             Ve di = new Ve(Ho, DemVaTen, NgaySinh, DiaChi, SDT, SoCMND, idQuocTich, idChuyenbayDi, null, soNguoilonDi, soTreemDi, soEmbeDi, GiaChuyenbayDi);
             VeService veservice = new VeService();
             veservice.InsertVe(ve);
             veservice.InsertVe(di);
+            //session.setAttribute("kiemtra", "1");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
-
-        response.sendRedirect("index.jsp");
-
 //        try (PrintWriter out = response.getWriter()) {
 //            /* TODO output your page here. You may use following sample code. */
 //            out.println("<!DOCTYPE html>");

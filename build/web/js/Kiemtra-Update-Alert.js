@@ -290,8 +290,63 @@ function kiemtraxoatintuc(idTintuc) {
 }
 ;
 
-//
+//Open window new tab
 function openInNewTab(url) {
   var win = window.open(url, '_blank');
   win.focus();
 }
+
+//Kiểm tra Xóa vé
+function kiemtraxoave(idVe) {
+    var a = document.getElementById('xoave');
+    swal({
+        title: "Bạn chắc chắn muốn xóa?",
+        text: "Tất cả thông tin của vé này đều sẽ bị xóa hết!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Xóa bỏ!",
+        cancelButtonText: "Hủy bỏ!",
+        closeOnConfirm: false,
+        closeOnCancel: false,
+        showLoaderOnConfirm: true
+    },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal("Xóa vé!", "Tất cả thông tin của vé này đều sẽ bị xóa", "success");
+                    setTimeout(function () {
+                        window.location = "XoaVe.jsp?idVe=" + idVe;
+                    }, 1500);
+                } else {
+                    swal("Hủy bỏ xóa!", "Thông tin của bạn đã được an toàn!", "error");
+                }
+            });
+}
+;
+
+//Kiểm tra Đặt vé
+function kiemtradatve(a) {
+    if (a == 1) {
+        swal({
+            title: "Đặt vé thành công!",
+            text: "Chờ 3s để trở về trang quản lý!",
+            type: "success",
+            timer: 2000,
+            showConfirmButton: false
+        },
+                function () {
+                    setTimeout(function () {
+                        window.location = "VeDaDat.jsp";
+                    }, 500);
+                });
+    } else if (a == 0) {
+        swal({
+            title: "Đặt vé thất bại!",
+            text: "Hãy kiểm tra lại các thông tin trước khi đặt vé!",
+            type: "error",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        });
+    }
+}
+;

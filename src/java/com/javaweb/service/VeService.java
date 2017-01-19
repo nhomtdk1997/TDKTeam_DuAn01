@@ -132,4 +132,28 @@ public class VeService {
         }
         return listVe;
     }
+    
+    //Xóa Vé
+    public boolean DeleteVe(int idVe) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Ve ve = new Ve();
+            ve.setIdve(idVe);
+            session.delete(ve);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        } finally {
+            session.close();
+        }
+        return false;
+    }
 }

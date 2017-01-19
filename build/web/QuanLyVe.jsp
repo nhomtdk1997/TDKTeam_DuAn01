@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Quản lý vét</h2>
+                        <h2>Quản lý vé</h2>
                         <p>Danh sách vé khách hàng đặt!</p>
                     </div>
                 </div>
